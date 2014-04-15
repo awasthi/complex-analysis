@@ -1,0 +1,143 @@
+\chapter{Complex Integration}
+\section{Integration in complex plain}
+In case of real variable, the path of the integration of $\ds \int_a^b f(x)dx$ is always along the $x$-axis from $x=a$ to $x=b$. But in case of a complex function $f(z)$ the path of a complex function $f(z)$ the path of the definite integral $\ds \int_{\alpha}^{\beta} f(z)dz$ can be along any curve from $z=\alpha$ to $z=\beta$. Here we will consider some examples.
+\begin{example}
+Evaluate $\ds \int_{0}^{2+i} \bar{z}^2 dz$ along the real axis from $z=0$ to $z=2$ and then along parallel to $y$-axis from $z=2$ to $z=2+i$.
+\end{example}
+\begin{solution}
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2+i} (x-iy)^2 (dx+idy)\\
+																&= \int_{0}^{2+i} (x^2-y^2-2ixy) (dx+idy)\\
+\end{align*}
+\paragraph{Along real axis from $z=0$ to $z=2$ (y=0)}
+\[y=0 \Rightarrow dy=0, dz = d(x+iy) = dx\]
+\[z=0, y=0 \Rightarrow x=0~~~~~and~~~~~z=2, y=0 \Rightarrow x=2\]
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2} (x^2) (dx)\\
+	&= \left[\frac{x^3}{3} \right]_0^2 = \frac{8}{3}\\
+\end{align*}
+\paragraph{Along parallel to $y$-axis from $z=2$ to $z=2+i$ (x=2)}
+\[x=2 \Rightarrow dx=0, dz = d(x+iy) = idy\]
+\[z=2, x=2 \Rightarrow y=0~~~~~and~~~~~z=2+i, x=2 \Rightarrow y=1\]
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{1} (4-y^2-4iy) (i.dy)\\
+	&= i \left[4y - \frac{y^3}{3} - 4i\frac{y^2}{2} \right]_0^1 =i\left[\frac{11}{3}i + 2\right]\\
+\end{align*}
+$\ds \int_{0}^{2+i} \bar{z}^2 dz$ along the real axis from $z=0$ to $z=2$ then along parallel to $y$-axis from $z=2$ to $z=2+i$
+\[= \frac{8}{3} +  \frac{11}{3}i + 2  = \frac{1}{3}(14+11i)\]
+\end{solution}
+\begin{problems}
+\prob Find the value of the integral 
+\[\int_0^{1+i}(x-y+ix^2)dz\]
+\subprob Along the straight line from $z=0$ to $z=1+i$.
+\subprob along the real axis from $z=0$ to $z=1$ and then along parallel to $y$-axis from $z=1$ to $z=1+i$.
+\prob Integrate $f(z) = x^2 + ixy$ from $A(1,1)$ to $B(2,8)$ along
+\subprob the straight line $AB$
+\subprob the curve $C$, $x=t, ~y=t^3$.
+\prob Evaluate the integral $\ds int_c (3y^2dx+2ydy)$, where $c$ is the circle $x^2+y^2=1$, counterclockwise from $(1,0)$ to $(0,1)$.
+
+\end{problems}
+
+\section{Cauchy's Integral Theorem}
+\begin{thm}
+If a function $f(z)$ is analytic and its derivative $f'(z)$ continuous at all points within and on a simple closed curve $c$, then $\ds \int_c f(z) dz = 0$.
+\end{thm}
+\begin{proof}
+Let $f(z)=u+iv$ and $z=x+iy$ and region enclosed by the curve $c$ be $R$, then
+\begin{align*}
+	\int_cf(z)dz 	&= \int_c(u+iv)(dx+idy) =  \int_c(udx-vdy) + i(vdx+udy)\\
+								&= \int\int_R (-v_x - u_y)dxdy + i\int\int_R (u_x - v_y)dxdy\\
+								\text{By Cauchy-Riemann equations,} \\
+								&= \int\int_R (u_y - u_y)dxdy + i\int\int_R (u_x - u_x)dxdy =0
+\end{align*}
+\end{proof}
+\begin{example}
+Find the integral $\ds \int_c \frac{3z^2+7z+1}{z+1}dz$, where $c$ is the circle $\ds |z|=\frac{1}{2}$.
+\end{example}
+\begin{solution}
+Poles of integrad are given by
+$$z+1 = 0$$
+That is, $z=-1$. Since given circle $|z|=\frac{1}{2}$, with centre $z=0$ and radius $1/2$ does not enclose any singularity of the given function. Thus it is obvious that the integrand is analytic everywhere. Hence, by Cauchy's Theorem,
+\[\int_c \frac{3z^2+7z+1}{z+1}dz = 0\]
+\end{solution}
+\begin{thm}[Cauchy's integral theorem for multiconnected region]
+If a function $f(z)$ is analytic in region $R$ between two simple closed curves $c_1$ and $c_2$, then
+\[\int_{c_1} f(z) dz = \int_{c_2} f(z) dz\]
+\end{thm}
+\begin{proof}
+Since $f(z)$ is analytic in region $R$, By Cauchy's Theorem
+\[\int f(z) dz = 0\]
+where path of integration is along $AB$, and curves $C_2$ in clockwise direction and along $BA$ and along $C_1$ in anticlockwise direction.
+
+We may write,
+\[\int_{AB} f(z) dz - \int_{c_2} f(z) dz + \int_{BA} f(z) dz + \int_{c_1} f(z) dz = 0\]
+or
+\[- \int_{c_2} f(z) dz +  \int_{c_1} f(z) dz = 0\]
+\[ \int_{c_1} f(z) dz =  \int_{c_2} f(z) dz \]
+\end{proof}
+\section{Cauchy Integral Formula}
+\begin{thm}
+If a function $f(z)$ is analytic within and on a closed curve $c$, and if $a$ is any point within $c$ , then
+\[f(a) = \frac{1}{2\pi}\int_{z} \frac{f(z)}{(z-a)} dz\]
+\end{thm}
+\begin{proof}
+Let $z=a$ be a point within a closed curve $c$. Describe a circle $\gamma$ such that $|z-a|=\rho$ and it lies entirely within $c$. Now consider the function 
+\[\phi(z) = \frac{f(z)}{(z-a)}\]
+Obviously, this function is analytic in region between $\gamma$ and $c$. Hence by Cauchy's integral theorem for multiconnected region, we have
+\[\int_{c} \phi(z) dz = \int_{\gamma} \phi(z) dz\]
+or
+\begin{align*}
+	\int_{c} \frac{f(z)}{(z-a)} dz 	&= \int_{\gamma} \frac{f(z)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a) + f(a)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz + \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+																	&= I_1 + I_2
+\end{align*}
+Now, since $|z-a|=\rho$, we have $z=a+ \rho e^{i\theta}$ and $dz = i \rho e^{i\theta} d\theta$. Hence
+\begin{align*}
+ I_1 &= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a+ \rho e^{i\theta}) - f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= \int_{0}^{2\pi} [f(a+ \rho e^{i\theta}) - f(a)] i d\theta \\
+ 	 &=0 ~~~~~~~~\text{ as } \rho \text{ tends to 0}
+\end{align*}
+and
+\begin{align*}
+ I_2 &= \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= f(a) \int_{0}^{2\pi} i d\theta \\
+ 	 &= 2\pi i f(a)	 
+ \end{align*}
+Hence,
+\[\int_{c} \frac{f(z)}{(z-a)} dz = I_1 + I_2\]
+That is 
+\[\int_{c} \frac{f(z)}{(z-a)} dz = 0 + 2 \pi i f(a) \]
+or
+\[ f(a) = \frac{1}{2 \pi i}\int_{c} \frac{f(z)}{(z-a)} dz \]
+\end{proof}
+\begin{example}
+Evaluate (i) $\ds \int_c \frac{e^z}{z+2}dz$ and (ii) $\ds \int_c \frac{e^z}{z}dz$, where $c$ is circle $|z|=1$.
+\end{example}
+\begin{solution}
+(i) The function $\ds \frac{e^z}{z+2}$ is analytic everywhere except at $z=-2$. This point lies outside the circle $|z|=1$. Thus function is analytic within and on $c$, by Cauchy's Theorem, we have
+\[\int_{|z|=1} \frac{e^z}{z+2}dz = 0\]
+
+(ii)
+The function $\ds \frac{e^z}{z}$ is analytic everywhere except at $z=0$. The point $z=0$ strictly inside $|z|=1$. Hence by Cauchy's Integral formula, we have
+\[\int_{|z|=1}~ \frac{e^z}{z}dz = 2 \pi i (e^z)_{z=0} =  2 \pi i \]
+\end{solution}
+\section{Cauchy Integral Formula For The Derivatives of An Analytic Function}
+\begin{thm}
+If a function $f(z)$ is analytic within and on a closed curve $c$, and if $a$ is any point within $c$ , then its derivative is also analytic within and on closed curve $c$, and is given as 
+\[f'(a) = \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)^2} dz\]
+\end{thm}
+\begin{proof}
+We know Cauchy's Integral formula
+\begin{align*}
+	f(a) &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)} dz \\
+\text{Differentiating, wrt $a$ , we get} \\
+	f'(a) &= \frac{1}{2\pi}\frac{d}{da}\left[\int_{c} \frac{f(z)}{(z-a)} dz \right]\\
+	      &= \frac{1}{2\pi} \int_{c} f(z) \frac{\partial}{\partial a}\left[\frac{1}{(z-a)} \right]dz\\
+	      &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)^2} dz
+\end{align*}
+We may generalize it,
+\[f^n(a) = \frac{n!}{2\pi}\int_{c} \frac{f(z)}{(z-a)^{n+1}} dz\]
+\end{proof}

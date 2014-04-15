@@ -1,0 +1,2515 @@
+#LyX file created by tex2lyx 1.6.2
+\lyxformat 247
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+chapter{Series}
+\end_layout
+
+\end_inset
+
+ In this chapter, we discuss the power series expansion of a complex function, viz, the Taylor's and Laurent's series 
+\end_layout
+
+\begin_layout Section
+
+Taylor's Theorem
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ If function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic at all points inside a circle 
+\begin_inset Formula $c$
+\end_inset
+
+, with its centre at the point 
+\begin_inset Formula $a$
+\end_inset
+
+ and radius 
+\begin_inset Formula $R$
+\end_inset
+
+, then at each point 
+\begin_inset Formula $z$
+\end_inset
+
+ inside 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula \[f(z) = f(a) + (z-a)f'(a) + \frac{(z-a)^2}{2!}f''(a) + ... + \frac{(z-a)^n}{n!}f^n(a) + ...\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ be analytic function within and on the circle circle 
+\begin_inset Formula $c$
+\end_inset
+
+ of radius 
+\begin_inset Formula $r$
+\end_inset
+
+ centered at 
+\begin_inset Formula $a$
+\end_inset
+
+ so that 
+\begin_inset Formula \[c: |z-a|=r\]
+\end_inset
+
+ Draw another circle 
+\begin_inset Formula $\gamma : |z-a|=\rho $
+\end_inset
+
+, where 
+\begin_inset Formula $\rho < r$
+\end_inset
+
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{0.7}{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{pspicture}
+\end_layout
+
+\end_inset
+
+(0,-1.62)(4.141875,1.62) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pscircle
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,dimen=outer](1.62,0.0)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+1.62
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pscircle
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer](1.65,-0.01)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+0.91
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(3.3514063,0.03)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psdots
+\end_layout
+
+\end_inset
+
+[dotsize=0.06](1.64,-0.04) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm](1.62,-0.06)(2.42,0.44) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psdots
+\end_layout
+
+\end_inset
+
+[dotsize=0.02](2.4,0.48) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psdots
+\end_layout
+
+\end_inset
+
+[dotsize=0.02](2.44,0.44) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm](0.4,1.1)(1.62,-0.04) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(0.7814062,0.93)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $R$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(2.0214062,-0.07)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(2.2214062,0.51)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $r$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psdots
+\end_layout
+
+\end_inset
+
+[dotsize=0.06](2.4,-0.54) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(2.7314062,-0.49)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $w$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \label{fig:taylor}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Caption
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Hence by Cauchy's integral formula, we have 
+\begin_inset Formula \[f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z}dw\]
+\end_inset
+
+ But, 
+\begin_inset Formula \begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= \frac{1}{(w-a)}\frac{1}{\left[{1-\frac{z-a}{w-a}}\right]} \\
+								&= \frac{1}{(w-a)}\left[{1-\frac{z-a}{w-a}}\right]^{-1} \\
+								&= \frac{1}{(w-a)}+ \frac{(z-a)}{(w-a)^2}+ \frac{(z-a)^2}{(w-a)^3} + ... \\
+								&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ \frac{(z-a)^{n-1}}{(w-a)^n} + \frac{(z-a)^n}{(w-a)^{n+1}}  \left[{1-\frac{z-a}{w-a}}\right]^{-1}\\
+\text{Hence,~~~~~~~~~~~~} \\
+					\frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-a)}dw+ \frac{(z-a)}{2\pi i}\int_{\gamma}\frac{f(w)}{(w-a)^2} dw + \frac{(z-a)^2 }{2\pi i}\int_{\gamma}\frac{f(w)}{(w-a)^3}dw \\
+					& ~~~~~~~+ ... + \frac{(z-a)^{n-1}}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-a)^n}dw + R_n\\
+					&~~~~~~~\text{where } \ds R_n= \frac{(z-a)^n}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-z)(w-a)^n}dw \\
+\text{But, we have ~~} \\
+	\frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-z)^{n+1}} dw &= \frac{1}{n!}f^{(n)}(z) 	
+\text{Hence,~~~~~~~~~~} \\
+f(z) &= f(a) + \frac{(z-a)}{1!}f'(a) +  ... + \frac{(z-a)^{n-1}}{(n-1)!}f^{(n-1)}(a) + R_n 
+\end{align*}
+\end_inset
+
+ which is called Taylor's formula, 
+\begin_inset Formula $R_n$
+\end_inset
+
+ being the 
+\shape italic
+remainder
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+
+Now, let 
+\begin_inset Formula $M$
+\end_inset
+
+ denotes the maximum value of 
+\begin_inset Formula $f(w)$
+\end_inset
+
+ on 
+\begin_inset Formula $\gamma$
+\end_inset
+
+. Since 
+\begin_inset Formula $|z-a|=\rho$
+\end_inset
+
+, 
+\begin_inset Formula $|w-a|=r$
+\end_inset
+
+ and 
+\begin_inset Formula $|w-z| > r - \rho$
+\end_inset
+
+, hence 
+\begin_inset Formula \begin{align*}
+|R_n| &\leq \frac{|(z-a)^n|}{|2\pi i|} \int_{\gamma} \frac{|f(w)|}{|(w-z)||(w-a)^n|} |dw| \\
+&\leq \frac{|\rho^n|}{2\pi} \frac{M}{(r-\rho)r^n}\int_{\gamma}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r}} \left(\frac{\rho}{r}\right)^n
+\end{align*}
+\end_inset
+
+ which tends to zero as 
+\begin_inset Formula $n$
+\end_inset
+
+ tends to infinity since 
+\begin_inset Formula $\ds \frac{\rho}{r} < 1$
+\end_inset
+
+. Thus 
+\begin_inset Formula \[f(z) = f(a) + (z-a)f'(a) + \frac{(z-a)^2}{2!}f''(a) + ... + \frac{(z-a)^n}{n!}f^n(a) + ...\]
+\end_inset
+
+ 
+\series bold
+Remark:
+\series default
+ If 
+\begin_inset Formula $a=0$
+\end_inset
+
+, Taylor's series is 
+\begin_inset Formula \[f(z) = f(0) + (z)f'(0) + \frac{(z)^2}{2!}f''(0) + ... + \frac{(z)^n}{n!}f^n(0) + ...\]
+\end_inset
+
+ which is called the 
+\shape italic
+Maclaurin's series
+\shape default
+ of 
+\begin_inset Formula $f(z)$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Find the first four terms of the Taylor's series expansion of the complex variable function 
+\begin_inset Formula \[f(z)=\frac{z+1}{(z-3)(z-4)}\]
+\end_inset
+
+ about 
+\begin_inset Formula $z=2$
+\end_inset
+
+. find the region of convergence. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Given 
+\begin_inset Formula $\ds f(z)=\frac{z+1}{(z-3)(z-4)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+If centre of a circle is at 
+\begin_inset Formula $z=2$
+\end_inset
+
+, then the distance of the singularities 
+\begin_inset Formula $z=3$
+\end_inset
+
+ and 
+\begin_inset Formula $z=4$
+\end_inset
+
+ from the centre are 1 and 2. Hence if a circle (
+\begin_inset Formula $|z-2|=1$
+\end_inset
+
+) of radius 1 and with centre 
+\begin_inset Formula $z=2$
+\end_inset
+
+ is drawn, the given function function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic, hence it can be expanded in a Taylor's series within the circle 
+\begin_inset Formula $|z-2|=1$
+\end_inset
+
+, which is therefore the circle of convergence. 
+\begin_inset Formula \begin{align*}
+	f(z) &= \frac{z+1}{(z-3)(z-4)} = \frac{-4}{z-3} + \frac{5}{z-4}~~~\text{ Using partial fraction}\\
+	&= \frac{-4}{(z-2)-1} + \frac{5}{(z-2)-2} \\
+	&= 4[1-(z-2)]^{-1} - \frac{5}{2}\left[1-\frac{z-2}{2}\right]^{-1} \\
+	&= 4[1+(z-2)+(z-2)^2+(z-2)^3 + ...] - \frac{5}{2}\left[1+\frac{z-2}{2}+\frac{(z-2)^2}{4}+\frac{(z-2)^3}{8}+ ...\right] \\
+	&= \frac{3}{2} + \frac{11}{4}(z-2) + \frac{27}{8}(z-2)^2 + \frac{59}{16}(z-2)^3
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Find the first three terms of the Taylor series expansion of 
+\begin_inset Formula $f(z)=\frac{1}{z^2+4}$
+\end_inset
+
+ about 
+\begin_inset Formula $z=-i$
+\end_inset
+
+. Find the region of convergence. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Here 
+\begin_inset Formula \[f(z) = \frac{1}{z^2+4}\]
+\end_inset
+
+ Poles are given by 
+\begin_inset Formula \[z^2+4 = 0 ~~~~~\Rightarrow ~~~~~~z=\pm 2i\]
+\end_inset
+
+ If the centre of a circle is 
+\begin_inset Formula $z=-i$
+\end_inset
+
+, then the distance of the singularities 
+\begin_inset Formula $z=2i$
+\end_inset
+
+ and 
+\begin_inset Formula $z=-2i$
+\end_inset
+
+ from the centre are 3 and 1. Hence if a circle of radius 1 is drawn at the centre 
+\begin_inset Formula $z=-i$
+\end_inset
+
+, then within the circle 
+\begin_inset Formula $|z+i|$
+\end_inset
+
+=1, the given function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic. Thus the function can be expanded in Taylor Series within the circle 
+\begin_inset Formula $|z+i|=1$
+\end_inset
+
+, which is therefore the region of convergence (
+\begin_inset Formula $|z+i|<1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+This problem could be solved as previous example. Here we use another alternative approach.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+We have Taylor Series about 
+\begin_inset Formula $z=-i$
+\end_inset
+
+, 
+\begin_inset Formula \[f(z) = f(-i) + (z+i)\frac{f'(-i)}{1!}+ (z+i)^2\frac{f''(-i)}{2!} + ...\]
+\end_inset
+
+ Now since 
+\begin_inset Formula $\ds f(z)=\frac{1}{z^2+4}$
+\end_inset
+
+, 
+\begin_inset Formula \[f(-i) = \frac{1}{3}\]
+\end_inset
+
+ 
+\begin_inset Formula \[f'(z) = \frac{-2z}{(z^2+4)^2}~~~~~ \Rightarrow ~~~~~ f'(-i) = \frac{2i}{9}\]
+\end_inset
+
+ 
+\begin_inset Formula \[f''(z) = \frac{2(z^2+4)-8z^2}{(z^2+4)^3}~~~~~ \Rightarrow ~~~~~ f''(-i) = -\frac{14}{27}\]
+\end_inset
+
+ Hence Taylor series, 
+\begin_inset Formula \[f(z) =  \frac{1}{3} +  \frac{2i}{9}(z+i)+ \frac{7}{27}(z+i)^2 + ...\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Laurent's Theorem
+\end_layout
+
+\begin_layout Standard
+
+In expanding a function 
+\begin_inset Formula $f(Z)$
+\end_inset
+
+ by Taylor's series at a point 
+\begin_inset Formula $z=a$
+\end_inset
+
+, we require that function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic at 
+\begin_inset Formula $z=a$
+\end_inset
+
+. Laurent's series gives an expansion of 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ at a point 
+\begin_inset Formula $z=a$
+\end_inset
+
+ even if 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is not analytic there. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ If function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic between and on two circles 
+\begin_inset Formula $c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $c_2$
+\end_inset
+
+ having common centre at 
+\begin_inset Formula $z=a$
+\end_inset
+
+ and radii 
+\begin_inset Formula $r_1$
+\end_inset
+
+ and 
+\begin_inset Formula $r_2$
+\end_inset
+
+, then for all points 
+\begin_inset Formula $z$
+\end_inset
+
+ in this region, 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ can be expanded by 
+\begin_inset Formula \[f(z) = \sum_{n=0}^{\infty}a_n (z-a)^n + \sum_{n=1}^{\infty} \frac{b_n}{(z-a)^n} \]
+\end_inset
+
+ where 
+\begin_inset Formula \begin{align*}
+	a_n &= \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw \\
+	b_n &= \frac{1}{2\pi i} \int_{c_2}\frac{f(w)}{(w-a)^{-n+1}} dw 
+\end{align*}
+\end_inset
+
+ the integrals being taken in counter clockwise sense. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ be analytic function between and on the circles 
+\begin_inset Formula $c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $c_2$
+\end_inset
+
+ of radii 
+\begin_inset Formula $r_1$
+\end_inset
+
+ and 
+\begin_inset Formula $r_2$
+\end_inset
+
+ centered at 
+\begin_inset Formula $a$
+\end_inset
+
+ so that 
+\begin_inset Formula \[c_1: |z-a|=r_1~~~~~~~~~c_2:|z-a|=r_2\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Draw another circle 
+\begin_inset Formula $\gamma : |z-a|=\rho $
+\end_inset
+
+, where 
+\begin_inset Formula $r_2 < \rho < r_1$
+\end_inset
+
+. Let 
+\begin_inset Formula $w$
+\end_inset
+
+ be a point on circle 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, then by Cauchy's integral formula, we have 
+\begin_inset Formula \begin{equation}\label{Laurent1}
+	f(z) = \frac{1}{2\pi i} \int_{c_1} \frac{f(w)}{w-z}dw - \frac{1}{2\pi i} \int_{c_2} \frac{f(w)}{w-z}dw 
+\end{equation}
+\end_inset
+
+ But, 
+\begin_inset Formula \begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= \frac{1}{(w-a)}\frac{1}{\left[{1-\frac{z-a}{w-a}}\right]} \\
+								&= \frac{1}{(w-a)}\left[{1-\frac{z-a}{w-a}}\right]^{-1} \\
+								&= \frac{1}{(w-a)}+ \frac{(z-a)}{(w-a)^2}+ \frac{(z-a)^2}{(w-a)^3} + ... \\
+								&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ \frac{(z-a)^{n-1}}{(w-a)^n} + \frac{(z-a)^n}{(w-a)^{n+1}}  \left[{1-\frac{z-a}{w-a}}\right]^{-1}\\
+\text{Hence,~~~~~~~~~~~~} \\
+					\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{(w-a)}dw+ \frac{(z-a)}{2\pi i}\int_{c_1}\frac{f(w)}{(w-a)^2}dw+ \frac{(z-a)^2 }{2\pi i}\int_{c_1}\frac{f(w)}{(w-a)^3} dw \\
+					& ~~~~~~~+ ... + \frac{(z-a)^{n-1}}{2\pi i}\int_{c_1} \frac{f(w)}{(w-a)^n}dw + R_n\\
+					&~~~~~~~\text{where $\ds R_n= \frac{(z-a)^n}{2\pi i} \int_{c_1} \frac{f(w)}{(w-z)(w-a)^n}dw$} 
+\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula $R_n$
+\end_inset
+
+ being the 
+\shape italic
+remainder
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+
+Now, let 
+\begin_inset Formula $M$
+\end_inset
+
+ denotes the maximum value of 
+\begin_inset Formula $f(w)$
+\end_inset
+
+ on 
+\begin_inset Formula $c_1$
+\end_inset
+
+. Since 
+\begin_inset Formula $|z-a|=\rho$
+\end_inset
+
+, 
+\begin_inset Formula $|w-a|=r_1$
+\end_inset
+
+ and 
+\begin_inset Formula $|w-z| >r_1 - \rho$
+\end_inset
+
+, hence 
+\begin_inset Formula \begin{align*}
+|R_n| &\leq \frac{|(z-a)^n|}{|2\pi i|} \int_{c_1} \frac{|f(w)|}{|(w-z)||(w-a)^n|} |dw| \\
+&\leq \frac{|\rho^n|}{2\pi} \frac{M}{(r_1 - \rho){r_1}^n}\int_{c_1}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r_1}} \left(\frac{\rho}{r_1}\right)^n
+\end{align*}
+\end_inset
+
+ which tends to zero as 
+\begin_inset Formula $n$
+\end_inset
+
+ tends to infinity since 
+\begin_inset Formula $\ds \frac{\rho}{r_1} < 1$
+\end_inset
+
+. Thus 
+\begin_inset Formula \begin{equation}\label{Laurent2}
+	\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z} dw = a_0 + a_1(z-a) + a_2(z-a)^2 + ... + a_n(z-a)^n + ...
+\end{equation}
+\end_inset
+
+ where 
+\begin_inset Formula \[	a_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw \]
+\end_inset
+
+ Similarly, since 
+\begin_inset Formula \begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= -\frac{1}{(z-a)}\frac{1}{\left[{1-\frac{w-a}{z-a}}\right]} \\
+								&= -\frac{1}{(z-a)}\left[{1-\frac{w-a}{z-a}}\right]^{-1} \\
+								&= -\left[\frac{1}{(z-a)}+ \frac{(w-a)}{(z-a)^2}+ \frac{(w-a)^2}{(z-a)^3} + ... \right]
+\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\text{Hence,~~~~~~~~~~~~} \\
+				-	\frac{1}{2\pi i}\int_{c_2} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{c_2} \frac{f(w)}{(z-a)}dw+ \frac{1}{2\pi i}\int_{c_2}\frac{(w-a)f(w)}{(z-a)^2}dw+ \frac{1 }{2\pi i}\int_{c_2}\frac{(w-a)^2f(w)}{(z-a)^3} dw\\
+					& ~~~~~~~+ ... + \frac{1}{2\pi i}\int_{c_2} \frac{(w-a)^{n-1}f(w)}{(z-a)^n}dw + R'_n\\
+					&~~~~~~~\text{where $\ds R'_n= \frac{1}{2\pi i} \int_{c_2} \frac{(w-a)^nf(w)}{(w-z)(z-a)^n}dw$} 
+\end{align*}
+\end_inset
+
+ Now, let 
+\begin_inset Formula $M$
+\end_inset
+
+ denotes the maximum value of 
+\begin_inset Formula $f(w)$
+\end_inset
+
+ on 
+\begin_inset Formula $c_2$
+\end_inset
+
+. Since 
+\begin_inset Formula $|z-a|=\rho$
+\end_inset
+
+, 
+\begin_inset Formula $|w-a|=r_2$
+\end_inset
+
+ and 
+\begin_inset Formula $|w-z| > r_2 - \rho$
+\end_inset
+
+, hence 
+\begin_inset Formula \begin{align*}
+|R'_n| &\leq \frac{1}{|2\pi i|} \int_{c_1} \frac{|(w-a)^n||f(w)|}{|(w-z)||(z-a)^n|} |dw|  \\
+&\leq \frac{|r_2^n|}{2\pi} \frac{M}{(r_2 - \rho ){\rho}^n}\int_{c_1}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r_2}} \left(\frac{r}{\rho}\right)^n
+\end{align*}
+\end_inset
+
+ which tends to zero as 
+\begin_inset Formula $n$
+\end_inset
+
+ tends to infinity since 
+\begin_inset Formula $\ds \frac{r_2}{\rho} < 1$
+\end_inset
+
+. Thus 
+\begin_inset Formula \begin{equation}\label{Laurent3}
+	-\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z}dw =  \frac{b_1}{(z-a)} + \frac{b_2}{(z-a)^2} + ... + \frac{b_n}{(z-a)^n} + ...
+\end{equation}
+\end_inset
+
+ where 
+\begin_inset Formula \[	b_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{-n+1}} dw \]
+\end_inset
+
+ Hence from equation 
+\begin_inset LatexCommand \ref{Laurent1}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \ref{Laurent2}
+
+\end_inset
+
+ and 
+\begin_inset LatexCommand \ref{Laurent3}
+
+\end_inset
+
+, we get 
+\begin_inset Formula \[f(z) = a_0 + a_1(z-a) + a_2(z-a)^2 + ... + a_n(z-a)^n + ... + \frac{b_1}{z-a} + \frac{b_2}{(z-a)^2} + ... + \frac{b_n}{(z-a)^n} + ...\]
+\end_inset
+
+ where 
+\begin_inset Formula $\ds a_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds 	b_n = \frac{1}{2\pi i} \int_{c_2}\frac{f(w)}{(w-a)^{-n+1}} dw$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Show that, if 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ has a pole at 
+\begin_inset Formula $z=a$
+\end_inset
+
+ then 
+\begin_inset Formula $|f(z)| \rightarrow \infty$
+\end_inset
+
+ as 
+\begin_inset Formula $z \rightarrow a$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Suppose the pole is of order 
+\begin_inset Formula $m$
+\end_inset
+
+, then 
+\begin_inset Formula \[f(z)=\sum_{n=0}^{\infty}a_{n}(z-a)^{n}+\sum_{n=1}^{m}b_{n}(z-a)^{-n}\]
+\end_inset
+
+ Its principal part is 
+\begin_inset Formula $\ds \sum_{n=1}^{m}b_{n}(z-a)^{-n}$
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\sum_{n=1}^{m}b_{n}(z-a)^{-n} &=\frac{b_{1}}{z-a}+\frac{b_{2}}{(z-a)^{2}}+...+\frac{b_{n}}{(z-a)^{m}} \\
+&=\frac{1}{(z-a)^{m}}[b_{m}+b_{m-1}(z-a)+...b_{1}(z-a)^{m-1}] \\
+&=\frac{1}{(z-a)^{m}}[b_{m}+\sum_{n=1}^{m-1}b_{n}(z-a)^{m-n}] \\
+|\sum_{n=1}^{m}b_{n}(z-a)^{-n}| &= |\frac{z}{(z-a)^{m}}[b_{m}+\sum_{n=1}^{m-1}b_{n}(z-a)^{m-n}]| \\
+&\geq |\frac{1}{(z-a)^{m}}|\left{||b_{m}||-\sum_{n-1}^{m-1}|b_{n}||z-a|^{m-n}\right}
+\end{align*}
+\end_inset
+
+ This tends to 
+\begin_inset Formula $b_{m}|a_{1}+a_{2}|\geq|a_{1}|-|a_{2}|$
+\end_inset
+
+. As 
+\begin_inset Formula $z\rightarrow -a$
+\end_inset
+
+ R.H.S. =
+\begin_inset Formula $\infty$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Write all possible Laurent series for the function 
+\begin_inset Formula \[f(z) = \frac{1}{z(z+2)^3}\]
+\end_inset
+
+ about the pole 
+\begin_inset Formula $z=-2$
+\end_inset
+
+. Using appropriate Laurent series. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ To expand 
+\begin_inset Formula $\frac{1}{z(z+2)^{3}}$
+\end_inset
+
+ about 
+\begin_inset Formula $z=-2$
+\end_inset
+
+, i.e., in powers of 
+\begin_inset Formula $(z+2)$
+\end_inset
+
+, we put 
+\begin_inset Formula $z+2=t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+Then 
+\begin_inset Formula \begin{align*} f(z)&=\frac{1}{z(z+2)^{3}}=\frac{1}{(t-2)t^{3}}=\frac{1}{t^{3}}.\frac{1}{t-2} \\
+&=\frac{1}{t^{3}}.\frac{1}{-2}.\frac{1}{1-\frac{t}{2}}=\end{align*}
+\end_inset
+
+
+\begin_inset Formula $-\frac{1}{2t^{3}}(1-\frac{t}{2})^{-1} 
+{align*}
+$
+\end_inset
+
+0<|z+2|<1
+\begin_inset Formula $ or $
+\end_inset
+
+0<|t|<1
+\begin_inset Formula $
+\begin{align*}
+f(z)&=-\frac{1}{2t^{3}}[1+\frac{t}{2}+\frac{t^{2}}{4}+\frac{t^{3}}{8}+\frac{t^{4}}{16}+\frac{t^{5}}{32}+...] \\
+&=-\frac{1}{2t^{3}}-\frac{1}{4t^{2}}-\frac{1}{8t}-\frac{1}{16}-\frac{t}{32}-\frac{t^{2}}{64}... \\
+&=-\frac{1}{2(z+2)^{3}}-\frac{1}{4(z+2)^{2}}-\frac{1}{8(z+2)}-\frac{1}{16}-\frac{z+2}{32}-\frac{(z+2)^{2}}{64}... 
+\end{align*}
+{solution}
+\begin{example}
+Expand \end{example}\ds f(z) = \cosh\left(z+\frac{1}{z}\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic except 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ can be expanded by Laurent 's theorem. 
+\begin_inset Formula \[f(z) =\sum_{n=0}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}}\]
+\end_inset
+
+ where 
+\begin_inset Formula \[a_{n}=\frac{1}{2\pi i}\int_c \frac{f(z)dz}{(z-0)^{n+1}}, \text{ and } b_{n}=\frac{1}{2\pi i}\int_c f(z)z^{n-1}dz
+\]
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+a_n&=\frac{1}{2\pi i}\int_{c}\frac{\cosh(z+\frac{1}{z})dz}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{\cosh(2\cos\theta)dz}{z^{n+1}} \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~z=e^{i\theta} \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~dz=ie^{i\theta}d\theta \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{\cosh(2\cos\theta)e^{i\theta}  d\theta}{e^{i(n+1)\theta}} \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos)e^{-ni\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos n\theta d\theta-\frac{i}{2\pi}\int_{c}\cosh(2\theta)\sin n\theta d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos n\theta d\theta+0 
+\end{align*}
+\end_inset
+
+ Since, 
+\begin_inset Formula \begin{align*}
+	b_n &=a_{-n}\\
+	 &=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos(-n\theta)d\theta \\
+	 &=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos(n\theta)d\theta \\
+	 &=a_n
+\end{align*}
+\end_inset
+
+ Therefore, 
+\begin_inset Formula \begin{align*}
+	f(z)&=\sum_{n=0}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}} =a_0 + \sum_{n=1}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{a_{n}}{z^{n}} \\
+	&=a_0 + \sum_{n=1}^{\infty}a_{n}(z^{n}+z^{-n})
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\ds f(z) = e^{\frac{c}{2}\left(z-\frac{1}{z}\right)} = \sum_{-\infty}^\infty a_nz^n.$
+\end_inset
+
+, where 
+\begin_inset Formula $\ds a_n=\frac{1}{2\pi} \cos(n\theta - c \sin \theta) d\theta $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is the analytic function except at 
+\begin_inset Formula $z=0$
+\end_inset
+
+ so 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ can be expanded by Laurent's series. 
+\begin_inset Formula \[f(z)=\sum_{n=0}^{\infty}a_{n}z^{n} + \sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}}\]
+\end_inset
+
+ where 
+\begin_inset Formula $\ds a_{n}=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{n+1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds b_{n}=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{-n+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Since 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ remains unaltered if 
+\begin_inset Formula $\frac{-1}{z}$
+\end_inset
+
+ is written for 
+\begin_inset Formula $z$
+\end_inset
+
+, hence 
+\begin_inset Formula \begin{align*}
+b_{n} &=(-1)^{n}a^{n} \\
+\therefore ~~~~~ f(z) &= \sum_{n=0}^{\infty} a_{n}z^{n}+ \sum_{n=0}^{\infty} \frac{b_{n}}{z^{n}} \\
+&= \sum_{n=0}^{\infty} a_n z^n + (-1)\sum_{n=0}^{\infty} \frac{a_n}{z^n} \\
+&= \sum_{- \infty}^{\infty} a_n z^n
+\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align*}
+ a_{n} &=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{c}\frac{e^{\frac{c}{2}(z-\frac{1}{z})}dx}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{e^{\frac{c}{2}(2isin\theta)}ie^{i\theta}d\theta}{e^{(n+1)i\theta}} \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}e^{cisin\theta}e^{-sini\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}e^{i(csin\theta)-ni\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}[cos(csin\theta-n\theta)-isin(csin\theta-n\theta)]d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}cos(csin\theta-n\theta)d\theta \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~\because \text{ if, } f(2a-x)=-f(x), then \int_{a}^{2a} f(x)dx=0 
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $f(z)= \frac{1}{(z-1)(z-2)}$
+\end_inset
+
+ for 
+\begin_inset Formula $1<|z|<2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Using partial fraction, rewrite the function as 
+\begin_inset Formula \begin{align*}
+f(z) & =-\frac{1}{2}\left(1-\frac{z}{2}\right)^{-1}-\frac{1}{z}\left(1-\frac{1}{z}\right)^{-1}\\
+ & =-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\ldots-\frac{1}{z}-\frac{1}{z^{2}}-\frac{1}{z^{3}}
+ \end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Obtain the Taylor's or Laurent's series which represents the function 
+\begin_inset Formula $\ds f(z) = \frac{1}{(1+z^2)(z+2)}$
+\end_inset
+
+ when (i) 
+\begin_inset Formula $1<|z|<2$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $|z| >2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Using partial fraction, rewrite the function as
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align*}
+f(z) & =\frac{1}{5}\left(\frac{z-2}{1+z^{2}}\right)+\frac{1}{5}\left(\frac{1}{z+2}\right)\\
+ & =\frac{z-2}{5z^{2}}\left(1+\frac{1}{z^{2}}\right)^{-1}+\frac{1}{10}\left(1+\frac{z}{2}\right)^{-1}\\
+ & =\frac{1}{5}\left[\ldots-2z^{-8}+z^{-7}+2z^{-6}-z^{-5}-2z^{-4}+z^{-3}+2z^{-2}-z^{-1}\right]\\
+ & \;\;\;+\frac{1}{5}\left[\frac{1}{2}-\frac{z}{4}+\frac{z^{2}}{8}-\frac{z^{3}}{16}+\ldots\right]\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\ds \frac{e^z}{(z-1)^2}$
+\end_inset
+
+ about 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Put 
+\begin_inset Formula $z-1=t$
+\end_inset
+
+. Then expand series in powers of 
+\begin_inset Formula $t$
+\end_inset
+
+ finally use back substitution to get 
+\begin_inset Formula \[e\left[\frac{1}{(z-1)^2}+\frac{1}{(z-1)}+\frac{1}{2!}+\frac{z-1}{3!} + \cdots \right]\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $f(z) = \sin \left\{c\left(z+\frac{1}{z}\right)\right\}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[b_n = a_n = \frac{1}{2\pi}\int_0^{2\pi}\sin(2c \cos \theta)\cos n\theta d\theta\]
+\end_inset
+
+ and 
+\begin_inset Formula \[f(z) = a_0 + \sum_{n=1}^{\infty}a_{n}(z^{n}+z^{-n})\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\ds f(z) = e^{\frac{c}{2}\left(z-\frac{1}{z}\right)} \\
+\begin{sol}
+\end{sol}f(z)$
+\end_inset
+
+ is analytic at 
+\begin_inset Formula $z=0$
+\end_inset
+
+, therefore by Taylor's theorem 
+\begin_inset Formula \[a_n =\frac{1}{2\pi}\int_0^{2\pi}\cos(c\sin \theta -n\theta) d\theta \]
+\end_inset
+
+ and 
+\begin_inset Formula \[b_n = (-1)^n a_n\]
+\end_inset
+
+ therefore 
+\begin_inset Formula \[f(z) = \sum_{-\infty}{\infty} a_nz^n\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \frac{z-1}{z+1}$
+\end_inset
+
+ (a) about 
+\begin_inset Formula $z=0$
+\end_inset
+
+ (b) about 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ (a) 
+\begin_inset Formula $-1+2(z-z^{2}+z^{3}-z^{4}+...)$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\frac{1}{2}(z-1)-\frac{1}{2^{2}}(z-1)^{2}+\frac{1}{2^{3}}(z-1)^{3}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\frac{1}{(z+1)(z+3)}$
+\end_inset
+
+ in Laurent's series, if (a) 
+\begin_inset Formula $1<|z|<3$
+\end_inset
+
+ (b) 
+\begin_inset Formula $|z|<3$
+\end_inset
+
+ (c) 
+\begin_inset Formula $-3<z<3$
+\end_inset
+
+ (d) 
+\begin_inset Formula $|z|<1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ (a) 
+\begin_inset Formula $\ds -\frac{1}{2z^{4}}+\frac{1}{2z^{3}}-\frac{1}{2z^{2}}+\frac{1}{2z}-\frac{1}{6}+\frac{z}{18}-\frac{z^{2}}{54}+\frac{z^{3}}{162}.......$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+(b) 
+\begin_inset Formula $\ds \frac{1}{z^{2}}-\frac{4}{z^{3}}+\frac{13}{z^{4}}-\frac{50}{z^{5}}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+(c) 
+\begin_inset Formula $\ds \frac{1}{2(1+z)}-\frac{1}{4}+\frac{(z+1)}{8}-\frac{(z+1)^{2}}{16}+....$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+(d) 
+\begin_inset Formula $\ds \frac{1}{3}-\frac{4}{9}z+\frac{13}{27}z^{2}-\frac{40}{81}z^{3}+...$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Find the Taylor's and Laurent's series which represents the function 
+\begin_inset Formula $\frac{z^2-1}{(z+2)(z+3)}$
+\end_inset
+
+ when (i) 
+\begin_inset Formula $|z|<2$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $2|z|<3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\frac{z}{(z^2+1)(z^2+4)}$
+\end_inset
+
+ in 
+\begin_inset Formula $1<|z|<2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{10}[(\frac{2}{z}+\frac{2}{z^{2}}+\frac{2}{z^{5}}+...)-(\frac{z}{2}+\frac{z^{3}}{8}+...)]$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Represent the function f(z) = 
+\begin_inset Formula $\frac{4z+3}{z(z-3)(z+2)}$
+\end_inset
+
+ in Laurent's series (i) within 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+ (ii) in the annular region between 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+ and 
+\begin_inset Formula $|z|=3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ (i) 
+\begin_inset Formula $-\frac{1}{2z}+\sum_{n=0}^{\infty}\left[(-1)^{n+1}\frac{1}{2^{n+2}}-\frac{1}{2^{n+1}}\right]z^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+(ii) 
+\begin_inset Formula $-\frac{1}{2z}-\frac{1}{2z}\sum_{n=0}^{\infty}(-1)^{n}(\frac{2}{z})^{n}-\frac{1}{3}\sum_{n=0}^{\infty}(\frac{z}{3})^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Write all possible Laurent Series for the function f(z) = 
+\begin_inset Formula $\frac{z^2}{(z-1)^2(z+3)}$
+\end_inset
+
+ about the singularity z=1, stating the region of convergence in each case. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ when 
+\begin_inset Formula $|z-1|>4,\frac{1}{z-1}-\frac{2}{(z-1)^{2}}+\frac{9}{(z-1)^{3}}+\frac{36}{(z-1)^{4}}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+when 
+\begin_inset Formula $0<|z-1|<4,\frac{1}{4}[1-\frac{1}{(z-1)^{2}}+\frac{7}{4}\frac{1}{z-1}+\frac{9}{16}-\frac{9}{-64}(z-1)...]$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Obtain the expansion 
+\begin_inset Formula \[f(z) = f(a)+ 2\left\{\frac{z-a}{2}f'\left(\frac{z+a}{2}\right)+\frac{(z-a)^3}{2^3.3}f'''\left(\frac{z+a}{2}\right) + \frac{(z-a)^5}{2^5.5} f^v\left(\frac{z+a}{2}\right)+....\right\}\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Expand 
+\begin_inset Formula $\frac{z^2-6z-1}{(z-1)(z+2)(z-3)}$
+\end_inset
+
+ in 
+\begin_inset Formula $3<|z+2|<5$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{2}{z+2}+\frac{3}{(z+2)^{2}}+\frac{3^{2}}{(z+2)^{3}}+\cdots+\frac{1}{5}\left[1+\frac{z+2}{5}+\frac{(z+2)^{2}}{5^{2}}+\frac{(z+2)^{3}}{5^{3}}+\cdots\right]$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

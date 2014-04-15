@@ -1,0 +1,366 @@
+\begin{Solution}{1.1.a}
+	Here, $u=x^2$ and $v=y^2$, this implies
+	\[u_x=2x,\;\;u_y=0\;\;v_x= 0\;\;v_y=2y\]
+	Cauchy Riemann equations give,
+	\[u_x=v_y \;\;\; \Rightarrow 2x=2y \;\;\text{ and } u_y=0=-v_x\]
+	Function is nowhere analytic except at $x=y$.
+	
+\end{Solution}
+\begin{Solution}{1.1.b}
+	Check Cauchy Riemann equations. Not satisfied. Not analytic.
+		
+\end{Solution}
+\begin{Solution}{1.1.d}
+Aanalytic everywhere except $z=\pm 1$.
+\end{Solution}
+\begin{Solution}{1.2}
+Here, \[u=4x + y \;\; \Rightarrow u_x=4,\;\;u_y=1\]
+and
+\[v=-x + 4y \;\; \Rightarrow v_x=-1,\;\;v_y=4\]
+Cauchy Riemann equations are satisfied. Partial derivatives $u_x,u_y,v_x,v_y$ exist and are continuous, therefore given function is differentiable everywhere. We have
+\[\frac{df}{dz} = \frac{\partial f}{ \partial z} = u_x+iv_x = 4-i\]
+\end{Solution}
+\begin{Solution}{1.3}
+Here, $w=\rho(\cos \phi + i\sin \phi) = \rho e^{i\phi}$ and
+\[z=\ln \rho + i\phi = \ln \rho + \ln (e^{i\phi}) = \ln \rho e^{i\phi}  \Rightarrow e^z = \rho e^{i\phi} = w \Rightarrow z = \ln w \]
+Now problem reduces to find the value of $z$ for which function $w=e^z$ is not analytic.
+
+\textbf{Important: } To find $z$ for which function ceases to be analytic, solve $\frac{dz}{dw}=0$, i.e.,
+\[\frac{dz}{dw} = \frac{1}{w} = e^{-z} \]
+Thus $\frac{dz}{dw} = 0  \Rightarrow  e^{-z} =0$
+which gives $z=\infty$
+\end{Solution}
+\begin{Solution}{1.5}
+for $z=0$ function ceases to be analytic.
+\end{Solution}
+\begin{Solution}{1.8}
+Here, $f(z) = z^3 = (x+iy^3)$, which gives
+\[u=x^3-3xy^2 \text{ and } v=3x^2y-y^3\]
+Compute Cauchy Riemann equations and check these holds. Hence function is analytic.
+\end{Solution}
+\begin{Solution}{1.9}
+Here, $w=\sin z = \sin(x+iy) = \sin x \cosh y + i \cos x \sinh y$ (Since $\cos (iy) = \cosh y$ and $\sin (iy) = i \sinh y$).
+\[u_x=\cos x \cosh y\;\;\;u_y=\sin x \sinh y\]
+\[v_x= - \sin x \sinh y\;\;\; v_y=\cos x \cosh y\]
+Cauchy Riemann equations are satisfied. $u_x,u_y,v_x,v_y$ exists and are continuous. Hence $w$ is analytic  function.
+Now,
+\[\frac{dw}{dz}=u_x+iv_x =\cos x \cosh y-\sin x \sinh y = \cos (x+iy) = \cos z\]
+\end{Solution}
+\begin{Solution}{1.11}
+Here,
+\[u_x=2x-2y,\;\;\;\;u_y=2ay-2x\;\;\;\;v_x=2bx+2y\;\;\;\;v_y=-2y+2x\]
+Now from Cauchy Riemann equations, we get
+\[u_x=v_y\;\;\;\Rightarrow 2x-2y=-2y+2x\]
+which is true, and
+\[u_y=-v_x\;\;\;\Rightarrow 2ay-2x=-(2bx+2y)\]
+Compare coefficients of $x$ and $y$ on both side
+\[a=-1,\;\;b=1\]
+Now,
+\[f'(z)=u_x+iv_x = (2x-2y)+i(2x+2y) = 2(1+i)z\]
+\end{Solution}
+\begin{Solution}{1.12}
+Here $f(z)=z|z| = (x+iy)|x+iy| = x\sqrt{(x^2+y^2)}+iy\sqrt{(x^2+y^2)}$, i.e.,
+\[u=x\sqrt{(x^2+y^2)},\;\;\;v=y\sqrt{(x^2+y^2)}\]
+Compute $u_x,u_y,v_x,v_y$ and check, $u_x\neq v_y \text{ and } u_y \neq -v_x$, therefore function is nowhere analytic.
+\end{Solution}
+\begin{Solution}{1.15}
+\[u_x=u_y=v_x=v_y =0\]
+It is obvious that the Cauchy Riemann equations are satisfied at $z=0$, i.e., at $x=0,\;y=0$.
+But derivative along $y=mx$ at $z=0$ is
+\[f'(0)=\lim_x\tends 0 \frac{f(z)-f(0)}{z}=\lim_x\tends 0 \frac{\sqrt{xy}-0}{x+iy} = \lim_x\tends 0 \frac{\sqrt{x.mx}-0}{x+imx} = \lim_x\tends 0 \frac{\sqrt{m}}{1+im} \]
+Evidently, this limit depends on $m$, which differers for different values of $m$. i.e., $f'(0)$ is not unique. This shows $f'(0)$ does not exist. Hence given function is not analytic.
+\end{Solution}
+\begin{Solution}{1.16.a}
+	$v=x^2-y^2+2y$
+	
+\end{Solution}
+\begin{Solution}{1.16.b}
+	$2y-3x^2y+y^3$
+	
+\end{Solution}
+\begin{Solution}{1.16.c}
+	\[u_x=\frac{x}{x^2+y^2} \text{ and }u_y=\frac{y}{x^2+y^2} \]
+	\[u_{xx}=\frac{y^2-x^2}{(x^2+y^2)^2} \text{ and }u_{yy}=\frac{x^2-y^2}{(x^2+y^2)^2} \]
+	\[u_{xx}+u_{yy} = 0 , \text{ Therefore function is harmonic.}\]
+	Now,
+	\[dv=v_xdx + v_ydy = -u_ydx + u_xdy = \frac{xdy-ydx}{x^2+y^2} \]
+	\[v=tan^{-1} \frac{y}{x}\]
+	
+\end{Solution}
+\begin{Solution}{1.16.d}
+	$v=3x^2y + 6xy - y^3$
+	
+\end{Solution}
+\begin{Solution}{1.17.a}
+	$w=z^{2}+(5-i)z-\frac{i}{z}$
+	
+\end{Solution}
+\begin{Solution}{1.17.b}
+		$w=\cos z$
+	
+\end{Solution}
+\begin{Solution}{1.17.c}
+	$w=2z^{2}-iz^{3}$
+	
+\end{Solution}
+\begin{Solution}{1.17.d}
+	$w=ize^{-z}$
+	
+\end{Solution}
+\begin{Solution}{1.17.e}
+	$w=ze^{2z}$
+	
+\end{Solution}
+\begin{Solution}{1.17.f}
+	$w=2i\log z-(2-i)z$
+	
+\end{Solution}
+\begin{Solution}{1.17.g}
+	$w=\sin(iz)$
+	
+\end{Solution}
+\begin{Solution}{1.17.h}
+	$w=(1+i)\frac{1}{z}$
+	
+\end{Solution}
+\begin{Solution}{1.17.i}
+	$w=z+\frac{1}{z}$
+	
+\end{Solution}
+\begin{Solution}{1.18}
+Let $U=u-v$ and $V=u+v$, therefore $F(z)=U+iV =(1+i)(u+iv)=(1+i)f(z)$. Now
+\[U= \frac{e^y-\cos x+ \sin x}{\cosh y- \cos x} = 1+\frac{\sin x+ \sinh y}{\cosh y- \cos x}\;\;\;\;\;(\because e^y=\cosh y + \sinh y)\]
+By Milne's method,
+\begin{align*}
+	F(z) = \int [\phi_1(z,0)-i\phi_2(z,0)] +C\\
+	&=(1+i) \int \frac{dz}{1-\cos z} = \frac{(1+i)}{2} \int \text{cosec}^2\frac{z}{2} dz +C\\
+	&=(1+i) \cot \frac{z}{2}  + C
+\end{align*}
+Therefore,
+\[f(z) = \cot  \frac{z}{2} + C \]
+To evaluate $C$, use condition $f\left(\frac{\pi}{2}\right)=\frac{3-i}{2}$, we get
+\[C=\frac{1-i}{2}\]
+Hence
+\[f(z) = \cot  \frac{z}{2} + \frac{1-i}{2} \]
+
+\end{Solution}
+\begin{Solution}{1.19}
+Here, $v=r^2 \cos 2 \theta - r  \cos \theta + 2$,
+\[u_r=\frac{1}{r}v_{\theta} = -2r^2\sin 2\theta + r\sin \theta\]
+and
+\[u_{\theta}=rv_{r} =r(2r\cos 2 \theta - \cos \theta)\]
+\begin{align*}
+	du &= u_rdr+u_{\theta}d\theta  \\
+	&= (-2r^2\sin 2\theta + r\sin \theta)dr + (2r^2\cos 2 \theta - r\cos \theta)d\theta \\
+	\Rightarrow u=-r^2\sin 2\theta +r \sin \theta +C
+\end{align*}
+Now, $f(z) = u+iv = -r^2\sin 2\theta +r \sin \theta +C + i(r^2 \cos 2 \theta - r  \cos \theta + 2)$. On arranging, we get
+\[f(z) = i(z^2-z)+2i+C\]
+\end{Solution}
+\begin{Solution}{1.20}
+$f(z)=(1+i)z^2 + (-2+i)z-1$
+\end{Solution}
+\begin{Solution}{1.21}
+$f(z)=\log iz$
+\end{Solution}
+\begin{Solution}{1.22}
+Let $f(z)=u+iv$, so that $|f(z)|^2=u^2+v^2 = \phi(x,y)$ (say)
+\[\phi_x = 2uu_x + 2vv_x,\;\;\;\phi_y = 2uu_y + 2vv_y\]
+and
+\[\phi_{xx} = 2\left[uu_{xx} + u_x^2 + vv_{xx} + v_x^2\right],\;\;\;\phi_{yy} =  2\left[uu_{yy} + u_y^2 + vv_{yy} + v_y^2\right]\]
+This gives
+\[\phi_{xx} + \phi_{yy} =  2\left[u(u_{xx}+u_{yy}) + (u_x^2 + u_y^2) + v(v_{xx}+v_{yy}) + (v_x^2+v_y^2)\right] \]
+Since CR equations are satisfied here and Laplace equation also holds for $u$ and $v$, therefore
+\[\phi_{xx} + \phi_{yy} =  4\left[(u_x^2 + v_x^2) \right]  = 4 |f'(z)|^2\]
+\end{Solution}
+\begin{Solution}{2.1.a}
+\[\frac{1}{3}(i-1)\]
+\end{Solution}
+\begin{Solution}{2.1.b}
+\[-\frac{1}{2}+\frac{5}{6}i\]
+\end{Solution}
+\begin{Solution}{2.2.a}
+Equation of line $AB$
+\[y=7x-6\]
+Now
+\[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+substitute $y=7x-6$, $dy=7dx$, then on integrating
+\[=\frac{1}{3}[-147+71i]\]
+\end{Solution}
+\begin{Solution}{2.2.b}
+Here
+\[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+substitute $x=t,y=t^3$, $dx=dt\text{ and } dy=3t^2dt$, then on integrating with respect to $t$ from 1 to 2
+\[=-\frac{1094}{21}+\frac{124}{5}i\]
+\end{Solution}
+\begin{Solution}{2.3}
+-1
+\end{Solution}
+\begin{Solution}{2.4.a}
+(i) 0	~~~~~~~~ (ii) $2\pi i$
+\end{Solution}
+\begin{Solution}{2.4.b}
+$2\pi i e$
+\end{Solution}
+\begin{Solution}{2.4.c}
+$-2\pi i$
+\end{Solution}
+\begin{Solution}{2.4.d}
+$4\pi i $
+\end{Solution}
+\begin{Solution}{2.4.e}
+$\frac{i\pi e^2}{12}$
+\end{Solution}
+\begin{Solution}{2.4.f}
+$\frac{8 i \pi e^{-2}}{3}$
+\end{Solution}
+\begin{Solution}{2.4.g}
+$4 \pi i$
+\end{Solution}
+\begin{Solution}{2.5}
+$-12 \pi i$
+\end{Solution}
+\begin{Solution}{2.6}
+$-\frac{4i\pi}{9}$
+\end{Solution}
+\begin{Solution}{2.7}
+$3\pi i$
+\end{Solution}
+\begin{Solution}{3.1}
+Using partial fraction, rewrite the function as
+\begin{align*}
+f(z) & =-\frac{1}{2}\left(1-\frac{z}{2}\right)^{-1}-\frac{1}{z}\left(1-\frac{1}{z}\right)^{-1}\\
+ & =-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\ldots-\frac{1}{z}-\frac{1}{z^{2}}-\frac{1}{z^{3}}
+ \end{align*}
+\end{Solution}
+\begin{Solution}{3.2}
+Using partial fraction, rewrite the function as
+
+\begin{align*}
+f(z) & =\frac{1}{5}\left(\frac{z-2}{1+z^{2}}\right)+\frac{1}{5}\left(\frac{1}{z+2}\right)\\
+ & =\frac{z-2}{5z^{2}}\left(1+\frac{1}{z^{2}}\right)^{-1}+\frac{1}{10}\left(1+\frac{z}{2}\right)^{-1}\\
+ & =\frac{1}{5}\left[\ldots-2z^{-8}+z^{-7}+2z^{-6}-z^{-5}-2z^{-4}+z^{-3}+2z^{-2}-z^{-1}\right]\\
+ & \;\;\;+\frac{1}{5}\left[\frac{1}{2}-\frac{z}{4}+\frac{z^{2}}{8}-\frac{z^{3}}{16}+\ldots\right]\end{align*}
+\end{Solution}
+\begin{Solution}{3.3}
+Put $z-1=t$. Then expand series in powers of $t$ finally use back substitution to get
+\[e\left[\frac{1}{(z-1)^2}+\frac{1}{(z-1)}+\frac{1}{2!}+\frac{z-1}{3!} + \cdots \right]\]
+\end{Solution}
+\begin{Solution}{3.4}
+\[b_n = a_n = \frac{1}{2\pi}\int_0^{2\pi}\sin(2c \cos \theta)\cos n\theta d\theta\]
+and
+\[f(z) = a_0 + \sum_{n=1}^{\infty}a_{n}(z^{n}+z^{-n})\]
+\end{Solution}
+\begin{Solution}{3.5}
+$f(z)$ is analytic at $z=0$, therefore by Taylor's theorem
+\[a_n =\frac{1}{2\pi}\int_0^{2\pi}\cos(c\sin \theta -n\theta) d\theta \]
+and
+\[b_n = (-1)^n a_n\]
+therefore
+\[f(z) = \sum_{-\infty}{\infty} a_nz^n\]
+\end{Solution}
+\begin{Solution}{3.6}
+(a) $-1+2(z-z^{2}+z^{3}-z^{4}+...)$
+\noindent
+(b) $\frac{1}{2}(z-1)-\frac{1}{2^{2}}(z-1)^{2}+\frac{1}{2^{3}}(z-1)^{3}$
+\end{Solution}
+\begin{Solution}{3.7}
+(a) $\ds -\frac{1}{2z^{4}}+\frac{1}{2z^{3}}-\frac{1}{2z^{2}}+\frac{1}{2z}-\frac{1}{6}+\frac{z}{18}-\frac{z^{2}}{54}+\frac{z^{3}}{162}.......$
+
+(b) $\ds \frac{1}{z^{2}}-\frac{4}{z^{3}}+\frac{13}{z^{4}}-\frac{50}{z^{5}}+...$
+
+(c) $\ds \frac{1}{2(1+z)}-\frac{1}{4}+\frac{(z+1)}{8}-\frac{(z+1)^{2}}{16}+....$
+
+(d) $\ds \frac{1}{3}-\frac{4}{9}z+\frac{13}{27}z^{2}-\frac{40}{81}z^{3}+...$
+\end{Solution}
+\begin{Solution}{3.9}
+$\frac{1}{10}[(\frac{2}{z}+\frac{2}{z^{2}}+\frac{2}{z^{5}}+...)-(\frac{z}{2}+\frac{z^{3}}{8}+...)]$
+\end{Solution}
+\begin{Solution}{3.10}
+(i) $-\frac{1}{2z}+\sum_{n=0}^{\infty}\left[(-1)^{n+1}\frac{1}{2^{n+2}}-\frac{1}{2^{n+1}}\right]z^{n}$
+
+(ii) $-\frac{1}{2z}-\frac{1}{2z}\sum_{n=0}^{\infty}(-1)^{n}(\frac{2}{z})^{n}-\frac{1}{3}\sum_{n=0}^{\infty}(\frac{z}{3})^{n}$
+
+\end{Solution}
+\begin{Solution}{3.11}
+when $|z-1|>4,\frac{1}{z-1}-\frac{2}{(z-1)^{2}}+\frac{9}{(z-1)^{3}}+\frac{36}{(z-1)^{4}}+...$
+
+when $0<|z-1|<4,\frac{1}{4}[1-\frac{1}{(z-1)^{2}}+\frac{7}{4}\frac{1}{z-1}+\frac{9}{16}-\frac{9}{-64}(z-1)...]$
+\end{Solution}
+\begin{Solution}{3.13}
+$\frac{2}{z+2}+\frac{3}{(z+2)^{2}}+\frac{3^{2}}{(z+2)^{3}}+\cdots+\frac{1}{5}\left[1+\frac{z+2}{5}+\frac{(z+2)^{2}}{5^{2}}+\frac{(z+2)^{3}}{5^{3}}+\cdots\right]$
+\end{Solution}
+\begin{Solution}{4.1}
+	For zeros
+	\[\frac{z-2}{z^2}\sin{1 \over z-1} = 0\]
+	\[z-2 = 0 \text{ and } \sin{1 \over z-1} = 0\]
+	Therefore $z=2$ and $\frac{1}{z-1}=n\pi$, i.e.
+	\[z= 2 \text{ and } z=\frac{1}{n\pi}+1\]
+	It is obvious that $z=2$ is simple zero. For $z=\frac{1}{n\pi}+1$, limit point of zero when $n\tends \infty$ is 1, i.e., $z=1$ is isolated essential singularity. Except these $z^2=0$ provides pole at $z=0$ of order 2.
+	
+\end{Solution}
+\begin{Solution}{4.2.b}
+	Poles: $\sin z - \cos z=0 \Rightarrow z=\frac{\pi}{4}$
+	
+\end{Solution}
+\begin{Solution}{4.2.d}
+	Here $\ds f(z)=\frac{\cot \pi z}{(z-a)^2}=\frac{\cos \pi z}{\sin \pi z(z-a)^2}$, The poles are given by putting denominator equal to zero. i.e.,
+	\[\sin \pi z(z-a)^2 = 0\]
+	\[(z-a)^2 = 0 \Rightarrow z=a \text{ Double pole}\]
+	and
+	\[\sin \pi z = 0 \Rightarrow \pi z = n\pi \Rightarrow z=n\]
+	Limit point of pole $z=n$, when $n\tends \infty$ is $\infty$. Thus $z=\infty$ is non-isolated essential singularity.
+	
+\end{Solution}
+\begin{Solution}{4.2.j}
+	Non-isolated essential singularity.
+	
+\end{Solution}
+\begin{Solution}{5.1.a}
+	$\ds \frac{\pi}{2\sqrt{5}}$
+	
+\end{Solution}
+\begin{Solution}{5.1.b}
+	0 ; \textbf{Hint}
+	\[I = \int_0^{2\pi}{\cos \theta \over 3+\sin\theta} d\theta = Real part of \int_0^{2\pi}{\frac{e^{i\theta}}{3+\sin\theta}} d\theta \]
+	
+\end{Solution}
+\begin{Solution}{5.1.c}
+	0
+	
+\end{Solution}
+\begin{Solution}{5.1.d}
+	$\frac{2\pi}{\sqrt{3}}$
+	
+\end{Solution}
+\begin{Solution}{5.1.e}
+	$\frac{\pi}{12}$
+	
+\end{Solution}
+\begin{Solution}{5.1.f}
+	Let
+	\begin{align*}
+	I &=\int_0^{2\pi} e^{\cos \theta}[\cos(\sin \theta - n \theta+ i\sin(\sin \theta - n \theta)]d\theta \\
+		&= \int_0^{2\pi}e^{e^{i\theta}}e^{-in\theta}
+\end{align*}
+	Put $z=e^{i\theta}$,
+	\[I = \int_C \frac{e^z}{iz^{n+1}}dz\]
+	Now by residue theorem,
+	\[I = \frac{2\pi}{n!}\]
+	Now compare real parts to obtain
+	\[\int_0^{2\pi} e^{\cos \theta}[\cos(\sin \theta - n \theta)]d\theta = \frac{2\pi}{n!}\]
+
+	
+\end{Solution}
+\begin{Solution}{5.2.a}
+$\frac{\pi e^{-m}}{2}$
+\end{Solution}
+\begin{Solution}{5.2.b}
+$\pi \log 2$
+\end{Solution}
+\begin{Solution}{5.2.c}
+$\frac{3\pi}{16}$
+\end{Solution}
+\begin{Solution}{5.2.d}
+$\frac{\pi}{3}$
+\end{Solution}

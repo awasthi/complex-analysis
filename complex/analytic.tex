@@ -1,0 +1,1171 @@
+%\chapter{Analytic Functions}\index{Analytic Function}
+The theory of functions of complex variable is utmost important in solving a large number of problems in the field of engineering. Many complicated integrals of real functions are solved with the help of functions of a complex variable. 
+\section{Introduction}
+Let $Z$ and $W$ be two non-empty set of complex numbers. A rule $f$ assigns to each element $z \in Z$, a unique $w \in W$, is called as complex function\index{complex function} or single valued function\index{single valued function}\index{Complex function!single valued functions}. i.e.,
+\[f: Z \rightarrow W\]
+We may also write,
+\[w = f(z)\]
+Here $z$ and $w$ are complex variables. As $z = x+iy$, $x$ and $y$ are independent real variables.
+Let $w=u+iv$, a function of $z$, which implies that $u$ and $v$ are functions $x$ and $y$ as $z$ is  function of $x$ and $y$. i.e, 
+\[ u \equiv u(x,y) \]
+\[ v \equiv v(x,y) \]
+Thus 
+\[ w = f(z) = u(x,y)+iv(x,y) \]
+
+\begin{example}
+Write the function $w = z^2 + 2z$ in the form $w = u(x,y) + \imath v(x,y)$.
+
+By setting $z = x + \imath y$ we obtain
+\[w = (x + \imath y)^2 + 2(x + \imath y) = x^2-y^2 + \imath2xy + 2x + \imath2y\]
+
+Which then can be rewritten as
+\[w = (x^2 - y^2 + 2x) + \imath (2xy + 2y).\]
+\qed
+\end{example}
+
+
+
+\section{Limits and Continuity of Complex Functions}
+
+The concepts of limits and continuity for complex functions are very similar to those for real functions.  Let's first examine the concept of the limit of a complex-valued function.
+
+\begin{definition}[Limit]
+\label{def:limit}
+Let $f$ be a function defined in some neighborhood of $z_0$, with the possible exception of the point $z_0$ itself.  We say that the limit of $f(z)$ as $z$ approaches $z_0$ is the number $w_0$ and write $$\lim_{z \to z_0} f(z) = w_0,$$ or equivalently,
+\[f(z) \rightarrow w_0 \text{ as } z \rightarrow z_0,\]
+if for any $\epsilon > 0$ there exists a positive number $\delta$ such that
+\[ \left|f(z)-w_0\right|<\epsilon\] whenever $0<\left|z-z_0\right|<\delta$
+(deleted neighborhood)\footnote{A subset $C_N$ of the complex plane containing $z_0$ is said to be neighborhood of $z_0$, if for some real number $\delta>0$, the set $\{z\in C:|z-z_0|<\delta\} \subseteq C_N$. Further the set $C_N-\{z_0\}$ is called deleted neighborhood of $z_0$.}
+
+\end{definition}
+
+If $f(z) = f(x+iy) = u(x,y) + iv(x,y)$. Let $z_0=x_0 + i y_0$, then
+\[\lim_{z \rightarrow z_0}f(z) = w_0 = \alpha + i \beta\;\;\text{ or }\;\;\lim_{x+iy \rightarrow x_0+iy_0}f(z) =  \alpha + i \beta\]
+\[\Leftrightarrow \;\;\; \lim_{x \rightarrow x_0, y \rightarrow y_0} u(x,y) = \alpha \;\;\text{ and }\;\; \lim_{x \rightarrow x_0, y \rightarrow y_0} v(x,y) = \beta\]
+
+%\subsection{Limits}\index{Complex function!Limits}
+%A function $f(z)$ is said to have limit $A$ as $z \rightarrow a$, if $f(z)$ %is defined in %of $a$ and if $\forall \epsilon ,\exists \delta >0$, such %that $|f(z)-A| %< \epsilon $ whenever $ 0 < |z-a| < \delta $.
+
+\begin{definition}[Continuous]
+\label{def:cont}
+Let $f(z)$ be a complex valued function defined in a neighborhood of $z_0$.  Then , we say $f$ is continuous at $z_0$ if $$\lim_{z \to z_0} f(z)=f(z_0).$$
+\end{definition}
+That is,  for $f$ to be continuous at $z_0$, it must have a limiting value at $z_0$, and this limiting value must be $f(z_0)$.
+
+\index{Complex function!Continuity}
+In other words, The function $f(z)$ of a complex variable $z$ is said to continuous at the point $z_0$, if for any given positive number $\epsilon$, we can find a number $\delta$ such that 
+\[|f(z)-f(z_0)|<\epsilon \;, \]
+for all points $z$ of the domain satisfying $|z-z_0|<\delta$.
+
+Also, if $f(z) = f(x+iy) = u(x,y) + iv(x,y)$  is continuous at $z_0=x_0 + i y_0$, then $u$ and $v$ are separately continuous at the point $z_0 = x_0+iy_0$.
+\begin{definition}
+$f(z)$ is said to be continuous in domain if continuous at each point of that domain.
+\end{definition}
+
+ In fact, the properties of limits and continuous functions  for real functions are also hold for complex-valued functions.  
+\begin{theorem}
+If $\lim_{z \to z_0} f(z) = A$ and $\lim_{z \to z_0} g(z) = B$, then
+
+\medskip
+
+(i) $\lim_{z \to z_0} (f(z)\pm g(z)) = A \pm B$,
+
+\medskip
+
+(ii) $\lim_{z \to z_0} f(z)g(z) = AB$,
+
+\medskip
+
+(iii) $\lim_{z \to z_0} \frac{f(z)}{g(z)} = \frac{A}{B}$, if $B \neq 0$.
+\end{theorem}
+
+\begin{theorem}
+If $f(z)$ and $g(z)$ are continuous at $z_0$, then so are $f(z) \pm g(z)$ and $f(z)g(z)$.  The quotient $\frac{f(z)}{g(z)}$ is also continuous at $z_0$ provided $g(z_0) \neq 0$.
+\end{theorem}
+
+Here are some simple examples using these concepts of limits and continuity.
+
+\begin{example}
+Find the limit as $z \rightarrow 2 \imath$ of the function $f(z)=z^2-2z+1$.
+\end{example}
+
+\textbf{Solution: } Since $f(z)$ is continuous at $z=2 \imath$, we simply evaluate it there, 
+$$\lim_{z \to 2\imath} f(z)=f(2\imath)=2(2\imath)^2-2(2\imath)+1=-3-4\imath.$$
+
+\qed
+\begin{example}
+Find the limit as $z \rightarrow 2 \imath$ of the function $f(z) = \frac{z^2 + 4}{z(z-2\imath)}$.
+\end{example}
+
+\textbf{Solution: } The function $f(z)$ is not continuous at $z=2\imath$ because it is not defined there.  However, for $z \neq 2\imath$ and $z \neq 0$ we have $$\lim_{z \to 2\imath} f(z) = \frac{(z+2\imath)(z-2\imath)}{z(z-2\imath)}=\frac{z+2\imath}{z}=\frac{2\imath+2\imath}{2\imath}=\frac{4\imath}{2\imath}=2.$$
+\qed
+
+
+\begin{example}
+The function $z, Re(z), Im(z)$ and $|\overline{z}|$ are continuous in the entire plane.
+\end{example}
+\section{Complex Differentiation}
+\index{Complex function!Differentiability}
+In general, a complex function of a complex variable, $f(z)$, is an arbitrary mapping from the \textit{xy}-plane to the \textit{uv}-plane.  A complex function is split into real and imaginary parts, $u$ and $v$, and any pair $u(x,y)$ and $v(x,y)$ of two-variable functions gives us a complex function $u+\imath v$.  
+
+Consider the following  example, 
+\[u_1(x,y)=x^2-y^2, \,\,\,\,\,v_1(x,y)=2xy\]
+as opposed to
+\[u_2(x,y)=x^2-y^2, \,\,\,\,\, v_2(x,y)=3xy\]
+
+The difference is that the first complex function $u_1+\imath v_1$ can be
+written as function of $z=x+\imath y$, $z$ as a single "unit", because $x^2-y^2+\imath 2xy = (x+\imath y)^2$.  These are the types of functions that are complex differentiable.
+\begin{definition}
+\label{def:diff}
+Let the complex function $f(z)$ be defined in neighbourhood of $z_0$, the
+complex derivative of  $f(z)$ at $z_0$, is defined as, 
+\[  \lim_{\Delta z \to 0}\frac{f(z_{0} + \Delta z) - f(z_{0})}{\Delta z}.\]
+provided this limit exists, and is denoted by $f'(z_{0})$.  
+\end{definition}
+This means that the 
+value of the limit is independent of the manner in which $\Delta z \to 0$.  
+Here $\Delta z$ is a complex number, so it can approach zero in many different ways. Which shows study becomes seem slightly more difficult.
+
+If the complex derivative exists at a point, then we say that the function
+is \textit{complex differentiable} at $z_0$.
+Although,  $\Delta z \tends 0$ in many different ways, the rules for differentiating real functions apply in the same way for complex-valued functions (as long as the complex-valued function is in a form where $z=x+\imath y$ is treated as a single unit).
+
+\begin{theorem}
+If $f$ and $g$ are differentiable at $z$, then 
+
+\begin{enumerate}
+\item $(f \pm g)'(z) = f'(z) \pm g'(z)$,
+\item $(cf)'(z) = cf'(z) \quad\mbox{for any constant c}$,
+\item $(fg)'(z) = f(z)g'(z) + f'(z)g(z)$,
+\item $\left(\frac{f}{g}\right)'(z) = \frac{g(z)f'(z)-f(z)g'(z)}{g(z)^2} \quad\mbox{if}\quad g(z) \neq 0$
+\item 
+if $g$ is differentiable at $z$ and $f$ is differentiable at $g(z)$, then the chain rule holds: 
+$$\frac{d}{dz}f(g(z))=f'(g(z))g'(z).$$
+\end{enumerate}
+\end{theorem}
+
+\begin{example}
+Show that, for any positive integer $n$, $$\frac{d}{dz} z^n=nz^{n-1}.$$
+\end{example}
+
+\textbf{Solution: }  Using Definition \ref{def:diff} we have
+$$\frac{(z+\Delta z)^n-z^n}{\Delta z}=\frac{nz^{n-1}\Delta z+\frac{n(n-1)}{2}z^{n-2}(\Delta z)^2+\cdot\cdot\cdot+(\Delta z)^n}{\Delta z}.$$
+
+Thus $$\frac{d}{dz}z^n=\lim_{\Delta z \to 0}\left[nz^{n-1}+\frac{n(n-1)}{2}z^{n-2}\Delta z+\cdot\cdot\cdot+(\Delta z)^{n-1}\right]=nz^{n-1}.$$
+\qed
+
+\begin{example}
+  \label{ex_conj_z}
+  Show that $f(z) = \overline{z}$ is not differentiable.
+\end{example}
+\begin{solution}
+    Here,
+    \[  \lim_{\Delta z \to 0}\frac{f(z+\Delta z)-f(z)}{\Delta z} \]
+  \begin{align*}
+     &= \lim_{\Delta z \to 0} \frac{\overline{z + \Delta z}-\overline{z}}{\Delta z} 
+    \\
+    &= \lim_{\Delta z \to 0} \frac{\overline{\Delta z}}{\Delta z} 
+  \end{align*}
+  First we take $\Delta z = \Delta x$ (i.e., $\Delta z \tends 0$ along $x$-direction only) and evaluate the limit.
+  \[ 
+  \lim_{\Delta x \to 0} \frac{\Delta x}{\Delta x} = 1
+  \]
+  Now, $\Delta z = \imath \Delta y$ (i.e., $\Delta z \tends 0$ along $y$-direction only).
+  \[ 
+  \lim_{\Delta y \to 0} \frac{-\imath \Delta y}{\imath \Delta y} = -1
+  \]
+  Since the limit depends on the way that $\Delta z \to 0$, the
+  function is nowhere differentiable.  
+\end{solution}
+\begin{example}
+Prove that the function $f(z)=|z|^2$ is continuous everywhere but nowhere differentiable except at the origin.
+\end{example}
+\begin{solution}
+Since $f(z)=|z|^2 = x^2+y^2$, the continuity of the function $f(z)$ is evident because of the continuity of $x^2+y^2$. 
+
+Let us consider its differentiability,
+\begin{align*}
+        f'(z_0) &= \lim_{\Delta z \rightarrow 0} \frac{f(z_0 + \Delta z)-f(z_0) }{\Delta z} \\
+        &= \lim_{\Delta z \rightarrow 0} \frac{|z_0 + \Delta z|^2-|z_0|^2 }{\Delta z} \\
+        &= \lim_{\Delta z \rightarrow 0} \frac{(z_0 + \Delta z)\overline{(z_0 + \Delta z)}-z_0\overline{z_0}) }{\Delta z} \\
+        &= \lim_{\Delta z \rightarrow 0} \overline{z_0} + \Delta \overline{z} + z_0 \frac{\Delta \overline{z}}{\Delta z} \\
+        &= \lim_{\Delta z \rightarrow 0} \overline{z_0} + z_0 \frac{\Delta \overline{z}}{\Delta z}~~~~~~~~\text{(Since $\Delta z \rightarrow 0 \Rightarrow \Delta \overline{z} \rightarrow 0 $)} \\
+\end{align*}
+Now at $z_0=0$, the above lim,it is clearly zero, so that $f'(0)=0$. Let us now choose $z_0 \neq 0$, let
+\begin{align*}
+\Delta z &= r e^{i\theta} \\
+%\Delta \overline{z} &= r e^{-i\theta} \\
+\Rightarrow \frac{\Delta \overline{z}}{\Delta z} &= e^{-2i\theta} = \cos 2\theta - i \sin 2\theta
+\end{align*}
+Above does not not tend to a unique limit as this limit depends upon $\theta$. Therefore, the given function is not differentiable at any other non-zero value of $z$.
+\end{solution}
+\begin{example}
+If 
+\[
+f(z)=
+\begin{cases}
+\ds \frac{x^3y(y-ix)}{x^6+y^2},~~~~~~~ z \neq 0 \\
+=0,~~~~~~~~~~~~~~~~~~~~ z=0,
+\end{cases}
+\]
+prove that $\ds \frac{f(z)-f(0)}{z} \rightarrow 0$ as $z \rightarrow 0$ along any radius vector, but not $z \rightarrow 0$ in any manner.
+\end{example}
+\begin{solution}
+Here, $y-ix = -i(x+iy) = -iz$. Now,
+\begin{align*}
+        \lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0}\frac{\frac{x^3y(y-ix)}{x^6+y^2} - 0}{z}\\
+                &= \lim_{z \rightarrow 0} \frac{x^3y i}{x^6+y^2}   
+\end{align*}
+Now if $z \tends 0$ along any radius vector, say $y=mx$, then
+\begin{align*}
+        \lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0} \frac{x^3 (mx) i}{x^6+(mx)^2}   \\
+        &= \lim_{z \rightarrow 0} \frac{x^4 im}{x^6+m^2x^2}   \\
+        &= \lim_{z \rightarrow 0} \frac{x^2 im}{x^4+m^2} = 0  ~~~\text{Hence.}  
+\end{align*}
+Now let us suppose that $z \tends 0$ along the curve $y=x^3$, then
+\begin{align*}
+        \lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0} \frac{x^3 (x^3) i}{x^6+(x^3)^2}   \\
+        &= \lim_{z \rightarrow 0} \frac{x^6 i}{x^6+x^6}   = -\frac{i}{2} 
+\end{align*}
+along different paths, the value of $f'(z)$ is not unique (that is 0 along $y=mx$ and $\ds -\frac{i}{2}$ along $y=x^3$). Therefore the function is not differentiable at $z=0$.
+\end{solution}
+
+\section{Cauchy-Riemann Equations}\index{Cauchy-Riemann Equations}
+\begin{theorem}
+The necessary and sufficient condition for the derivative of the function $f(z)=u+iv$, where $u$ and $v$ are real-valued functions of $x$ and $y$, exist for all values of $z$ in domain $D$, are
+\begin{enumerate}
+        \item $\ds \pd ux = \pd vy$  and $\ds \pd uy = - \pd vx$. 
+        \item $\ds \pd ux, \pd uy, \pd vx, \pd vy$ are continuous functions of $x, y$ in $D$.
+\end{enumerate}
+provided these four partial derivatives involved here should exist. The relations given in (1) is referred as Cauchy-Riemann Equations (some times CR Equations).
+\end{theorem}
+\begin{proof}
+
+\noindent 
+\textbf{Necessary Condition}\index{Cauchy-Riemann Equations!Necessary Condition}
+Let derivative of $f(z)$ exists, then 
+\begin{align*}
+        f'(z) &= \lim_{\delta z \tends 0} \frac{f(z+\delta z) - f(z)}{\delta z} \\
+         &= \lim_{\delta x, \delta y \tends 0,0} \frac{[u(x+\delta x, y+\delta y)+iv(x+\delta x, y+\delta y)]-[u(x, y)+iv(x, y)]  }{\delta x + i\delta y} 
+\end{align*}
+since $f'(z)$ exists, the limit of above equation should be finite as $(\delta x, \delta y) \tends (0,0)$ in any manner that we may choose. To begin with, we assume that $\delta z$ is wholly real, i.e. $\delta y=0$ and $\delta z =\delta x$. This gives
+\begin{align*}
+f'(z) &= \lim_{\delta x \tends 0} \frac{[u(x+\delta x, y)+iv(x+\delta x, y)]-[u(x, y)+iv(x, y)]  }{\delta x} \\
+&= \lim_{\delta x \tends 0} \frac{[u(x+\delta x, y)-u(x, y)]+i[v(x+\delta x, y) - v(x, y)]  }{\delta x}
+&= u_x + i v_x
+\end{align*}
+Similarly, if we assume $\delta z$ wholly imaginary number, then
+\begin{align*}
+f'(z) &= \lim_{\delta y \tends 0} \frac{[u(x, y+\delta y)+iv(x, y+\delta y)]-[u(x, y)+iv(x, y)]  }{\delta y} \\
+&= \lim_{\delta x \tends 0} \frac{[u(x, y+\delta y)-u(x, y)]+i[v(x, y+\delta y) - v(x, y)]  }{i\delta y}
+&=\frac{1}{i}u_y + v_y = v_y - iu_y
+\end{align*}
+Since $f'(z)$ exists, it is unique, therefore
+\[u_x + i v_x = v_y - iu_y\]
+Equating then the real and imaginary parts, we obtain
+\[u_x = v_y \text{ and } u_y = -v_x\]
+Thus the necessary conditions for the existence of the derivative of $f(z)$ is that the CR equations should be satisfied.
+
+\noindent 
+\textbf{Sufficient Condition}\index{Cauchy-Riemann Equations!Sufficient Condition}
+
+Suppose $f(z)$ possessing partial derivatives $u_x,u_y,v_x,v_y$ at each point in $D$ and the CR equations are satisfied.
+\begin{align*}
+f(z) &= u(x,y)+iv(x,y)  \\
+f(z+\delta z) &= u(x+\delta x,y+\delta y)+iv(x+\delta x,y+\delta y) \\
+&= [u(x,y) + (u_x \delta x + u_y \delta y) + ... ] + i[v(x,y) + (v_x \delta x + v_y \delta y) + ... ] \\
+&~~~~~~~~~~\text{(Using Taylor's Theorem for two variables)} \\
+&= [u(x,y)+iv(x,y)] + (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y + ... \\
+&= f(z) +  (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y \; \\
+&=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{ Leaving the higher order terms}\\
+\Rightarrow ~~~~f(z+\delta z)-f(z) & = (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y
+\end{align*}
+On using Cauchy Riemann equations 
+\[u_x=v_y;\;u_y=-v_x \]
+we get,
+\begin{align*}
+f(z+\delta z)-f(z) & = (u_x+iv_x)\delta x  + (-v_x+iu_x)\delta y \\
+ & = (u_x+iv_x)\delta x  + i(iv_x+ u_x)\delta y \\
+ & = (u_x+iv_x)(\delta x  + i\delta y) \\
+ & = (u_x+iv_x)\delta z \\
+\Rightarrow~~~~ \frac{f(z+\delta z)-f(z)}{\delta z} &= u_x + iv_x \\
+\Rightarrow~~~~ \lim_{z \tends 0}\frac{f(z+\delta z)-f(z)}{\delta z} &= u_x + iv_x \\
+\Rightarrow~~~~ f'(z) &= u_x + iv_x
+\end{align*}
+Since $u_x, v_x$ exist and are unique, therefore we conclude that $f'(z)$ exists. Hence $f(z)$ is analytic.
+
+\end{proof}
+\textbf{Remark : }$\ds \frac{dw}{dz} = u_x+iv_x = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} = \frac{\partial}{\partial x}(u+iv) = \frac{\partial w}{\partial x}$. Also, $\ds \frac{dw}{dz} = -i \frac{\partial w}{\partial y}$(why?).
+
+\begin{example}
+  Discuss  the differentiability of  exponential function.
+  \[  w= \e^z = \phi(x,y) = \e^x (\cos y + \imath \sin y)  \]
+ \end{example}
+ \begin{solution}
+  We use the Cauchy-Riemann equations to show that the function is entire. Let 
+ \[f(z) = u+iv = e^z =  \e^x (\cos y + \imath \sin y)\]
+ Hence
+ \[ u =e^x \cos y \text{   and   } v = e^x \sin y\]
+ Then,
+ \[u_x =e^x \cos y, ~~~~u_y= -e^x \sin y, ~~~~v_x=e^x \sin y, ~~~~v_y=e^x \cos y \] 
+ It follows that Cauchy-Riemann equations are satisfied. Since the function satisfies the Cauchy-Riemann equations and the first partial derivatives are continuous everywhere in the finite complex plane. Hence $f'(z)$ exists and
+ 
+Now we find the value of the complex derivative.
+\begin{align*}
+        f'(z) &= \frac{dw}{dz} = \frac{\partial w}{\partial x} \\
+         &=  \frac{\partial}{\partial x}[e^x(\cos y + i \sin y)] \\
+         &=  e^x(\cos y + i \sin y) \\
+         &=e^z
+\end{align*}
+\end{solution}
+
+\textbf{Remark: }The differentiability of the exponential function implies the  differentiability of the trigonometric functions, as they can be written
+  in terms of the exponential.
+  
+\begin{example}
+A function $f(z)$ is defined as follows:
+\[
+f(z) = \begin{cases} \frac{x^3-y^3}{x^2+y^2} + i\frac{x^3+y^3}{x^2+y^2}, z\neq 0 \\
+0,~~~~~~~~~~~~~~~~~~~~~z=0
+\end{cases}
+\]
+
+\noindent
+Show that $f(z)$ is continuous and that Cauchy-Riemann equations are satisfied at the origin. Also show that $f'(0)$ does not exist.
+\end{example}
+\begin{solution}
+We have
+\[u = \frac{x^3-y^3}{x^2+y^2} ~~~~~\text{and}~~~~~v=\frac{x^3+y^3}{x^2+y^2}\]
+For non zero values of $z,~f(z)$ is continuous since $u$ and $v$ are rational functions of $x$ and $y$ with non-zero denominators. To prove its continuity at $z=0$, we use polar coordinates. Then we have $u=r(\cos^3\theta -  \sin^3\theta)$ and $v=r(\cos^3\theta + \sin^3\theta)$. It is seen that $u$ and $v$ tends to zero as $r \tends 0$ irrespective of the values of $\theta$. Since $u(0,0) = v(0,0) = 0$ (Given $f(z)=0$ at $z=0$), it follows that $f(z)$ is continuous at $(0,0)$. Thus $f(z)$ is continuous for all values of $z$.
+
+Further,
+\begin{align*}
+%\ds
+        (u_x)_{(0,0)} &= \lim_{x \tends 0} \frac{u(x,0) - u(0,0)}{x} = \lim_{x \tends 0} \frac{x^3/x^2}{x} = 1 \\
+        (u_y)_{(0,0)} &= \lim_{y \tends 0} \frac{u(0,y) - u(0,0)}{y} = \lim_{y \tends 0} \frac{-y^3/y^2}{y} = -1 \\
+        (v_x)_{(0,0)} &= \lim_{x \tends 0} \frac{v(x,0) - v(0,0)}{x} = \lim_{x \tends 0} \frac{x^3/x^2}{x} = 1 \\
+        (v_y)_{(0,0)} &= \lim_{y \tends 0} \frac{v(0,y) - u(0,0)}{y} = \lim_{y \tends 0} \frac{y^3/y^2}{y} = 1 
+\end{align*}
+which show that the Cauchy-Riemann equations are satisfied at the origin. Finally,
+%\begin{align*}
+% f'(0) &= \lim_{z \tends 0} \frac{f(z)-f(0)}{z} \\
+%  &= \lim_{x,y \tends 0} \frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} \\
+%  &= \lim_{y \tends 0} \frac{(i-1)y^3}{iy^3} \\
+%  &= \frac{(i-1)}{i} = 1+i
+%\end{align*}
+%Now, let $z \tends 0$ along $y=x$, then
+%\begin{align*}
+% f'(0) &= \lim_{z \tends 0} \frac{f(z)-f(0)}{z} \\
+%  &= \lim_{z \tends 0} \frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} \\
+%  &= \lim_{x \tends 0} \frac{2ix^3}{2(1+i)x^3} \\
+%  &= \frac{(1+i)}{2}
+%\end{align*}
+Now, let $z \tends 0$ along $y=mx$, then
+\begin{align*}
+ f'(0) &= \lim_{z \tends 0} \frac{f(z)-f(0)}{z} \\
+  &= \lim_{x,y \tends 0} \frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} \\
+  &= \lim_{x \tends 0} \frac{x^3(1-m^3)+ix^3(1+m^3)}{x^2(1+m^2)x(1+im)} \\
+  &= \lim_{x \tends 0} \frac{(1-m^3)+i(1+m^3)}{(1+m^2)(1+im)} \\
+\end{align*}
+Since this limit depends on $m$ therefore $f'(0)$ is not unique, it follows that $f'(z)$ does not exist at $z=0$.
+\end{solution}
+
+\section{Cauchy-Riemann Equations in Polar Form}\index{Cauchy-Riemann Equations!Polar Form}
+We know that $x=r\cos\theta,y=r\sin\theta$ and $u$ is a function
+$x$ and $y$. Thus, we have 
+
+\[
+z=x+iy=r\cos\theta+ir\sin\theta=re^{i\theta}\]
+
+
+\begin{equation}
+\Rightarrow f(z)=u+iv=f(re^{i\theta})\label{eq:CRP1}\end{equation}
+
+
+Differentiating Equation (\ref{eq:CRP1}) partially with respect to
+$r$, we get 
+
+\begin{equation}
+\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial v}=f'(re^{i\theta})e^{i\theta}\label{eq:CRP2}\end{equation}
+
+
+Again, differentiating Equation (1.10) partially with respect to $\theta,$
+we get 
+
+\begin{equation}
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=if'(re^{i\theta})re^{i\theta}\label{eq:CRP3}\end{equation}
+
+
+Substituting the value of $f'(re^{i\theta})e^{i\theta}$ from Equation
+(\ref{eq:CRP2}) into Equation (\ref{eq:CRP3}), we get 
+
+\[
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)ir\]
+
+
+or \[
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=ir\frac{\partial u}{\partial r}-r\frac{\partial v}{\partial r}\]
+
+
+Comparing real and imaginary parts of the above equation, we get
+
+\begin{equation}
+\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial\theta}\label{eq:CRPa}\end{equation}
+ and \begin{equation}
+\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta}\label{eq:CRPb}\end{equation}
+
+\section{Derivative of a complex function in Polar Form}
+We have \[w=u+iv\]
+Therefore 
+\[\frac{dw}{dz}=\frac{\partial w}{\partial x}=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}\]
+But \begin{align*}
+\frac{dw}{dz} & =\frac{\partial w}{\partial x}=\frac{\partial w\partial r}{\partial r\partial x}+\frac{\partial w\partial\theta}{\partial\theta\partial x}\\
+ & =\frac{\partial w}{\partial r}\cos\theta-\left(\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}\right)\frac{\sin\theta}{r}\;\;\;(w=u+iv)\\
+ & =\frac{\partial u}{\partial r}\cos\theta-\left(-r\frac{\partial v}{\partial r}+ir\frac{\partial u}{\partial r}\right)\frac{\sin\theta}{r}\end{align*}
+Since $\ds \frac{\partial u}{\partial\theta}=-r\frac{\partial v}{\partial r}$
+and $\ds \frac{\partial v}{\partial\theta}=r\frac{\partial u}{\partial r}$.
+Therefore 
+
+\[
+\frac{dw}{dz}=\frac{\partial w}{\partial r}\cos\theta-i\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)\sin\theta=\frac{\partial w}{\partial r}\cos\theta-i\frac{\partial}{\partial r}(u+iv)\sin\theta\]
+
+
+\begin{equation}
+\therefore\;\;\;\;\;\frac{dw}{dz}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}\label{eq:DP1}\end{equation}
+Again, we have 
+
+\[
+\frac{dw}{dz}=\frac{\partial w\partial r}{\partial r\partial x}+\frac{\partial w\partial\theta}{\partial\theta\partial x}=\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}\]
+Using the Cauchy-Riemann equations in Polar form, we get
+
+\[
+=(\frac{1}{r}\frac{\partial v}{\partial\theta}-i\frac{1}{r}\frac{\partial u}{\partial\theta})\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}=-\frac{1}{r}(\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta})\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}\]
+
+
+\begin{equation}
+\therefore\;\;\;\;\;\frac{dw}{dz}=-\frac{i}{r}(\cos\theta-i\sin\theta)\frac{\partial w}{\partial\theta}\label{eq:DP2}\end{equation}
+
+\section{Analytic Functions}\index{Analytic function}
+We will consider a single valued function throughout the section.
+\subsection{Analyticity at a point}\index{Analytic function!Analyticity at point}
+The function $f(z)$ is said to be analytic  at a point $z=z_0$ in the domain $D$ if its derivative $f'(z)$ exists at $z=z_0$ and at every point in some neighborhood of $z_0$.
+\subsection{Analyticity in a domain}\index{Analytic function!Analyticity in domain}
+A function $f(z)$ is said to be analytic in a domain $D$, if $f(z)$ is defined and differentiable at all points of the domain.
+
+Note that complex differentiable has a different meaning than analytic.
+Analyticity refers to the behavior of a function on an open set.  A function
+can be complex differentiable at isolated points, but the function would
+not be analytic at those points.
+Analytic functions are also called \textit{regular}\index{Regular function} or \textit{holomorphic}\index{Holomorphic function}.
+If a function is analytic everywhere in the finite complex plane, it is 
+called \textit{entire}.
+\index{regular}
+\index{holomorphic}
+\index{entire}
+\begin{example}
+  \label{example11-1}
+  Consider $z^n$, $n \in \mathbb{Z}^+$, Is the function differentiable?  
+  Is it analytic? What is the value of the derivative?
+\end{example}
+\begin{solution}
+  We determine differentiability by trying to differentiate the function.
+  We use the limit definition of differentiation.  We will use Newton's 
+  binomial formula to expand $(z + \Delta z)^n$.
+  %% CONTINUE reference Newton's Binomial formula.
+  \begin{align*}
+    \frac{d}{d z} z^n
+    &= \lim_{\Delta z \to 0} \frac{ (z + \Delta z)^n - z^n }{ \Delta z } 
+    \\
+    &= \lim_{\Delta z \to 0} \frac{ \left( z^n + n z^{n-1} \Delta z
+        + \frac{n (n-1)}{2} z^{n-2} \Delta z^2 + \cdots + \Delta z^n
+      \right) - z^n }{ \Delta z } 
+    \\
+    &= \lim_{\Delta z \to 0} \left( n z^{n-1}
+      + \frac{n (n-1)}{2} z^{n-2} \Delta z + \cdots + \Delta z^{n-1} \right) 
+    \\
+    &= n z^{n-1}
+  \end{align*}
+  The derivative exists everywhere.  The function is analytic in the whole
+  complex plane so it is entire.  The value of the derivative is 
+  $\frac{d}{dz}z^n = n z^{n-1}$.
+\end{solution}
+
+\textbf{Remark: } The definition of the derivative of a function of complex variable is identical in form of that the derivative of the function of real variable. Hence the rule of differentiation for complex functions are the same as those of real functions. Thus if a complex function is once known to be analytic, it can be differentiated just like ordinary way.
+
+\begin{example}
+If $w=\log z$, find $\ds \frac{dw}{dz}$ and determine the value of $z$ at which function ceases to be analytic.
+\end{example}
+\begin{solution}
+We have
+\[w=\log z = \log (x+iy) = \frac{1}{2}\log(x^2+y^2)+i \tan^{-1}\frac{y}{x}\]
+i.e.,
+\[u =\frac{1}{2}\log(x^2+y^2) \]
+\[v= \tan^{-1}\frac{y}{x}\]
+\[\therefore \;\;\;\; u_x = \frac{x}{x^2+y^2}, u_y =\frac{y}{x^2+y^2}\]
+\[\text{and } \;\;\;\; v_x = \frac{-y}{x^2+y^2}, v_y =\frac{x}{x^2+y^2}\]
+Since, the CR equations are satisfied and the partial derivatives are continuous except at (0,0). Hence $w$ is analytic everywhere except at $z=0$.
+\[\therefore \;\;\;\; \frac{dw}{dz}=u_x+iv_x = \frac{x}{x^2+y^2} + i \frac{-y}{x^2+y^2} =\frac{x-iy}{x^2+y^2} = \frac{1}{x+iy} = \frac{1}{z} \]
+where $z\neq 0$. \\
+(Note direct differentiations of $\log z$ also gives $1/z$).
+\end{solution}
+
+\begin{example}
+Show that for the analytic function $f(z)=u+iv$, the two families of curves $u(x,y)=c_1$ and $v(x,y)=c_2$ are orthogonal\footnote{Two curves are said to be orthogonal if they intersect at right angle at each point of intersection. Mathematically, if the curves have slopes $m_1$ and $m_2$, then the curves are orthogonal if $m_1m_2=-1$.}.
+\end{example}
+\begin{solution}
+Families of curves
+\begin{equation}\label{eqa1}
+u(x,y)=c_1
+\end{equation}
+\begin{equation}\label{eqa2}
+v(x,y)=c_2
+\end{equation}
+On differentiating equation \ref{eqa1},
+\begin{equation}u_xdx+u_ydy=0~~~~~~\Rightarrow~~~~~~ m_1 = \frac{dy}{dx} = - \frac{u_x}{u_y}\end{equation}
+On differentiating equation \ref{eqa1},
+\begin{equation}v_xdx+v_ydy=0~~~~~~\Rightarrow~~~~~~ m_2 = \frac{dy}{dx} = - \frac{v_x}{v_y}\end{equation}
+The product of two slopes
+\begin{equation}\label{eqa3}
+m_1m_2 = \left(- \frac{u_x}{u_y}\right)\left(- \frac{v_x}{v_y}\right) 
+\end{equation}
+Since, $u + iv$ is analytic, Hence. Cauchy Riemann equations are 
+\[u_x = v_y~~~~and ~~~~ u_y=-v_x\]
+Hence equation \ref{eqa3} reduces to
+\[m_1m_2 =\left(- \frac{u_x}{u_y}\right)\left( \frac{u_y}{u_x}\right)  = -1 \]
+Hence the two families of curves $u(x,y)=c_1$ and $v(x,y)=c_2$ are orthogonal.
+\end{solution}
+
+\subsection{Analytic Functions can be Written in Terms of $\mathbf{z}$.}
+Consider an analytic function expressed in terms of $x$ and $y$, $\phi(x, y)$.
+We can write $\phi$ as a function of $z = x + \imath y$ and $\overline{z} = x - \imath y$.
+\[
+f \left( z, \overline{z} \right) 
+= \phi \left( \frac{z + \overline{z}}{2}, \frac{z - \overline{z}}{2i} \right)
+\]
+We treat $z$ and $\overline{z}$ as independent variables.  We find the 
+partial derivatives with respect to these variables.
+\begin{gather*}
+  \frac{\partial}{\partial z} = \frac{\partial x}{\partial z} \frac{\partial}{\partial x} 
+  + \frac{\partial y}{\partial z} \frac{\partial }{\partial y}
+  = \frac{1}{2} \left( \frac{\partial}{\partial x} - \imath \frac{\partial}{\partial y} \right) 
+  \\
+  \frac{\partial}{\partial \overline{z}} 
+  = \frac{\partial x}{\partial \overline{z}} \frac{\partial}{\partial x} 
+  + \frac{\partial y}{\partial \overline{z}} \frac{\partial}{\partial y}
+  = \frac{1}{2} \left( \frac{\partial}{\partial x} + \imath \frac{\partial}{\partial y} \right)
+\end{gather*}
+Since $\phi$ is analytic, the complex derivatives in the $x$ and $y$ directions
+are equal.
+\[
+\frac{\partial \phi}{\partial x} = - \imath \frac{\partial \phi}{\partial y}
+\]
+The partial derivative of $f\left( z,\overline{z} \right)$ 
+with respect to $\overline{z}$ is zero.
+\[
+\frac{\partial f}{\partial \overline{z}} 
+= \frac{1}{2} \left( \frac{\partial \phi}{\partial x} + \imath \frac{\partial \phi}{\partial y} \right)
+= 0
+\]
+Thus $f\left( z,\overline{z} \right)$ has no functional dependence 
+on $\overline{z}$, it can be written as a function of $z$ alone.
+
+If we were considering an analytic function expressed in polar coordinates
+$\phi(r, \theta)$, then we could write it in Cartesian coordinates with the 
+substitutions: 
+\[
+r = \sqrt{x^2 + y^2}, \quad \theta = \arctan(x, y) \text{ or } tan^{-1}(x,y).
+\]
+Thus we could write $\phi(r, \theta)$ as a function of $z$ alone.
+\begin{example}
+If $n$ is real, show that $f(re^{i\theta})=r^{n}(\cos n\theta+i\sin n\theta)$
+is analytic expect possibly when $r=0$ and that its derivative is
+$nr^{n-1}[\cos(n-1)\theta+i\sin(n-1)\theta].$
+\end{example}
+\begin{solution}
+Let $w=f(z)=u+iv=r^{n}(\cos n\theta+i\sin n\theta)$. Therefore $u=r^{n}\cos n\theta,v=r^{n}\sin n\theta$
+
+\[
+\frac{\partial u}{\partial r}=nr^{n-1}\cos n\theta,\frac{\partial u}{\partial\theta}=-nr^{n}\sin n\theta\]
+
+
+\[
+\frac{\partial v}{\partial r}=nr^{n-1}\sin n\theta,\frac{\partial v}{\partial\theta}=nr^{n}\cos n\theta\]
+ Thus, we have 
+
+\[
+\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta}=nr^{n-1}\cos n\theta\]
+
+
+and \[
+\frac{1}{r}\frac{\partial u}{\partial\theta}=-\frac{\partial v}{\partial r}=-nr^{n-1}\sin n\theta\]
+ Hence, the Cauchy-Riemann equations are satisfied. Thus, the function
+$w=r^{n}(\cos n\theta+i\sin n\theta)$ is analytic for all finite
+values of $z,$ if $\frac{dw}{dz}$ exits . we have 
+
+\[
+\frac{dw}{dz}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}=(\cos\theta-i\sin\theta)nr^{n-1}(\cos n\theta+i\sin n\theta)\]
+
+
+\[
+=nr^{n-1}[\cos(n-1)\theta+i\sin(n-1)\theta]\]
+Thus, $\ds\frac{dw}{dz}$ exits for all values of $r$, including
+zero, except when $r=0$ and $n\le1.$  
+\end{solution}
+
+\begin{example}
+Show that the function $\ds f(z)=e^{{-z}^{-4}}$ $(z\neq 0)$ and $f(0)=0$ is not analytic at $z=0$. Although Cauchy-Riemann equations are satisfied at the point. How would you explain this?
+\end{example}
+\begin{solution}
+Here 
+\begin{align*}
+        f(z) &= e^{-z^{-4}} \\
+        &=e^{\ds -\frac{1}{(x+iy)^4}} = e^{ \ds-\frac{(x-iy)^4}{(x^2+y^2)^4}} = e^{\ds -\frac{(x^4+y^4-6x^2y^2)-i4xy(x^2-y^2)}{(x^2+y^2)^4}} \\
+\Rightarrow u+iv  &= e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}}e^{\ds -i\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}}
+\end{align*}
+This gives,
+\[ u = e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}} \cos \left(\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}\right) \text{ and } v = e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}} \sin \left(\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}\right)\]
+At $z=0$
+\begin{align*}
+\frac{\partial u}{\partial x} & =\lim_{h\rightarrow0}\frac{u(0+h,0)-u(0,0)}{h}=\lim_{h\rightarrow0}\frac{e^{-h^{-4}}}{h}\\
+ & =\lim_{h\rightarrow0}\frac{1}{he^{\frac{1}{h^{4}}}}=\lim_{h\rightarrow0}\left[\frac{1}{h\left(1+\frac{1}{h^{4}}+\frac{1}{2!h^{8}}+\frac{1}{3!h^{12}}+...\right)}\right]=0\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;(\because e^{x}=1+x+\frac{x^{2}}{2!}+...)
+\end{align*}
+\begin{align*}
+\frac{\partial u}{\partial y} & =\lim_{k\rightarrow0}\frac{u(0,0+k)-u(0,0)}{k}=\lim_{k\rightarrow0}\frac{e^{-k^{-4}}}{k}\\
+ & =\lim_{k\rightarrow0}\frac{1}{ke^{\frac{1}{k^{4}}}}=0\end{align*}
+\begin{align*}
+\frac{\partial v}{\partial x} & =\lim_{h\rightarrow0}\frac{v(0+h,0)-v(0,0)}{h}=\lim_{h\rightarrow0}\frac{e^{-h^{-4}}}{h}\\
+ & =\lim_{h\rightarrow0}\frac{1}{h.e^{\frac{1}{h^{4}}}}=0\end{align*}
+\begin{align*}
+\frac{\partial v}{\partial y} & =\lim_{k\rightarrow0}\frac{v(0,0+k)-v(0,0)}{k}=\lim_{k\rightarrow0}\frac{e^{-k^{-4}}}{k}\\
+ & =\lim_{k\rightarrow0}\frac{1}{k.e^{\frac{1}{k^{4}}}}=\lim_{k\rightarrow0}\frac{1}{k.e^{\frac{1}{k^{4}}}}=0\end{align*}
+
+
+Hence $\ds \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$
+and $\ds \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+(C-R equations are satisfied at $z=0$)
+
+But \[
+f'(0)=\lim_{z\rightarrow0}\frac{f(z)-f(0)}{z}=\lim_{z \rightarrow 0}\frac{e^{-z^{-4}}-0}{z}\]
+
+
+Along $z=re^{i\frac{\pi}{4}}$ \begin{align*}
+f'(0) & =\lim_{r\rightarrow0}\frac{e^{-r^{-4}}e^{-\left(e^{i\frac{\pi}{4}}\right)^{4}}}{re^{i\frac{\pi}{4}}}=\lim_{r\rightarrow0}\frac{e^{-r^{-4}}e}{re^{i\frac{\pi}{4}}}\\
+ & =\frac{e}{e^{i\frac{\pi}{4}}}\lim_{r\rightarrow0}\frac{1}{re^{-r^{-4}}}=0\end{align*}
+
+
+Showing that $f'(z)$ does not exist at $z=0$. Hence $f(z)$ is not
+analytic at $z=0$.
+\end{solution}
+
+\begin{problems}
+\prob Determine which of the following functions are analytic: 
+        \subprob  $x^2+iy^2$ 
+        \begin{sol}
+        Here, $u=x^2$ and $v=y^2$, this implies 
+        \[u_x=2x,\;\;u_y=0\;\;v_x= 0\;\;v_y=2y\]
+        Cauchy Riemann equations give,
+        \[u_x=v_y \;\;\; \Rightarrow 2x=2y \;\;\text{ and } u_y=0=-v_x\]
+        Function is nowhere analytic except at $x=y$.
+        \end{sol}       
+        \subprob $2xy+i(x^2-y^2)$
+        \begin{sol}
+        Check Cauchy Riemann equations. Not satisfied. Not analytic.
+                \end{sol}       
+                
+        \sidebyside{    \subprob $\sin x \cosh y+i\cos x \sinh y$ }{    \subprob $\ds \frac{1}{(z-1)(z+1)}$ }
+         \begin{sol}Aanalytic everywhere except $z=\pm 1$.\end{sol}
+        \sidebyside{\subprob $\ds \frac{x-iy}{x-iy+a}$ }{\subprob $\ds \frac{x-iy}{x^2+y^2}$}
+
+\prob Consider the function $f(z)=(4x+y)+i(-x+4y)$ and discuss $\ds \frac{df}{dz}$ 
+\begin{sol}
+Here, \[u=4x + y \;\; \Rightarrow u_x=4,\;\;u_y=1\]
+and
+\[v=-x + 4y \;\; \Rightarrow v_x=-1,\;\;v_y=4\]
+Cauchy Riemann equations are satisfied. Partial derivatives $u_x,u_y,v_x,v_y$ exist and are continuous, therefore given function is differentiable everywhere. We have
+\[\frac{df}{dz} = \frac{\partial f}{ \partial z} = u_x+iv_x = 4-i\]
+\end{sol}
+\prob For what values of $z$, the function $w$ defined as
+\[w=\rho(\cos \phi + i\sin \phi);\;\;\text{ where } z=\ln \rho + i \phi\]
+cases to be analytic.
+\begin{sol}
+Here, $w=\rho(\cos \phi + i\sin \phi) = \rho e^{i\phi}$ and 
+\[z=\ln \rho + i\phi = \ln \rho + \ln (e^{i\phi}) = \ln \rho e^{i\phi}  \Rightarrow e^z = \rho e^{i\phi} = w \Rightarrow z = \ln w \]
+Now problem reduces to find the value of $z$ for which function $w=e^z$ is not analytic.
+
+\textbf{Important: } To find $z$ for which function ceases to be analytic, solve $\frac{dz}{dw}=0$, i.e.,
+\[\frac{dz}{dw} = \frac{1}{w} = e^{-z} \]
+Thus $\frac{dz}{dw} = 0  \Rightarrow  e^{-z} =0$
+which gives $z=\infty$
+\end{sol}
+\prob For what values of $z$ the function $z=\sinh u\cos v + i\cosh u \sin v$, where $w=u+iv$ ceases to be analytic.
+\prob For what values of $z$ the function $z=e^{-v}(\cos u + i \sin u)$, where $w=u+iv$ ceases to be analytic.
+\begin{sol}
+for $z=0$ function ceases to be analytic.
+\end{sol}
+\prob If 
+\[
+f(z)=
+\begin{cases}
+\ds \frac{x^3y(y-ix)}{x^6+y^2},~~ z \neq 0 \\
+=0, z=0,
+\end{cases}
+\]
+then discuss $\ds \frac{df}{dz}$ at $z=0$. 
+\prob Show that the complex variable function $f(z)=|z|^2$ is differentiable only at the origin. 
+\prob Using the Cauchy-Riemann equations, show that $f(z)=z^3$ is analytic in the entire z-plane. 
+\begin{sol}
+Here, $f(z) = z^3 = (x+iy^3)$, which gives
+\[u=x^3-3xy^2 \text{ and } v=3x^2y-y^3\]
+Compute Cauchy Riemann equations and check these holds. Hence function is analytic.
+\end{sol}
+\prob Test the analyticity of the function $w= \sin z$ and hence derive that: 
+\[\frac{d}{dz}(\sin z) = \cos z\]
+\begin{sol}
+Here, $w=\sin z = \sin(x+iy) = \sin x \cosh y + i \cos x \sinh y$ (Since $\cos (iy) = \cosh y$ and $\sin (iy) = i \sinh y$).
+\[u_x=\cos x \cosh y\;\;\;u_y=\sin x \sinh y\]
+\[v_x= - \sin x \sinh y\;\;\; v_y=\cos x \cosh y\]
+Cauchy Riemann equations are satisfied. $u_x,u_y,v_x,v_y$ exists and are continuous. Hence $w$ is analytic  function.
+Now,
+\[\frac{dw}{dz}=u_x+iv_x =\cos x \cosh y-\sin x \sinh y = \cos (x+iy) = \cos z\]
+\end{sol}
+
+\prob Find the point where the Cauchy-Riemann equations are satisfied for the function: 
+\[f(z)=xy^2+ix^2y\]
+where does $f'(z)$ = exist? Where is $f(z)$ analytic? 
+\prob Find the values of $a$ and $b$ such that the function \[f(z)=x^2+ay^2-2xy+i(bx^2-y^2+2xy)\] is analytic. Also find $f'(z)$. 
+\begin{sol}
+Here,
+\[u_x=2x-2y,\;\;\;\;u_y=2ay-2x\;\;\;\;v_x=2bx+2y\;\;\;\;v_y=-2y+2x\]
+Now from Cauchy Riemann equations, we get
+\[u_x=v_y\;\;\;\Rightarrow 2x-2y=-2y+2x\]
+which is true, and
+\[u_y=-v_x\;\;\;\Rightarrow 2ay-2x=-(2bx+2y)\]
+Compare coefficients of $x$ and $y$ on both side
+\[a=-1,\;\;b=1\]
+Now,
+\[f'(z)=u_x+iv_x = (2x-2y)+i(2x+2y) = 2(1+i)z\]
+\end{sol}
+\prob Show that the function $z|z|$ is not analytic anywhere. 
+\begin{sol}
+Here $f(z)=z|z| = (x+iy)|x+iy| = x\sqrt{(x^2+y^2)}+iy\sqrt{(x^2+y^2)}$, i.e.,
+\[u=x\sqrt{(x^2+y^2)},\;\;\;v=y\sqrt{(x^2+y^2)}\]
+Compute $u_x,u_y,v_x,v_y$ and check, $u_x\neq v_y \text{ and } u_y \neq -v_x$, therefore function is nowhere analytic.
+\end{sol}
+\prob Discuss the analyticity of the function $f(z)=z\overline(z)$.
+\prob Show that the function $f(z)=u+iv$, where 
+\[
+f(z)=
+\begin{cases} 
+\ds \frac{x^3(1+i)-y^3(1-i)}{x^2+y^2},~~ z \neq 0 \\
+$=0, z=0$ 
+\end{cases}
+\]
+satisfy the Cauchy-Riemann conditions at $z=0$. Is the function analytic at $z=0$? justify your answer. 
+\prob Show that the function defined by $f(z)=\sqrt{|xy|}$ satisfy Cauchy Riemann equations at the origin but is not analytic at the point. 
+\begin{sol}
+\[u_x=u_y=v_x=v_y =0\]
+It is obvious that the Cauchy Riemann equations are satisfied at $z=0$, i.e., at $x=0,\;y=0$.
+But derivative along $y=mx$ at $z=0$ is
+\[f'(0)=\lim_x\tends 0 \frac{f(z)-f(0)}{z}=\lim_x\tends 0 \frac{\sqrt{xy}-0}{x+iy} = \lim_x\tends 0 \frac{\sqrt{x.mx}-0}{x+imx} = \lim_x\tends 0 \frac{\sqrt{m}}{1+im} \]
+Evidently, this limit depends on $m$, which differers for different values of $m$. i.e., $f'(0)$ is not unique. This shows $f'(0)$ does not exist. Hence given function is not analytic.
+\end{sol}
+\end{problems}
+\section{Harmonic Functions}\index{Harmonic Functions}
+Any real valued function of $x$ and $y$ satisfying Laplace equation\footnote{The following equation is known as Laplace equation\index{Laplace equation} \[\nabla ^2u = \pdn ux2 + \pdn uy2 = 0\]} is called Harmonic function.\\
+If $f(z) = u+iv$ is analytic function, then $u$ and $v$ are harmonic functions.\\
+If $f(z)$ is analytic, we have CR Equations,
+\[\pd ux = \pd vy ~~~~~~~~~~~~~~~~~\pd uy = - \pd vx\]
+On differentiating first equation partially with respect to $x$ and second equation partially with respect to $y$, we get
+\[\pdn ux2 = \pdxy vxy ~~~~~~~~~~~~~~~~~\pdn uy2 = - \pdxy vxy\]
+On adding both equations, we get 
+\[\pdn ux2 + \pdn uy2 = 0\]
+which shows that $u$ is harmonic.
+Similarly, on differentiating first equation partially with respect to $y$ and second equation partially with respect to $x$, we get
+\[\pdxy uxy = \pdn vx2 ~~~~~~~~~~~~~~~~~\pdxy uxy = - \pdn vx2\]
+On subtracting both equations, we get 
+\[\pdn vx2 + \pdn vy2 = 0\]
+which shows that $v$ is harmonic.
+Hence, if $f(z) = u+iv$ is some analytic function then $u$ and $v$ are harmonic functions.\\
+
+\section{Determination of conjugate functions}\index{Conjugate functions}\index{Conjugate functions!Determination}
+If $f(z) = u +iv$ is an analytic function, $v(x,y)$ is called conjugate function of $u(x,y)$. In this section we have to device a method to compute $v(x,y)$ provided $u(x,y)$ is given. From partial differentiation, we have 
+\begin{equation} \label{Total-Derivative}
+dv = \pd vx dx + \pd vy dy
+\end{equation}
+But, $f(z)$ is analytic, which implies 
+\begin{equation}\label{CREqn}
+\pd ux = \pd vy ~~~~~~~~~~~~~~~~~~~~~\pd uy = - \pd vx
+\end{equation}
+Using equations \ref{CREqn}, Equation \ref{Total-Derivative} reduces to
+\begin{equation}\label{dv}
+dv = - \pd uy dx + \pd ux dy
+\end{equation}
+Here $M= -\pd uy $ and $N= \pd ux$, which gives
+\[\pd My = - \pdn uy2 ~~~~~~~~~~~~~\pd Nx = \pdn ux2\]
+\[\pd My  - \pd Ny = - \left(\pdn uy2 + \pdn ux2\right)\]
+Since $f(z)$ is analytic, $u$ is harmonic
+\[\pd My  - \pd Ny = 0\]
+\[\pd My  = \pd Ny \]
+which shows that Eq \ref{dv} is an exact differential equation. It can be integrated to obtain $v$.\\
+\begin{example}
+Show that $u = x^2 - y^2$ is harmonic and find the its  conjugate
+\end{example}
+\begin{solution}
+Here $u$ is given, we may compute following
+\[ u_x = 2x ~~~~~~~~~~~u_y = -2y\]
+\[u_{xx} = 2 ~~~~~~~~~~~ u_{yy} = -2\]
+This implies $u_{xx}+u_{yy}=0$, i.e., Laplace equation holds. Therefore, the given function is harmonic.
+From partial differentiation and CR Equations, we have
+\[dv = - \pd uy dx + \pd ux dy\]
+which gives
+\[dv = 2y dx + 2x dy\]
+As this differential equation is exact, we may use method of solving an exact differential equation\footnote{See Appendix }, which is as
+\begin{align*}
+        v &= \int_{y\mbox{ as constant}}(2y) dx + c \\
+         &= 2xy +c
+\end{align*}
+which is required harmonic conjugate of $u$.
+\end{solution}
+\begin{example}
+
+If $\phi$ and $\psi$ are function of $x$ and $y$ satisfying Laplace's
+equation, show that $s+it$ is analytic, where 
+
+$s=\frac{\partial\phi}{\partial y}-\frac{\partial\psi}{\partial x}$
+and $t=\frac{\partial\phi}{\partial x}+\frac{\partial\psi}{\partial y}$.
+
+\end{example}
+
+\begin{solution}
+
+Since $\phi$ and $\psi$ are function of $x$ and $y$ satisfying Laplace's
+equations.
+
+\begin{equation}
+\therefore\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}}=0\label{eq:ex1}\end{equation}
+
+
+and \begin{equation}
+\frac{\partial^{2}\psi}{\partial x^{2}}+\frac{\partial\psi}{\partial y^{2}}=0.\label{eq:ex2}\end{equation}
+
+
+For the function $s+it$ to be analytic,
+
+\begin{equation}
+\frac{\partial s}{\partial x}=\frac{\partial t}{\partial y}\label{eq:ex3}\end{equation}
+
+
+\begin{equation}
+\frac{\partial s}{\partial y}=-\frac{\partial t}{\partial x}\label{eq:ex4}\end{equation}
+
+
+must satisfy.
+
+Now, \begin{equation}
+\frac{\partial s}{\partial x}=\frac{\partial}{\partial x}\left(\frac{\partial\phi}{\partial y}-\frac{\partial\psi}{\partial x}\right)=\frac{\partial^{2}\phi}{\partial x\partial y}-\frac{\partial^{2}\psi}{\partial x^{2}}\label{eq:ex5}\end{equation}
+
+
+\begin{equation}
+\frac{\partial t}{\partial y}=\frac{\partial}{\partial y}\left(\frac{\partial\phi}{\partial x}+\frac{\partial\psi}{\partial y}\right)=\frac{\partial^{2}\phi}{\partial y\partial x}+\frac{\partial^{2}\psi}{\partial y^{2}}\label{eq:ex6}\end{equation}
+
+
+\begin{equation}
+\frac{\partial s}{\partial y}=\frac{\partial}{\partial y}\left(\frac{\partial\phi}{\partial y}-\frac{\partial\psi}{\partial x}\right)=\frac{\partial^{2}\phi}{\partial y^{2}}-\frac{\partial^{2}\psi}{\partial y\partial x}\label{eq:ex7}\end{equation}
+
+
+and \begin{equation}
+\frac{\partial t}{\partial x}=\frac{\partial}{\partial x}\left(\frac{\partial\phi}{\partial x}+\frac{\partial\psi}{\partial y}\right)=\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\psi}{\partial x\partial y}\label{eq:ex8}\end{equation}
+
+
+From (\ref{eq:ex3}), (\ref{eq:ex5}) and (\ref{eq:ex6}), we have 
+
+\[
+\frac{\partial^{2}\phi}{\partial x\partial y}-\frac{\partial^{2}\psi}{\partial x^{2}}=\frac{\partial^{2}\phi}{\partial y\partial x}+\frac{\partial^{2}\psi}{\partial y^{2}}\]
+
+
+\[
+\frac{\partial^{2}\psi}{\partial x^{2}}+\frac{\partial^{2}\psi}{\partial y^{2}}=0\]
+
+
+Which is true by (\ref{eq:ex2}).
+
+Again from (\ref{eq:ex4}), (\ref{eq:ex7}) and (\ref{eq:ex8}), we
+have 
+
+\[
+\frac{\partial^{2}\phi}{\partial y^{2}}-\frac{\partial^{2}\psi}{\partial y\partial x}=-\frac{\partial^{2}\phi}{\partial x^{2}}-\frac{\partial^{2}\psi}{\partial x\partial y}\]
+
+
+\[
+\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}}=0\]
+
+
+which is also true by (\ref{eq:ex1}).
+
+Hence the function $s+it$ is analytic.
+
+\end{solution}
+
+\begin{example}
+
+Show that an analytic function with constant modulus is constant.
+
+\end{example}
+
+\begin{solution}
+
+Solution : Let $f(z)=u+iv$ be an analytic function with constant
+modulus. Then,
+
+\[
+|f(z)|=|u+iv|=\text{Constant}\]
+ 
+
+\[
+\sqrt{u^{2}+v^{2}}=\text{Constant}=c\;(\text{say})\]
+
+
+Squaring both sides, we get 
+
+\begin{equation}
+u^{2}+v^{2}=c^{2}\label{eq:ex21}\end{equation}
+
+
+Differentiating equation (\ref{eq:ex21}) partially w.r.t. $x,$ we
+get 
+
+\[
+2u\frac{\partial u}{\partial x}+2v\frac{\partial v}{\partial x}=0\]
+
+
+\begin{equation}
+u\frac{\partial u}{\partial x}+v\frac{\partial v}{\partial x}=0\label{eq:ex22}\end{equation}
+
+
+Again, differentiating equation (\ref{eq:ex21}) partially w.r.t.
+$y,$ we get 
+
+\[
+2u\frac{\partial u}{\partial y}+2v\frac{\partial v}{\partial y}=0\]
+
+
+\[
+u\frac{\partial u}{\partial y}+v\frac{\partial v}{\partial y}=0\]
+
+
+\begin{equation}
+-u\frac{\partial v}{\partial x}+v\frac{\partial u}{\partial x}=0\label{eq:ex23}\end{equation}
+ $\because\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+and $\frac{\partial v}{\partial y}=\frac{\partial u}{\partial x}$.
+Squaring and adding equations (\ref{eq:ex22}) and (\ref{eq:ex23}),
+we get 
+
+\[
+(u^{2}+v^{2})\left[\left(\frac{\partial u}{\partial x}\right)^{2}+\left(\frac{\partial v}{\partial x}\right)^{2}\right]=0\]
+
+
+\[
+\left(\frac{\partial u}{\partial x}\right)^{2}+\left(\frac{\partial v}{\partial x}\right)^{2}=0\;\;\;\;\;\because u^{2}+v^{2}=c^{2}\ne0\]
+
+
+\[
+|f'(z)|^{2}=0\;\;\;\;\;[\because f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}]\]
+\[
+|f'(z)|=0\]
+
+
+Hence $f(z)$ is constant.
+
+\end{solution}
+\section{Milne Thomson Method}\index{Milne Thomson Method}
+Consider the problem to determine the function $f(z)$ of which $u$ is given. One procedure may be as previous section, compute its harmonic conjugate $v$, and finally combine them to compute $f(z)=u+iv$. To overcome the length of the mechanism Milne's introduced another method which is a direct way to compute $f(z)$ for a given $u$.
+We have $z=x+iy$ which implies
+\[x = \frac{z+\overline{z}}{2} ~~~~~~~~~~~~~y = \frac{z-\overline{z}}{2i}\]
+\[w = f(z) = u+iv = u(x,y) + i v(x,y)\]
+\[~~~~~~~~~~~~~~~~~~= u\left(\frac{z+\overline{z}}{2},\frac{z-\overline{z}}{2i}\right) + iv\left(\frac{z+\overline{z}}{2},\frac{z-\overline{z}}{2i}\right)\]
+On putting $z=\overline{z}$, we get
+\[f(z) = u(z,0) + i v(z,0)\]
+We have (CR Equation are used.)
+\[f'(z)={\frac{dw}{dz}} = \pd ux + i \pd vx =  \pd ux - i \pd uy \]
+Here, $\pd ux = \phi_1(x,y)$ and $\pd uy = \phi_2(x,y)$
+Thus
+\[f'(z)= \phi_1(x,y)- i \phi_2(x,y)\]
+or
+\[f'(z)= \phi_1(z,0)- i \phi_2(z,0)\]
+On integrating, we obtain the required function
+\[f(z)= \int [\phi_1(z,0)- i \phi_2(z,0)] dz + K\]
+where $K$ is complex constant.
+
+\textbf{Remark: } In case, $v$ is given,  $\phi_1(x,y) =u_x = v_y $ and $\phi_2(x,y) = u_y = -v_x$
+\begin{example}
+Let $z=x+iy$ and 
+  \[
+    f(z) = x^2-y^2 - 2y +i(2x-2xy)
+  \]
+  
+Write $f(z)$ as a function of only $z$ and $\bar{z}$.
+\end{example}
+{\it Solution:} Using the formulas $$x=\frac{z+\bar z}{2} \text { and } y=\frac{z-\bar z}{2i},$$
+we compute
+\begin{eqnarray*} 
+f(z)& =& x^2-y^2 - 2y +i(2x-2xy)=\\
+&=& \left(\frac{z+\bar z}{2}\right)^2-\left(\frac{z-\bar z}{2i}\right)^2 -2\cdot\frac{z-\bar z}{2i} + i\left(2\cdot \frac{z+\bar z}{2}-2\cdot \frac{z+\bar z}{2}\cdot\frac{z-\bar z}{2i}\right) \\
+&=&\frac{z^2+\bar z^2+2z\cdot \bar z}{4}-\frac{z^2+\bar z^2-2z\cdot \bar z}{-4}-\frac{z-\bar z}{i}+i(z+\bar z)-\frac{z^2-\bar z^2}{2}\\        &=&{\bar{z}}^2+2iz.
+\end{eqnarray*}
+\begin{example}
+Find the regular\footnote{Analytic function is also called as Regular function.} function for the given $u = x^2 - y^2$.
+\end{example}
+\begin{solution}
+Here $u$ is given, we may compute following
+\[ \phi_1(x,y) = \pd ux = 2x ~~~~~~~~~~~~~~~ \phi_2(x,y) =\pd uy = -2y\]
+\[f'(z)= \phi_1(z,0)- i \phi_2(z,0)\]
+\[= 2z - i(0)\]
+\[= 2z\]
+On integrating,
+\[f(z) = 2 \int z dz = z^2 + K\]
+which is required function.
+\end{solution}
+\begin{example}
+If $u-v = (x-y)(x^2+4xy+y^2)$ and $f(z)=u+iv$ is an analytic function of $z=x+iy$, find the $f(z)$ in terms of $z$.
+\end{example}
+\begin{solution}
+We have, \[u+iv = f(z)\]
+This gives \[iu-v = if(z)\]
+On adding these both
+\[(u-v) + i(u+v) = (1+i)f(z)\]
+Let $U=u-v$ and $V=u+v$ then 
+\[U+iV = (1+i)f(z) = F(z) ~~(say)\]
+Here $U=(u-v)$ gives,
+\[U =(x-y)(x^2+4xy+y^2) \]
+\[U =x^3 + 3x^2y - 3xy^2 -y^3 \]
+Now, we can use Milne's Method to find $F(z)$.
+\[ \phi_1(x,y) = \pd Ux = 3x^2+6xy-3y^2 ~~~~~~~~~~~~ \phi_2(x,y) =\pd Uy =3x^2-6xy-3y^2 \]
+\[F'(z)= \phi_1(z,0)- i \phi_2(z,0)\]
+\[=3z^2 - i 3z^2 = (1-i)3z^2\]
+Hence
+\[F(z) = (1-i)z^3 + K \]
+where K is complex constant.
+
+\noindent
+Since we have $F(z) = (1+i)f(z)$,
+\[f(z) = \frac{F(z)}{(1+i)} = \frac{(1-i)z^3 + K }{1+i}\]
+\[f(z) = -iz^3 + K_1\]
+where $K_1$ is complex constant.
+\end{solution}
+\begin{problems}
+\prob Show that the following functions are harmonic and determine the conjugate functions.  
+        \subprob  $u=2x(1-y)$  
+        \begin{sol}
+        $v=x^2-y^2+2y$
+        \end{sol}
+        \subprob  $u=2x-x^3+3xy$  
+                \begin{sol}
+        $2y-3x^2y+y^3$
+        \end{sol}
+        \subprob  $u = \frac{1}{2} log(x^2+y^2)$  
+        \begin{sol}
+        \[u_x=\frac{x}{x^2+y^2} \text{ and }u_y=\frac{y}{x^2+y^2} \]
+        \[u_{xx}=\frac{y^2-x^2}{(x^2+y^2)^2} \text{ and }u_{yy}=\frac{x^2-y^2}{(x^2+y^2)^2} \]
+        \[u_{xx}+u_{yy} = 0 , \text{ Therefore function is harmonic.}\]
+        Now,
+        \[dv=v_xdx + v_ydy = -u_ydx + u_xdy = \frac{xdy-ydx}{x^2+y^2} \]
+        \[v=tan^{-1} \frac{y}{x}\]
+        \end{sol}
+        \subprob $x^3-3xy^2+3x^2-3y^2$ 
+        \begin{sol}
+        $v=3x^2y + 6xy - y^3$
+        \end{sol}
+        
+\prob Determine the analytic function, whose imaginary part is  
+        \subprob  $x^2-y^2+5x+y-\frac{y}{x^2+y^2}$  
+        \begin{sol}
+        $w=z^{2}+(5-i)z-\frac{i}{z}$
+        \end{sol}
+        \subprob  $\cos x \cosh y$
+        \begin{sol}
+                $w=\cos z$
+        \end{sol}
+        \subprob  $3x^2y+2x^2-y^3-2y^2$  
+        \begin{sol}
+        $w=2z^{2}-iz^{3}$
+        \end{sol}
+        \subprob  $e^{-x}(x \sin y - y \cos y)$  
+        \begin{sol}
+        $w=ize^{-z}$
+        \end{sol}
+        \subprob  $e^{2x}(x \cos 2y - y \sin 2y)$  
+        \begin{sol}
+        $w=ze^{2z}$
+        \end{sol}
+        \subprob  $v=\log(x^2+y^2)+x-2y$  
+        \begin{sol}
+        $w=2i\log z-(2-i)z$
+        \end{sol}
+        \subprob  $v=\sinh x cos y$  
+        \begin{sol}
+        $w=\sin(iz)$
+        \end{sol}
+        \subprob  $v=\frac{x-y}{x^2+y^2}$  
+        \begin{sol}
+        $w=(1+i)\frac{1}{z}$
+        \end{sol}
+        \subprob  $v= \left(r-\frac{1}{r}\right) sin\theta$ 
+        \begin{sol}
+        $w=z+\frac{1}{z}$
+        \end{sol} 
+\prob  If $f(z)= u+iv$ is an analytic function of $z=x+iy$ and $\ds u-v = \frac{e^y-\cos x+ \sin x}{\cosh y- \cos x}$, find $f(z)$ subject to the condition that $f \left(\frac{\pi}{2}\right) = \frac{(3-i)}{2}$ 
+\begin{sol}
+Let $U=u-v$ and $V=u+v$, therefore $F(z)=U+iV =(1+i)(u+iv)=(1+i)f(z)$. Now
+\[U= \frac{e^y-\cos x+ \sin x}{\cosh y- \cos x} = 1+\frac{\sin x+ \sinh y}{\cosh y- \cos x}\;\;\;\;\;(\because e^y=\cosh y + \sinh y)\]
+By Milne's method,
+\begin{align*}
+        F(z) = \int [\phi_1(z,0)-i\phi_2(z,0)] +C\\
+        &=(1+i) \int \frac{dz}{1-\cos z} = \frac{(1+i)}{2} \int \text{cosec}^2\frac{z}{2} dz +C\\
+        &=(1+i) \cot \frac{z}{2}  + C
+\end{align*}
+Therefore,
+\[f(z) = \cot  \frac{z}{2} + C \]
+To evaluate $C$, use condition $f\left(\frac{\pi}{2}\right)=\frac{3-i}{2}$, we get
+\[C=\frac{1-i}{2}\]
+Hence
+\[f(z) = \cot  \frac{z}{2} + \frac{1-i}{2} \]
+
+\end{sol}
+\prob  Find an analytic function $f(z) = u(r,\theta) + iv(r, \theta)$ such that $v(r,\theta)= r^2 \cos 2 \theta - r  \cos \theta + 2$  
+\begin{sol}
+Here, $v=r^2 \cos 2 \theta - r  \cos \theta + 2$,
+\[u_r=\frac{1}{r}v_{\theta} = -2r^2\sin 2\theta + r\sin \theta\]
+and
+\[u_{\theta}=rv_{r} =r(2r\cos 2 \theta - \cos \theta)\]
+\begin{align*}
+        du &= u_rdr+u_{\theta}d\theta  \\
+        &= (-2r^2\sin 2\theta + r\sin \theta)dr + (2r^2\cos 2 \theta - r\cos \theta)d\theta \\
+        \Rightarrow u=-r^2\sin 2\theta +r \sin \theta +C
+\end{align*}
+Now, $f(z) = u+iv = -r^2\sin 2\theta +r \sin \theta +C + i(r^2 \cos 2 \theta - r  \cos \theta + 2)$. On arranging, we get
+\[f(z) = i(z^2-z)+2i+C\]
+\end{sol}
+
+\prob  Show that the function $u=x^2-y^2-2xy-2x-y-1$ is harmonic. Find the conjugate harmonic function $v$ and express $u+iv$ as a function of $z$ where $z=x+iy$  
+\begin{sol}
+$f(z)=(1+i)z^2 + (-2+i)z-1$
+\end{sol}
+\prob  Construct an analytic function of the form $f(z)=u+iv$, where v is $tan^{-1}(\frac{y}{x})$, $x \neq 0, y \neq 0$
+\begin{sol}
+$f(z)=\log iz$
+\end{sol}
+
+\prob  If $f(z)$ is a regular function of $z$, prove that 
+$\ds \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)|f(z)|^2 = 4|f'(z)|^2$
+\begin{sol}
+Let $f(z)=u+iv$, so that $|f(z)|^2=u^2+v^2 = \phi(x,y)$ (say)
+\[\phi_x = 2uu_x + 2vv_x,\;\;\;\phi_y = 2uu_y + 2vv_y\]
+and
+\[\phi_{xx} = 2\left[uu_{xx} + u_x^2 + vv_{xx} + v_x^2\right],\;\;\;\phi_{yy} =  2\left[uu_{yy} + u_y^2 + vv_{yy} + v_y^2\right]\]
+This gives
+\[\phi_{xx} + \phi_{yy} =  2\left[u(u_{xx}+u_{yy}) + (u_x^2 + u_y^2) + v(v_{xx}+v_{yy}) + (v_x^2+v_y^2)\right] \]
+Since CR equations are satisfied here and Laplace equation also holds for $u$ and $v$, therefore
+\[\phi_{xx} + \phi_{yy} =  4\left[(u_x^2 + v_x^2) \right]  = 4 |f'(z)|^2\]
+\end{sol}
+\end{problems}

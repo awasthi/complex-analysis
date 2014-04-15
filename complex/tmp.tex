@@ -1,0 +1,84 @@
+\begin{example}
+ Show that the following functions are nowhere analytic by checking where the
+  derivative with respect to $z$ exists.  
+  \begin{enumerate}
+  \item $\sin x \cosh y - \imath \cos x \sinh y$
+  \item $x^2 - y^2 + x + \imath (2 x y - y)$
+  \end{enumerate}
+ \end{example}
+ 
+ \begin{solution}
+   \begin{enumerate}
+    %%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  \item
+    Consider $f(x,y) = \sin x \cosh y - \imath \cos x \sinh y$.
+    The derivatives in the $x$ and $y$ directions are
+    \begin{align*}
+      \frac{\partial f}{\partial x} &= \cos x \cosh y + \imath \sin x \sinh y 
+      \\
+      -\imath  \frac{\partial f}{\partial y} &= - \cos x \cosh y - \imath \sin x \sinh y
+    \end{align*}
+    These derivatives exist and are everywhere continuous.  We equate the
+    expressions to get a set of two equations.
+    \begin{gather*}
+      \cos x \cosh y = - \cos x \cosh y, \qquad
+      \sin x \sinh y = - \sin x \sinh y 
+      \\
+      \cos x \cosh y = 0, \qquad
+      \sin x \sinh y = 0 
+      \\
+      \left( x = \frac{\pi}{2} + n \pi \right) \text{ and }
+      \left( x = m \pi \text{ or } y = 0 \right) 
+    \end{gather*}
+    The function may be differentiable only at the points $\ds x = \frac{\pi}{2} + n \pi, \quad y = 0$.
+ %   \[
+ %   \boxed{
+ %     x = \frac{\pi}{2} + n \pi, \quad y = 0.
+ %     }
+ %   \]
+    Thus the function is nowhere analytic.
+  \item 
+    Consider $f(x,y) = x^2 - y^2 + x + \imath (2 x y - y)$.
+    The derivatives in the $x$ and $y$ directions are
+    \begin{align*}
+      \frac{\partial f}{\partial x} &= 2 x + 1 + \imath 2 y 
+      \\
+      -\imath  \frac{\partial f}{\partial y} &= \imath 2 y + 2 x - 1
+    \end{align*}
+    These derivatives exist and are everywhere continuous.  We equate the
+    expressions to get a set of two equations.
+    \[
+    2 x + 1 = 2 x - 1, \qquad 2 y = 2 y.
+    \]
+    Since this set of equations has no solutions, there are no points at which
+    the function is differentiable.  The function is nowhere analytic.
+  \end{enumerate}
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\prob Prove that $ u = x^2-y^2$ and $\ds v=\frac{y}{x^2+y^2}$ are harmonic function of (x,y), but are not harmonic conjugates.
+\prob  Show that the function $x^2-y^2+2y$ which is harmonic remains harmonic under the transformation $z=w^3$ \\
+\prob Let $f(z)=u(x,y)+iv(x,y)$ be an analytic function. If $u=3x-2xy$, then find v and express f(z) in terms of z. \\
+\prob Show that the function $u(z,y) = 4xy-3x +2$ is harmonic. Construct the corresponding analytic function \\
+$f(z) =u(x,y) + iv(x,y)$ 
+Express f(z) in terms of complex variable z. 
+\prob  If $w=\phi+i\psi$ represents the complex potential for an electric field and 
+$\ds\psi =  x^2-y^2+\frac{x}{x^2+y^2}$ 
+determine the function $\phi$ 
+\prob Construct the analytic function f(z) of which the real part is $e^x cosy$ 
+\prob  Find an analytic funtion $w=u+iv$ given that 
+$v = \frac{x}{x^2+y^2} + cosh xcosy$ 
+\prob  If $u-v = (x-y) (x^2+4xy+y^2)$ and $f(z)=u+iv$ is an analytic function of $z=x+iy$, find f(z) in terms of z. \\
+\prob  Of $f(z)=u+iv$, is any analytic function of the complex variable z and $u-v=e^x(cos y- sin y)$, find f(z) in terms of z. 
+\prob  Let $f(z) =u(r,\theta) +iv(r,\theta)$ be an analytic function. $\pm fu = -r^3 sin 3\theta$, then construct the corresponding analytic function f(z) in terms of z. 
+\prob  Find analytic function $f(z)=u(r,\theta)+iv(r,\theta)$ such that 
+$v(r,\theta) = r^2 cos 2\theta -r cos \theta +2$ 
+ 
+\prob  If $u=x^2-y^2$, find a corresponding analytic function. 
+\prob  If $u= \frac{sin 2x}{cosh 2y+cos 2x}$, find f(z) 
+\prob  Find the analytic function $f(z)=u+iv$, given that $v=e^x(x sin y + y cos y)$ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

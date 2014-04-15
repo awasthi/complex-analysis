@@ -1,0 +1,360 @@
+%\chapter{Complex Integration}\index{Complex integration}
+\section{Integration in complex plain}
+In case of real variable, the path of the integration of $\ds \int_a^b f(x)dx$ is always along the $x$-axis from $x=a$ to $x=b$. But in case of a complex function $f(z)$ the path of a complex function $f(z)$ the path of the definite integral $\ds \int_{\alpha}^{\beta} f(z)dz$ can be along any curve from $z=\alpha$ to $z=\beta$. 
+\begin{example}
+Evaluate $\ds \int_{0}^{2+i} \bar{z}^2 dz$ along the real axis from $z=0$ to $z=2$ and then along parallel to $y$-axis from $z=2$ to $z=2+i$.
+\end{example}
+\begin{solution}
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2+i} (x-iy)^2 (dx+idy)\\
+																&= \int_{0}^{2+i} (x^2-y^2-2ixy) (dx+idy)\\
+\end{align*}
+\begin{figure}[ht]
+  \begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.08)(2.9934375,1.05)
+\psline[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.2778125,1.04)(0.2778125,-0.74)
+\psline[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.2778125,-0.74)(2.7178125,-0.74)
+\psline[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.2778125,-0.74)(1.6978126,0.56)
+\psline[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(1.6778125,0.58)(1.6778125,-0.74)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.7167188,-0.93){z=2}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.2298439,0.55){z=2+i}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.8632812,-0.73){x}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.085625,0.93){y}
+\end{pspicture} 
+}
+\end{center}
+\caption{}
+\end{figure}
+\paragraph{Along real axis from $z=0$ to $z=2$ (y=0)}:
+\[y=0 \Rightarrow dy=0, dz = d(x+iy) = dx \]
+\[z=0, y=0 \Rightarrow x=0\]
+and
+\[z=2, y=0 \Rightarrow x=2\]
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2} (x^2) (dx)\\
+	&= \left[\frac{x^3}{3} \right]_0^2 = \frac{8}{3}\\
+\end{align*}
+\paragraph{Along parallel to $y$-axis from $z=2$ to $z=2+i$ (x=2)}
+\[x=2 \Rightarrow dx=0, dz = d(x+iy) = idy\]
+\[z=2, x=2 \Rightarrow y=0~~~~~and~~~~~z=2+i, x=2 \Rightarrow y=1\]
+\begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{1} (4-y^2-4iy) (i.dy)\\
+	&= i \left[4y - \frac{y^3}{3} - 4i\frac{y^2}{2} \right]_0^1 =\left[\frac{11}{3}i + 2\right]\\
+\end{align*}
+$\ds \int_{0}^{2+i} \bar{z}^2 dz$ along the real axis from $z=0$ to $z=2$ then along parallel to $y$-axis from $z=2$ to $z=2+i$
+\[= \frac{8}{3} +  \frac{11}{3}i + 2  = \frac{1}{3}(14+11i)\]
+\end{solution}
+\begin{problems}
+\prob Find the value of the integral 
+\[\int_0^{1+i}(x-y+ix^2)dz\]
+\subprob Along the straight line from $z=0$ to $z=1+i$.
+\begin{sol}\[\frac{1}{3}(i-1)\]\end{sol}
+\subprob along the real axis from $z=0$ to $z=1$ and then along parallel to $y$-axis from $z=1$ to $z=1+i$.
+\begin{sol}\[-\frac{1}{2}+\frac{5}{6}i\]\end{sol}
+\prob Integrate $f(z) = x^2 + ixy$ from $A(1,1)$ to $B(2,8)$ along
+\subprob the straight line $AB$
+\begin{sol}
+Equation of line $AB$
+\[y=7x-6\]
+Now 
+\[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+substitute $y=7x-6$, $dy=7dx$, then on integrating
+\[=\frac{1}{3}[-147+71i]\]
+\end{sol}
+\subprob the curve $C$, $x=t, ~y=t^3$.
+\begin{sol}
+Here
+\[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+substitute $x=t,y=t^3$, $dx=dt\text{ and } dy=3t^2dt$, then on integrating with respect to $t$ from 1 to 2
+\[=-\frac{1094}{21}+\frac{124}{5}i\]
+\end{sol}
+
+\prob Evaluate the integral $\ds \int_c (3y^2dx+2ydy)$, where $c$ is the circle $x^2+y^2=1$, counterclockwise from $(1,0)$ to $(0,1)$.
+\begin{sol}
+-1
+\end{sol}
+\end{problems}
+
+\section{Cauchy's Integral Theorem}\index{Cauchy's Integral Theorem}
+\begin{theorem}
+If a function $f(z)$ is analytic and its derivative $f'(z)$ continuous at all points within and on a simple closed curve $c$, then $\ds \int_c f(z) dz = 0$.
+\end{theorem}
+\begin{proof}
+Let $f(z)=u+iv$ and $z=x+iy$ and region enclosed by the curve $c$ be $R$, then
+\begin{align*}
+	\int_cf(z)dz 	&= \int_c(u+iv)(dx+idy) =  \int_c(udx-vdy) + i(vdx+udy)\\
+								&= \int\int_R (-v_x - u_y)dxdy + i\int\int_R (u_x - v_y)dxdy\\
+								\text{By Cauchy-Riemann equations,} \\
+								&= \int\int_R (u_y - u_y)dxdy + i\int\int_R (u_x - u_x)dxdy =0
+\end{align*}
+\end{proof}
+\begin{example}
+Find the integral $\ds \int_c \frac{3z^2+7z+1}{z+1}dz$, where $c$ is the circle $\ds |z|=\frac{1}{2}$.
+\end{example}
+\begin{solution}
+Poles of integrand are given by
+$$z+1 = 0$$
+That is, $z=-1$. Since given circle $|z|=\frac{1}{2}$, with centre $z=0$ and radius $1/2$ does not enclose $z=-1$. Thus it is obvious that the integrand is analytic everywhere. Hence, by Cauchy's Theorem,
+\[\int_c \frac{3z^2+7z+1}{z+1}dz = 0\]
+\end{solution}
+\begin{theorem}[Cauchy's integral theorem for multi-connected region]\index{Cauchy's Integral Theorem!multi-connected region}
+If a function $f(z)$ is analytic in region $R$ between two simple closed curves $c_1$ and $c_2$, then
+\[\int_{c_1} f(z) dz = \int_{c_2} f(z) dz\]
+\end{theorem}
+\begin{proof}
+Since $f(z)$ is analytic in region $R$, By Cauchy's Theorem
+\[\int f(z) dz = 0\]
+where path of integration is along $AB$, and curves $C_2$ in clockwise direction and along $BA$ and along $C_1$ in anticlockwise direction.
+
+We may write,
+\[\int_{AB} f(z) dz - \int_{c_2} f(z) dz + \int_{BA} f(z) dz + \int_{c_1} f(z) dz = 0\]
+or
+\[- \int_{c_2} f(z) dz +  \int_{c_1} f(z) dz = 0\]
+\[ \int_{c_1} f(z) dz =  \int_{c_2} f(z) dz \]
+\end{proof}
+\section{Cauchy Integral Formula}\index{Cauchy Integral Formula}
+\begin{theorem}
+If a function $f(z)$ is analytic within and on a closed curve $c$, and if $a$ is any point within $c$ , then
+\[f(a) = \frac{1}{2\pi i}\int_{z} \frac{f(z)}{(z-a)} dz\]
+\end{theorem}
+\begin{proof}
+Let $z=a$ be a point within a closed curve $c$. Describe a circle $\gamma$ such that $|z-a|=\rho$ and it lies entirely within $c$. Now consider the function 
+\begin{figure}[ht]
+	\centering
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.4300019)(3.361875,1.4300019)
+\definecolor{color73b}{rgb}{0.8,0.8,1.0}
+\pswedge[linewidth=0.04,fillcolor=color73b](1.4100019,0.0){1.4100019}{275.4772}{272.41934}
+\pscircle[linewidth=0.032,dimen=outer,fillstyle=solid](1.4510782,-0.023076477){0.9110782}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,0.009998169)(0.0,-0.15000182)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.54,-0.15000182)(0.56,0.029998168)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.32,0.16999817)(2.32,-0.11000183)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.82,0.16999817)(2.84,-0.03000183)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.0214062,-0.68000185){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.1914062,0.5999982){$\gamma$}
+\psdots[dotsize=0.12](1.42,-0.03000183)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4614062,-0.16000183){$a$}
+\end{pspicture} 
+}
+\caption{Cauchy Integral Formula}
+\end{figure}
+\[\phi(z) = \frac{f(z)}{(z-a)}\]
+Obviously, this function is analytic in region between $\gamma$ and $c$. Hence by Cauchy's integral theorem for multiconnected region, we have
+\[\int_{c} \phi(z) dz = \int_{\gamma} \phi(z) dz\]
+or
+\begin{align*}
+	\int_{c} \frac{f(z)}{(z-a)} dz 	&= \int_{\gamma} \frac{f(z)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a) + f(a)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz + \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+																	&= I_1 + I_2
+\end{align*}
+Now, since $|z-a|=\rho$, we have $z=a+ \rho e^{i\theta}$ and $dz = i \rho e^{i\theta} d\theta$. Hence
+\begin{align*}
+ I_1 &= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a+ \rho e^{i\theta}) - f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= \int_{0}^{2\pi} [f(a+ \rho e^{i\theta}) - f(a)] i d\theta \\
+ 	 &=0 ~~~~~~~~\text{ as } \rho \text{ tends to 0}
+\end{align*}
+and
+\begin{align*}
+ I_2 &= \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= f(a) \int_{0}^{2\pi} i d\theta \\
+ 	 &= 2\pi i f(a)	 
+ \end{align*}
+Hence,
+\[\int_{c} \frac{f(z)}{(z-a)} dz = I_1 + I_2\]
+That is 
+\[\int_{c} \frac{f(z)}{(z-a)} dz = 0 + 2 \pi i f(a) \]
+or
+\[ f(a) = \frac{1}{2 \pi i}\int_{c} \frac{f(z)}{(z-a)} dz \]
+\end{proof}
+\begin{example}
+Evaluate (i) $\ds \int_c \frac{e^z}{z+2}dz$ and (ii) $\ds \int_c \frac{e^z}{z}dz$, where $c$ is circle $|z|=1$.
+\end{example}
+\begin{solution}
+(i) The function $\ds \frac{e^z}{z+2}$ is analytic everywhere except at $z=-2$. This point lies outside the circle $|z|=1$. Thus function is analytic within and on $c$, by Cauchy's Theorem, we have
+\[\int_{|z|=1} \frac{e^z}{z+2}dz = 0\]
+
+(ii)
+The function $\ds \frac{e^z}{z}$ is analytic everywhere except at $z=0$. The point $z=0$ strictly inside $|z|=1$. Hence by Cauchy's Integral formula, we have
+\[\int_{|z|=1}~ \frac{e^z}{z}dz = 2 \pi i (e^z)_{z=0} =  2 \pi i \]
+\end{solution}
+\section{Cauchy Integral Formula For The Derivatives of An Analytic Function}
+\begin{theorem}
+If a function $f(z)$ is analytic within and on a closed curve $c$, and if $a$ is any point within $c$ , then its derivative is also analytic within and on closed curve $c$, and is given as 
+\[f'(a) = \frac{1}{2\pi i}\int_{c} \frac{f(z)}{(z-a)^2} dz\]
+\end{theorem}
+\begin{proof}
+We know Cauchy's Integral formula
+\begin{align*}
+	f(a) &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)} dz \\
+\text{Differentiating, wrt $a$ , we get} \\
+	f'(a) &= \frac{1}{2\pi}\frac{d}{da}\left[\int_{c} \frac{f(z)}{(z-a)} dz \right]\\
+	      &= \frac{1}{2\pi} \int_{c} f(z) \frac{\partial}{\partial a}\left[\frac{1}{(z-a)} \right]dz\\
+	      &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)^2} dz
+\end{align*}
+We may generalize it,
+\[f^n(a) = \frac{n!}{2\pi i}\int_{c} \frac{f(z)}{(z-a)^{n+1}} dz\]
+\end{proof}
+\begin{example}
+Evaluate the following integral $\ds \int_{c}\frac{1}{z}\cos z dz$, where $c$ is the ellipse $9x^{2}+4y^{2}=1$.
+\end{example} 
+\begin{solution}
+Here function $\ds \frac{1}{z}\cos z$ has a simple pole at $z=0$. The given ellipse $9x^{2}+4y^{2}=1.$ encloses pole $z=0$.
+
+\noindent
+By Cauchy Integral formula
+\[\int_{c}\frac{cosz}{z}dz=2\pi i(cosz)_{z=0}=2\pi i\]
+\end{solution} 
+\begin{example}
+Evaluate the complex integral $\ds \int_{c} \tan z dz$, where $c$ is $|z|=2$.
+\end{example} 
+\begin{solution}
+We have
+\[\int_{c}tanz.dz=\int_{c}\frac{\sin z}{\cos z} dz\]
+$|z|=2$, is a circle with centre at origin and radius = 2. Poles are given by putting the denominator equal to zero. i.e.,
+\[\cos z=0 ~~~~\Rightarrow ~~~~ z=-\frac{\pi}{2},\frac{\pi}{2},\frac{3\pi}{2},...\]
+The integrand has two poles at $z=\frac{\pi}{2}$ and $z=-\frac{\pi}{2}$ inside the given circle $|z|=2$.
+
+\noindent
+On applying Cauchy integral formula 
+\begin{align*}
+	\int_{c}\frac{\sin z}{\cos z}dz &= \int_{c_1}\frac{\sin z}{\cos z}dz + \int_{c_2} \frac{\sin z}{\cos z}dz \\
+	&=2\pi i[\sin z]_{z=\frac{\pi}{2}} + 2 \pi i[\sin z]_{z=-\frac{\pi}{2}} \\
+	&=2\pi i(1)+2\pi i(-1)=0
+\end{align*}
+\end{solution} 
+\begin{example}
+Evaluate  $\ds \int_{c}\frac{e^{z}}{z^{2}+1}dz$ over the circular path $|z|=2$.
+\end{example} 
+\begin{solution}
+Here,
+\[z^{2}+1=0,~~z^{2}=-1,~~z=\pm i\]
+\begin{figure}[ht]
+  \begin{center}
+   \scalebox{0.5} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.0)(6.0,3.0)
+\rput(3.0,0.0){\psaxes[linewidth=0.02,labels=none,ticks=y,ticksize=0.10583333cm,showorigin=false](0,0)(-3,-3)(3,3)}
+\pscircle[linewidth=0.02,dimen=outer](2.94,-0.02){2.0}
+\pscircle[linewidth=0.02,dimen=outer](2.94,0.98){0.3}
+\pscircle[linewidth=0.02,dimen=outer](2.94,-1.02){0.3}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.2803125,1.13){i}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.4182813,-0.93){-i}
+\end{pspicture} }
+  \end{center}
+  \caption{}
+\end{figure}
+
+Both points are inside the given circle with at origin and radius 2.
+\begin{align*}
+\int_{c}\frac{1}{2i}\{\frac{e^{z}}{z-i}-\frac{e^{z}}{z+i}\}dz &=\int_{c}\frac{1}{2i}\frac{e^{z}}{z-i}dz-\frac{1}{2i}\int_{c}\frac{e}{z+i}dz\\
+&=\frac{1}{2i}[2\pi i(e^{z})_{z=i}-2\pi i(e^{z})_{z=-i}] \\
+&=\frac{2\pi i}{2i}[e^{i}-e^{-i}]=2\pi i \sin(1) \\
+\end{align*}
+\paragraph{Second Method} 
+\begin{align*}
+	\int_{c}\frac{e^{z}}{z^{2}+1}dz &=\int_{c}\frac{e^{z}d_{z}}{(z+i)(z-i)} \\
+	&=\int_{c1}\frac{\frac{e^{z}}{z-i}}{z+i}dz+\int_{c}\frac{\frac{e^{z}}{z+i}}{z-i}dz \\
+	&=2\pi i(\frac{e^{z}}{z-i})_{z=-i}+2\pi i(\frac{e^{z}}{z+i})_{z=i} \\
+	&=[2\pi i\frac{e^{-i}}{-i-i}+2\pi i\frac{e^{i}}{i+i}]=\pi[-e^{-i}+e^{i}] \\
+	&=\pi(2isin1)=2\pi i \sin 1
+\end{align*}
+\end{solution} 
+\begin{example}
+Evaluate $\ds \int_{c}\frac{z-1}{(z+1)^{2}(z-2)}dz$ where $c$ is $|z-i|= 2$.
+\end{example} 
+\begin{solution}
+The centre of the circle is at $z = i$ and its radius is $2$. Poles are obtained by putting the denominator equal to zero.
+\[(z+1)^{2}(z-2)=0~~~~\Rightarrow ~~~~z=-1,-1,2\]
+The integral has two Poles at $z = -1$ (second order) and $z = 2$ (simple pole ) of which $z = -1$ is inside the given circle.
+We can rewrite
+\[\int_{c}\frac{(z-1)dz}{(z+1)^{2}(z-2)}=\int_{c1}\frac{\frac{z-1}{z-2}}{(z+1)^{2}}dz\]
+By Cauchy Integral formula 
+\[\ds \int\frac{f(z)}{(z+1)^{2}}dz=2\pi i f'(-1)\]
+Here
+\begin{align*}
+f(z)&=\frac{z-1}{z-2} \\
+f'(z)&=\frac{(z-2).1-(z-1).1}{(z-2)^{2}}=\frac{-1}{(z-2)^{2}}=\frac{-1}{(z-2)^{2}}\\
+\Rightarrow ~~~f'(-1)&=\frac{-1}{(-1-2)^{2}}=\frac{-1}{9} \\
+\therefore \int \frac{(z-1)}{(z+1)^{2}(z-2)}dz &= =-\frac{2\pi i}{9}
+\end{align*}
+\end{solution} 
+\begin{example}
+Use Cauchy integral formula to evaluate .
+\[\int_{c}\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)(z-2)}dz\]
+where $c$ is the circle $|z| = 3$.
+\end{example} 
+\begin{solution}
+Poles of the integrand are given by putting the denominator equal
+to zero.
+\[(z-1)(z-2)=0, ~~~~z=1,2\]
+The integrand has two poles at $z = 1,2$. The given circle $|z| = 3$ with centre at $z = 0$ and radius 3 encloses both the poles $z = 1$, and $z = 2$.
+\begin{align*}
+	\int_{c}\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)(z-2)}dz &=\int_{c_1}{\frac{\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-2)}}{(z-1)}dz}+\int_{c_2}{\frac{\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)}}{(z-2)}dx} \\
+	&=2\pi i \left[\frac{sin\pi z^{2}+cos\pi z^{2}}{z-2}\right]_{z=1}+2\pi i\left[\frac{sin\pi z^{2}+cos\pi z^{2}}{z-1}\right]_{z=2} \\
+	&=2\pi i \left[\frac{sin\pi+cos\pi}{1-2}\right]+2\pi i\left[\frac{sin4\pi+cos4\pi}{2-1}\right] \\
+	&=2\pi i\left(\frac{-1}{-1}\right)+2\pi i\left(\frac{1}{1}\right)=4\pi i 
+\end{align*}
+\end{solution}
+\begin{problems}
+\prob Evaluate the following by using Cauchy integral formula:
+
+\subprob $\ds \int_{c}\frac{1}{z-a}dz,$ where $c$ is a simple closed curve and
+the point $\ds z = a$ is  (i) outside $c$; (ii) inside $c$. 
+\begin{sol}
+(i) 0	~~~~~~~~ (ii) $2\pi i$
+\end{sol}
+\subprob  $\ds \int_{c}\frac{e^{z}}{z-1}dz$, where c is the circle $|z| =2$.
+\begin{sol}
+$2\pi i e$
+\end{sol}
+\subprob $\ds \int_{c}\frac{cos\pi z}{z-1}dz$, where c is the circle $|z|=3$.
+\begin{sol}
+$-2\pi i$
+\end{sol}
+\subprob $\ds \int_{c}\frac{cos\pi z^{2}}{(z-1)(z-2)}dz$, where c is the circle $|z| = 3$. 
+\begin{sol}
+$4\pi i $
+\end{sol}
+\subprob $\ds \int_{c}\frac{e^{-z}}{(z+2)^{5}}dz$, where c is the circle $|z|=3$. 
+\begin{sol}
+$\frac{i\pi e^2}{12}$
+\end{sol}
+\subprob $\ds \int_{c}\frac{e^{2z}}{(z+1)^{4}}dz$, where c is the circle $|z|= 2$. 
+\begin{sol}
+$\frac{8 i \pi e^{-2}}{3}$
+\end{sol}
+\subprob $\ds \int_{c}\frac{3z^{2}+z}{z^{2}-1}dz$, where c is the circle $|z-1|=1$.
+\begin{sol}
+$4 \pi i$
+\end{sol}
+\prob Evaluate the following integral using Cauchy integral formula 
+\[\int_{c}\frac{4-3z}{z(z-1)(z-2)}dz\]
+where $c$ is the circle $|z| =\frac{3}{2}$.
+\begin{sol}
+$-12 \pi i$
+\end{sol}
+\prob Integrate $\ds  \frac{1}{(z^{3}-1)^{2}}$ the counter clockwise sense around the circle $|z-1|=1$.
+\begin{sol}
+$-\frac{4i\pi}{9}$
+\end{sol}
+\prob Find the value of $\ds \int_{c}\frac{2z^{2}+z}{z^{2}-1}dz$, if $c$ is circle of unit radius with centre at $z = 1$.
+\begin{sol}
+$3\pi i$
+\end{sol}
+
+\end{problems}

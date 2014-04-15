@@ -1,0 +1,97 @@
+\chapter{Singularity, Zeros and Residue}
+\section{Definitions:}
+\subsection{Zeros:}
+The value of $z$ for which analytic function $f(z) = 0$ is called ZERO of the function $f(z)$.
+\subsection{Singularity of an analytic function:}
+A SINGULARITY of an analytic function is the point $z$ at which function ceases to be analytic. Singularity may be classified in two major kinds : \\
+(i) Isolated Singularity \\
+(ii) Non-isolated Singularity
+
+Let $z=a$ be a singularity of $f(z)$ and if there is no other  singularity in neighbourhood of the point $z=a$, then this point $z=a$ is said to be an isolated singularity and otherwise it is termed as non-isolated singularity. (Note when a sequence of singularities is obtained the limit point of the sequence is isolated singularity.)
+\subsubsection{Example}
+The function $f(z) = {1 \over (z-a)(z-b)}$ is analytic everywhere except $z=a$ and $z=b$. Thus point $z= a$ and $z=b$ are singularity of $f(z)$. Also there is no other singularity of $f(z)$ in neighbourhood of these points, these are isolated singularities.
+\subsubsection{Example}
+The function $f(z) = {1 \over \sin {\pi \over z}}$ is analytic everywhere except those points at which $\sin {\pi \over z} = 0$.
+\[\sin {\pi \over z} = 0~~~~~~~~\Rightarrow~~~~~~~~~~{\pi \over z} = n \pi ~~~~~~~~~~\Rightarrow~~~~~~~~~~~~ z = {1 \over n} ~~~~~~(n = 1, 2, 3, ...)\]
+
+ Thus point $z= 1, {1 \over 2}, {1 \over 3}, {1 \over 4}, ..., z=0$ and $z=b$ are singularity of $f(z)$. Here too, no other singularity of $f(z)$ in neighbourhood of these points (except $z=0$), these are isolated singularities. But at $z=0$, there are infinite number of other singularities, where $n$ is very large.
+ \subsection{Types of Singularities}
+ Let $f(z)$ be analytic function  within domain $D$ except at the point $z=a$ which is an isolated singularity. Now draw a circle $C$ centered at $z=a$ and of radius as small as we please. draw another concentric circle of any radius say R lying wholly within the domain $D$. The function $f(z)$ is analytic in ring shaped region between these two circles. Hence by Laurent's Theorem, we have
+ \[f(z) = \Sigma_{n=0}^{\infty} a_n (z-a)^n + \Sigma_{n=1}^{\infty} b_n (z-a)^{-n}\]
+ The second term $\Sigma_{n=1}^{\infty} b_n (z-a)^{-n}$ in this expansion is called PRINCIPAL PART of $f(z)$ at the singularity $z=a$.
+ 
+ 
+\begin{itemize}
+	\item  If there is no of term in principal part. Then singularity $z=a$ is called REMOVABLE SINGULARITY.
+	\[f(z) = {\sin (z-a) \over (z-a)} = {1 \over (z-a)}\left[(z-a) -{(z-a)^3 \over 3!}+{(z-a)^5 \over 5!} - ... \infty \right] \]
+	\[= 1 -{(z-a)^2 \over 3!}+{(z-a)^4 \over 5!} - ... \infty\]
+	\item  If there are infinite number of terms in principal part. Then singularity $z=a$ is called ESSENTIAL SINGULARITY.
+		\[f(z) = e^{1 \over z} =  1 +{1 \over z}+{1 \over 2!}{1 \over z^2} +{1 \over 3!}{1 \over z^3} ... \infty\]
+	\item If there are finite number of term in principal part. (Say $m$ terms). Then singularity $z=a$ is called POLE. and $m$ is called ORDER of pole.  
+	\[f(z) = {\sin (z-a) \over (z-a)^3} = {1 \over (z-a)^3}\left[(z-a) -{(z-a)^3 \over 3!}+{(z-a)^5 \over 5!} - ... \infty \right] \]\[= (z-a)^{-2} -{(1 \over 3!} + {(z-a)^2 \over 5!} - ... + \infty \]
+\end{itemize}
+	\section{The Residue at Poles}
+	The coefficient of $1 \over (z-a)$ in the principal part of Laurent's Expansion is called the RESIDUE of function $f(z)$. The coefficient $b_1$ which is given as 
+	\[b_1 = {1 \over 2\pi i} \int_C f(t) dt  ~~ = RES[f(z)]_{z=a}\]
+\subsection{Methods of finding residue at poles}
+ \subsubsection{The residue at a \textbf{simple pole} (Pole of order one.)}
+ \[R = \lim_{z\rightarrow a}[(z-a).f(z)]\]
+ If function of form $f(z) = {\phi (z) \over \psi (z)}$	 Then 
+ \[R = \left[{\phi (z) \over \psi' (z)}\right]_{z=a} \]
+ 
+ \subsubsection{The residue at multiple pole (Pole of order $m$.) }
+ \[R = \lim_{z\rightarrow a}\left[{d^{m-1} \over {dz^{m-1}}}(z-a)^m.f(z)\right]\]
+ 
+ \subsubsection{The residue at pole of any order}
+ Pole is $z=a$
+ 
+ Put $z-a = t$. Expand function. Now the coefficient of $1/t$ is residue.
+
+\section{ASSIGNMENT}
+\begin{enumerate}
+	\item Find out the zeros and discuss the nature of singularities of $f(z)={z-2 \over z^2}{\sin{1 \over z-1}}$
+	\item What kind  of singulariies, the following functions have:
+									\begin{enumerate}
+										\item $f(z)={1 \over 1-e^z}$ at $z=2\pi i$
+										\item $f(z)={1 \over \sin z - \cos z}$  at $z={\pi\over 4}$
+										\item $f(z)={\cot \pi z \over (z-a)^2}$  at $z=0$ and $z= \infty$
+										\item $f(z)={\cos z - \sin z}$ at $z=\infty$
+										\item $f(z)={\sin{1 \over 1-z}}$ at $z=1$
+										\item $f(z)={\tan{1 \over z}}$ at $z=0$
+										\item $f(z)={1 \over \cos{1 \over z}}$ at $z=0$
+										\item $f(z)={1 \over \sin{1 \over z}}$ at $z=0$
+										\item $f(z)={1-e^z \over 1 + e^z}$ at $z=\infty$
+										\item $f(z)={z \text{cosec } z}$ at $z=\infty$
+										
+									\end{enumerate}
+		
+     	\item Determine poles of the following functions. Also find the residue at its poles.
+           	\begin{enumerate}
+           	\item $z^2 \over (z-a)(z-b)(z-c)$
+           	\item $z-3 \over (z-2)^2 (z+1)$
+           	\item $ze^{iz} \over z^2 + a^2$
+           	\item $z^3 \over (z-2)(z-3)$
+           	\item $z^2 \over (z^2 + a^2)$
+           	\item $e^z \over (z^2 + a^2)$
+           	\item $z^2 \over (z+2)(z^2+1)$
+           	\item $ze^z \over (z-3)^2$
+           	\item $1 \over (z^2+a^2)^2$ at $z=ia$
+           	\item $\tan z$
+           	\item $z^2 e^{1/z}$
+           	\item $z^2 \sin {1 \over z}$
+           	\item $e^{2z} \over (1+e^z)$
+           	\item $1+e^z \over \sin z + z \cos z$ at $z=0$
+           	\item $1 \over z(e^z-1)$
+           	\item $z^2 +1 \over (z^2-1)(z^2+4)$
+           	\item $\cot z$
+           	\item $\cot \pi z \over (z-a)^2$
+                     \end{enumerate}
+		\item Find the residue at $z=1$ of \[z^3 \over (z-1)^4(z-2)(z-3)\]
+		\item Locate the poles of \[e^{az} \over \cosh \pi z\] and evaluate the residue at the pole of the smallest positive value of $z$.
+		\item Find the residue of $z^3 \over z^2-1$ at $z=\infty$
+		\item Find the residue of $z^2 \over (z-a)(z-b)(z-c)$ at ${z=\infty}$
+	\item The function $f(z)$ has a double pole at $z=0$ with residue 2, a simple pole at $z=1$ with residue 2, is analytic at all finite points of the plane and is bouded as $|z|\rightarrow \infty$ if $f(2)=5$ and $f(-1)=2$ find $f(z)$						
+\end{enumerate}
+
+%*8888888*************************************************
+

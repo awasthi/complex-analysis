@@ -1,0 +1,245 @@
+%\chapter{Singularity, Zeros and Residue}\index{Singularity}\index{zero}\index{Residue}
+\section{Definitions}
+\subsection{Zeros}\index{zero}
+\begin{definition}
+The value of $z$ for which analytic function $f(z) = 0$ is called \textit{zero} of the function $f(z)$. 
+\end{definition}
+Let $z_0$ be a zero of an analytic function $f(z)$. Since $f(z)$ is analytic at $z_0$, there exists a neighbourhood\index{neighbourhood} of $z_0$ at which $f(z)$ can be expanded in a Taylor's series. i.e.,
+\[
+f(z) = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + ... a_n(z-z_0)^n + ...
+\]
+where $|z-z_0|< \rho$, where $a_0=f(z_0)$ and $\ds a_n = \frac{f^{(n)}(z_0)}{n!}$.
+
+Since $z_0$ is zero of $f(z)$, $f(z_0)=0$ which gives $a_0=0$ and $a_1 \neq 0$, then such $z_0$ is said to be a \emph{simple zero}. If $a_0=0$ and $a_1=0$ but $a_2 \neq 0$ then $z_0$ is called double zero. In general, if $a_0=a_1=a_2= ... = a_{m-1}=0$ but $a_m \neq 0$ then $z_0$ is called zero of order $m$. Thus zero of order\index{zero!Order $m$} $m$ may be defined as the condition
+\begin{equation}
+	f(z_0)=f'(z_0)=f''(z_0)= ... = f^{(m-1)}(z_0) =0 \text{ and } f^{(m)}(z_0) \neq 0
+\end{equation}
+In this case function $f(z)$ may be rewritten as
+\begin{equation}
+	f(z) = (z-z_0)^m g(z)
+\end{equation}
+where $g(z)$ is analytic and $g(z_0)=a_m$, which is a non-zero quantity.
+\begin{example}
+The function $\ds f(z) = \frac{1}{(z-1)}$ has a simple zero at infinity.
+\end{example}
+\begin{example}
+The function $\ds f(z) = (z-1)^3$ has a zero of order 3 at $z=1$.
+\end{example}
+\begin{example}
+Find the zero of the function defined by
+\[f(z) = \frac{(z-3)}{z^3} \sin \frac{1}{(z-2)}\]
+\end{example}
+\begin{solution}
+To find zero, we have $f(z)=0$
+\[\frac{(z-3)}{z^3} \sin \frac{1}{(z-2)} = 0\]
+Hence $(z-3)=0$ or $\ds \sin \frac{1}{(z-2)} = 0 \Rightarrow \frac{1}{(z-2)} = n\pi$, where $n=0, \pm 1, \pm 2, ...$
+It follows that $z=3$ or $\ds z = 2 + \frac{1}{n\pi}$, where $n=0, \pm 1, \pm 2, ...$
+\end{solution}
+
+\subsection{Singularity}\index{Singularity}
+\begin{definition}
+If a function $f(z)$ is analytic at every point in the neighbourhood of a point $z_0$ except at $z_0$ itself, then $z_0$ is called a singularity or a singular point of the function.
+\end{definition}
+A singularity of an analytic function is the point $z$ at which function ceases to be analytic. 
+ \subsection{Types of Singularities}
+ \paragraph{Isolated and Non-isolated Singularities}\index{Singularity!Isolated}\index{Singularity!Non-isolated}
+Let $z=a$ be a singularity of $f(z)$ and if there is no other  singularity in neighbourhood of the point $z=a$, then this point $z=a$ is said to be an \textit{isolated singularity} and otherwise it is termed as \textit{non-isolated singularity}. (Note when a sequence of singularities is obtained the limit point\index{limit point} of the sequence is isolated singularity.)
+\begin{example}
+The function $f(z) = \frac{1}{\sin \frac{\pi}{z}}$ is analytic everywhere except those points at which \[\sin \frac{\pi}{z} = 0\]
+\[\Rightarrow~~~~~~~~~~{\pi \over z} = n \pi ~~~~~~~~~~\Rightarrow~~~~~~~~~~~~ z = {1 \over n} ~~~~~~(n = 1, 2, 3, ...)\]
+
+ Thus point $z= 1, {1 \over 2}, {1 \over 3}, {1 \over 4}, ..., z=0$ are the singularity of $f(z)$. Since no other singularity of $f(z)$ in neighbourhood of these points (except $z=0$), these are isolated singularities. But at $z=0$, there are infinite number of other singularities, where $n$ is very large. Therefore $z=0$ is non isolated singularity.
+\end{example}
+\begin{example}
+The function $\ds f(z) = \frac{1}{(z-a)(z-b)}$ is analytic everywhere except $z=a$ and $z=b$. Thus point $z= a$ and $z=b$ are singularity of $f(z)$. Also there is no other singularity of $f(z)$ in neighbourhood of these points, these are isolated singularities.
+\end{example}
+ \paragraph{Principal Part of $f(z)$ at isolated singularity}\index{Principal Part!at isolated singularity}
+ Let $f(z)$ be analytic function  within domain $D$ except at the point $z=a$ which is an isolated singularity. Now draw a circle $C$ centered at $z=a$ and of radius as small as we please. draw another concentric circle of any radius say R lying wholly within the domain $D$. The function $f(z)$ is analytic in ring shaped region between these two circles. Hence by Laurent's Theorem, we have
+ \[f(z) = \sum_{n=0}^{\infty} a_n (z-a)^n + \sum_{n=1}^{\infty} b_n (z-a)^{-n}\]
+ The second term $\ds \sum_{n=1}^{\infty} b_n (z-a)^{-n}$ in this expansion is called \textit{principal part}\index{principal part} of $f(z)$ at the singularity $z=a$.
+  
+\begin{itemize}
+	\item  If there is no of term in principal part. Then singularity $z=a$ is called \textit{removal singularity}\index{removal singularity}.
+	\[f(z) = {\sin (z-a) \over (z-a)} = {1 \over (z-a)}\left[(z-a) -{(z-a)^3 \over 3!}+{(z-a)^5 \over 5!} - ... \infty \right] \]
+	\[= 1 -{(z-a)^2 \over 3!}+{(z-a)^4 \over 5!} - ... \]
+	\item  If there are infinite number of terms in principal part. Then singularity $z=a$ is called \textit{essential singularity}\index{essential singularity}.
+		\[f(z) = e^{1 \over z} =  1 +{1 \over z}+{1 \over 2!}{1 \over z^2} +{1 \over 3!}{1 \over z^3} + ...\]
+	\item If there are finite number of term in principal part. (Say $m$ terms). Then singularity $z=a$ is called \textit{pole}. and $m$ is called \emph{Order of pole}\index{Order of pole}.  
+	\[f(z) = {\sin (z-a) \over (z-a)^3} = {1 \over (z-a)^3}\left[(z-a) -{(z-a)^3 \over 3!}+{(z-a)^5 \over 5!} - ... \right] \]
+	\[= (z-a)^{-2} -{1 \over 3!} + {(z-a)^2 \over 5!} - ... + \infty \]
+\end{itemize}
+\begin{definition}
+A functions is said to be \textit{meromorphic function}\index{meromorphic function} if it has poles as its only type of singularity.
+\end{definition}
+\begin{definition}
+A functions is said to be \textit{entire function}\index{entire function} if it has no singularity.
+\end{definition}
+\begin{definition}
+Limit point of zeros is called isolated essential singularity.
+\end{definition}
+\begin{definition}
+Limit point of poles is called non-isolated essential singularity.
+\end{definition}
+\begin{example}
+Show that the function $e^z$ has an isolated essential singularity at $z=\infty$
+\end{example}
+\begin{solution}
+\textbf{Note: } The behaviour of function $f(z)$ at $\infty$ is same as the behaviour $\ds f\left(\frac{1}{z}\right)$ at $z=0$.
+
+Here
+\begin{align*}
+	f\left(\frac{1}{z}\right) &= e^{\frac{1}{z}}\\
+	&= \sum_{n=0}^{\infty}\frac{z^{-n}}{n!}
+\end{align*}
+Thus, $\ds 	f\left(\frac{1}{z}\right) $ contains an infinite number of terms in the negative power of $z$. Therefore, by definition, $z=0$ is an essential singularity of  function $\ds 	f\left(\frac{1}{z}\right) $. Consequently $f(z)$ has essential singularity at $z=\infty$.
+\end{solution}
+\begin{problems}
+	\prob  Find out the zeros and discuss the nature of singularities of $f(z)=\frac{z-2}{z^2}\sin{1 \over z-1}$
+	\begin{sol}
+	For zeros
+	\[\frac{z-2}{z^2}\sin{1 \over z-1} = 0\]
+	\[z-2 = 0 \text{ and } \sin{1 \over z-1} = 0\]
+	Therefore $z=2$ and $\frac{1}{z-1}=n\pi$, i.e.
+	\[z= 2 \text{ and } z=\frac{1}{n\pi}+1\]
+	It is obvious that $z=2$ is simple zero. For $z=\frac{1}{n\pi}+1$, limit point of zero when $n\tends \infty$ is 1, i.e., $z=1$ is isolated essential singularity. Except these $z^2=0$ provides pole at $z=0$ of order 2.
+	\end{sol}
+	\prob  What kind  of singularities, the following functions have:
+	
+\sidebyside{\subprob  $f(z)={1 \over 1-e^z}$ at $z=2\pi i$ }{\subprob  $f(z)={1 \over {\sin z - \cos z}}$  at $z={\pi\over 4}$}
+	\begin{sol}
+	Poles: $\sin z - \cos z=0 \Rightarrow z=\frac{\pi}{4}$
+	\end{sol}
+\sidebyside{\subprob  $f(z)={\cos z - \sin z}$ at $z=\infty$}{\subprob  $f(z)={\cot \pi z \over (z-a)^2}$  at $z=0$ and $z= \infty$}
+	\begin{sol}
+	Here $\ds f(z)=\frac{\cot \pi z}{(z-a)^2}=\frac{\cos \pi z}{\sin \pi z(z-a)^2}$, The poles are given by putting denominator equal to zero. i.e.,
+	\[\sin \pi z(z-a)^2 = 0\]
+	\[(z-a)^2 = 0 \Rightarrow z=a \text{ Double pole}\]
+	and
+	\[\sin \pi z = 0 \Rightarrow \pi z = n\pi \Rightarrow z=n\]
+	Limit point of pole $z=n$, when $n\tends \infty$ is $\infty$. Thus $z=\infty$ is non-isolated essential singularity.
+	\end{sol}
+\sidebyside{\subprob  $f(z)={\sin{1 \over 1-z}}$ at $z=1$}{\subprob  $f(z)={\tan{1 \over z}}$ at $z=0$}
+\sidebyside{\subprob  $f(z)={1 \over \cos{1 \over z}}$ at $z=0$}{\subprob  $f(z)={1 \over \sin{1 \over z}}$ at $z=0$}
+\sidebyside{\subprob $f(z)={1-e^z \over 1 + e^z}$ at $z=\infty$}{\subprob $f(z)={z \text{ cosec} z}$ at $z=\infty$}
+		\begin{sol}
+	Non-isolated essential singularity.
+	\end{sol}									
+	\end{problems}
+	
+	\section{The Residue at Poles}\index{Residue!at poles}
+	The coefficient of $1 \over (z-a)$ in the principal part of Laurent's Expansion is called the RESIDUE of function $f(z)$. The coefficient $b_1$ which is given as 
+	\[b_1 = {1 \over 2\pi i} \int_C f(z) dz  ~~ = RES[f(z)]_{z=a}\]
+\subsection{Methods of finding residue at poles}
+ \subsubsection{The residue at a \textbf{simple pole} (Pole of order one.)}
+ \[R = \lim_{z\rightarrow a}[(z-a).f(z)]\]
+ If function of form $f(z) = {\phi (z) \over \psi (z)}$	 Then 
+ \[R = \left[{\phi (z) \over \psi' (z)}\right]_{z=a} \]
+ \subsubsection{The residue at multiple pole (Pole of order $m$.) }
+ \[R = \frac{1}{(m-1)!}\left[{d^{m-1} \over {dz^{m-1}}}(z-a)^m.f(z)\right]_{z=a}\]
+ \subsubsection{The residue at pole of any order}
+ Pole is $z=a$
+ 
+ Put $z-a = t$. Expand function. Now the coefficient of $1/t$ is residue.
+ \begin{example}
+ Determine the poles and the residue at each pole of the function
+ \[f(z) = \frac{z^2}{(z-1)^2(z+2)}\]
+ \end{example}
+ \begin{solution}
+ The poles of the function $f(z)$ are given by putting the denominator equal to zero. i.e.,
+ \[(z-1)^2(z+2) = 0\]
+ \[z = 1, 1, -2\]
+ The function $f(z)$ has a simple pole\footnote{Pole of order one is called simple pole.}  at $z=-2$ and pole of order 2 at $z=1$.
+ \begin{align*}
+	\text{Residue of $f(z)$ at $(z=-2)$} &= \lim_{z\rightarrow -2} (z+2).f(z)\\
+	 &=\lim_{z\rightarrow -2} (z+2)\frac{z^2}{(z-1)^2(z+2)}\\
+	 &=\lim_{z\rightarrow -2} \frac{z^2}{(z-1)^2} = \frac{4}{9}
+\end{align*}
+ \begin{align*}
+	\text{Residue of $f(z)$ at double pole (order 2) $(z=1)$} &= \frac{1}{(2-1)!}\left[{\frac{d^{2-1}}{dz^{2-1}}}(z-1)^2.f(z)\right]_{z=1}\\
+	&= \left[\frac{d}{dz}(z-1)^2\frac{z^2}{(z-1)^2(z+2)}\right]_{z=1}\\
+	&= \left[\frac{d}{dz}\frac{z^2}{(z+2)}\right]_{z=1}\\
+	&= \left[\frac{z^2+4z}{(z+2)^2}\right]_{z=1} = \frac{5}{9}
+\end{align*}
+ \end{solution}
+\begin{example}
+Determine the poles and residue at each pole of the function $f(z)=\cot z$
+\end{example}
+\begin{solution}
+Here $\ds \cot z = \frac{\cos z}{\sin z}$. i.e. $\phi(z) = \cos z$ and $\psi(z) = \sin z$. The poles of the function $f(z)$ are given by 
+\[\sin z = 0 \Rightarrow z=n\pi, \text{ where } n=0,\pm 1, \pm 2, ...\]
+\begin{align*}
+	\text{Residue of $f(z)$ at $(z=n\pi)$} &= \left[\frac{\phi (z)}{\psi' (z)}\right]_{z=n\pi}\\
+	&= \left[\frac{\cos z}{\frac{d}{dz}\sin z}\right]_{z=n\pi} \\
+	&=\frac{\cos z}{\cos z} = 1\\
+\end{align*}
+\end{solution}
+
+\begin{example}
+Find the residue of $\ds \frac{ze^z}{(z-a)^3}$ at its poles.
+\end{example}
+\begin{solution}
+The pole of $f(z)$ is given by $(z-a)^3 = 0$, i.e., $z=a$ (pole of order 3)
+
+\noindent
+Putting $z = t+a$
+\begin{align*}
+f(z) &= \frac{ze^z}{(z-a)^3} \\
+\Rightarrow f(z) &=\frac{(t+a)e^{t+a}}{t^3} \\
+&=\left(\frac{a}{t^3} + \frac{1}{t^2}\right)e^{t+a} \\
+&=e^a \left(\frac{a}{t^3} + \frac{1}{t^2}\right)e^{t} \\
+&=e^a \left(\frac{a}{t^3} + \frac{1}{t^2}\right)\left(1+\frac{t}{1!} + \frac{t^2}{2!} + ...\right) \\
+&=e^a \left(\frac{a}{t^3} + \frac{a}{t^2} + \frac{a}{2t} + \frac{1}{t^2} + \frac{1}{t} + \frac{1}{2} + ... \right) \\
+\end{align*}
+Hence the residue at $(z=a)$ =Coefficient of $\ds \frac{1}{t} = e^a\left(\frac{a}{2}+1\right)$.
+\end{solution}
+\subsection{Residue at Infinity}\index{Residue!at infinity}
+Residue of $f(z)$ at $z=\infty$ is defined as $\ds -\frac{1}{2\pi i}\int_C f(z) dz$, where integration is taken round in anti-clockwise direction. Where $C$ is a large circle containing all finite singularities of $f(z)$.
+We also have,
+Residue at Infinity = $\ds \lim_z\tends \infty (-zf(z))$
+
+Residue at Infinity = - Residue at zero of $f(1/z)$
+
+\begin{example}
+Find the residue of $\ds f(z)=\frac{z^3}{z^2-1}$ at $z=\infty$.
+\end{example}
+\begin{solution}
+
+Here, 
+\[f(z) = \frac{z^3}{z^2-1} \]
+Therefore
+\[f(1/z) = \frac{1}{z(z^2-1)} \]
+Residue at $z=0$
+\[\lim_{z\tends 0} z.\frac{1}{z(z^2-1)} = -1\]
+Hence
+Residue at Infinity of $f(z)$ = - Residue at zero of $f(1/z)$ = 1
+\end{solution}
+
+
+	\begin{problems}		
+
+		
+     	\prob  Determine poles of the following functions. Also find the residue at its poles.
+           	
+           	\subprob  $z-3 \over (z-2)^2 (z+1)$
+           	\subprob  $ze^{iz} \over z^2 + a^2$
+             	\subprob  $e^z \over (z^2 + a^2)$
+           	\subprob  $z^2 \over (z+2)(z^2+1)$
+           		\subprob  $z^2 e^{1/z}$
+           	\subprob  $z^2 \sin {1 \over z}$
+           	\subprob  $e^{2z} \over (1+e^z)$
+           	\subprob  $1+e^z \over \sin z + z \cos z$ at $z=0$
+           	\subprob  $1 \over z(e^z-1)$
+           		\subprob  $\cot \pi z \over (z-a)^2$
+          
+		\prob  Find the residue at $z=1$ of $\ds z^3 \over (z-1)^4(z-2)(z-3)$
+		\prob  Locate the poles of $\ds e^{az} \over \cosh \pi z $ and evaluate the residue at the pole of the smallest positive value of $z$.
+		\prob  Find the residue of $z^3 \over z^2-1$ at $z=\infty$
+		\prob  Find the residue of $z^2 \over (z-a)(z-b)(z-c)$ at ${z=\infty}$
+	
+	\prob  The function $f(z)$ has a double pole at $z=0$ with residue 2, a simple pole at $z=1$ with residue 2, is analytic at all finite points of the plane and is bounded as $|z|\rightarrow \infty$ if $f(2)=5$ and $f(-1)=2$ find $f(z)$						
+\prob Let $\ds \frac{P(z)}{Q(z)}$, where both $P(z)$ and $Q(x)$ are complex polynomial
+of degree 2. If $f(0) = f(-1) = 0$. and only singularly of $f(z)$ is of order 2 at $z =1$ with residue -1, then find $f(z)$.		
+\end{problems}
+
+%*8888888*************************************************
+

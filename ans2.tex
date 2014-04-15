@@ -1,0 +1,175 @@
+\begin{Solution}{2.1.a}
+        Here, $u=x^2$ and $v=y^2$, this implies
+        \[u_x=2x,\;\;u_y=0\;\;v_x= 0\;\;v_y=2y\]
+        Cauchy Riemann equations give,
+        \[u_x=v_y \;\;\; \Rightarrow 2x=2y \;\;\text{ and } u_y=0=-v_x\]
+        Function is nowhere analytic except at $x=y$.
+        
+\end{Solution}
+\begin{Solution}{2.1.b}
+        Check Cauchy Riemann equations. Not satisfied. Not analytic.
+                
+\end{Solution}
+\begin{Solution}{2.1.d}
+Aanalytic everywhere except $z=\pm 1$.
+\end{Solution}
+\begin{Solution}{2.2}
+Here, \[u=4x + y \;\; \Rightarrow u_x=4,\;\;u_y=1\]
+and
+\[v=-x + 4y \;\; \Rightarrow v_x=-1,\;\;v_y=4\]
+Cauchy Riemann equations are satisfied. Partial derivatives $u_x,u_y,v_x,v_y$ exist and are continuous, therefore given function is differentiable everywhere. We have
+\[\frac{df}{dz} = \frac{\partial f}{ \partial z} = u_x+iv_x = 4-i\]
+\end{Solution}
+\begin{Solution}{2.3}
+Here, $w=\rho(\cos \phi + i\sin \phi) = \rho e^{i\phi}$ and
+\[z=\ln \rho + i\phi = \ln \rho + \ln (e^{i\phi}) = \ln \rho e^{i\phi}  \Rightarrow e^z = \rho e^{i\phi} = w \Rightarrow z = \ln w \]
+Now problem reduces to find the value of $z$ for which function $w=e^z$ is not analytic.
+
+\textbf{Important: } To find $z$ for which function ceases to be analytic, solve $\frac{dz}{dw}=0$, i.e.,
+\[\frac{dz}{dw} = \frac{1}{w} = e^{-z} \]
+Thus $\frac{dz}{dw} = 0  \Rightarrow  e^{-z} =0$
+which gives $z=\infty$
+\end{Solution}
+\begin{Solution}{2.5}
+for $z=0$ function ceases to be analytic.
+\end{Solution}
+\begin{Solution}{2.8}
+Here, $f(z) = z^3 = (x+iy^3)$, which gives
+\[u=x^3-3xy^2 \text{ and } v=3x^2y-y^3\]
+Compute Cauchy Riemann equations and check these holds. Hence function is analytic.
+\end{Solution}
+\begin{Solution}{2.9}
+Here, $w=\sin z = \sin(x+iy) = \sin x \cosh y + i \cos x \sinh y$ (Since $\cos (iy) = \cosh y$ and $\sin (iy) = i \sinh y$).
+\[u_x=\cos x \cosh y\;\;\;u_y=\sin x \sinh y\]
+\[v_x= - \sin x \sinh y\;\;\; v_y=\cos x \cosh y\]
+Cauchy Riemann equations are satisfied. $u_x,u_y,v_x,v_y$ exists and are continuous. Hence $w$ is analytic  function.
+Now,
+\[\frac{dw}{dz}=u_x+iv_x =\cos x \cosh y-\sin x \sinh y = \cos (x+iy) = \cos z\]
+\end{Solution}
+\begin{Solution}{2.11}
+Here,
+\[u_x=2x-2y,\;\;\;\;u_y=2ay-2x\;\;\;\;v_x=2bx+2y\;\;\;\;v_y=-2y+2x\]
+Now from Cauchy Riemann equations, we get
+\[u_x=v_y\;\;\;\Rightarrow 2x-2y=-2y+2x\]
+which is true, and
+\[u_y=-v_x\;\;\;\Rightarrow 2ay-2x=-(2bx+2y)\]
+Compare coefficients of $x$ and $y$ on both side
+\[a=-1,\;\;b=1\]
+Now,
+\[f'(z)=u_x+iv_x = (2x-2y)+i(2x+2y) = 2(1+i)z\]
+\end{Solution}
+\begin{Solution}{2.12}
+Here $f(z)=z|z| = (x+iy)|x+iy| = x\sqrt{(x^2+y^2)}+iy\sqrt{(x^2+y^2)}$, i.e.,
+\[u=x\sqrt{(x^2+y^2)},\;\;\;v=y\sqrt{(x^2+y^2)}\]
+Compute $u_x,u_y,v_x,v_y$ and check, $u_x\neq v_y \text{ and } u_y \neq -v_x$, therefore function is nowhere analytic.
+\end{Solution}
+\begin{Solution}{2.15}
+\[u_x=u_y=v_x=v_y =0\]
+It is obvious that the Cauchy Riemann equations are satisfied at $z=0$, i.e., at $x=0,\;y=0$.
+But derivative along $y=mx$ at $z=0$ is
+\[f'(0)=\lim_x\tends 0 \frac{f(z)-f(0)}{z}=\lim_x\tends 0 \frac{\sqrt{xy}-0}{x+iy} = \lim_x\tends 0 \frac{\sqrt{x.mx}-0}{x+imx} = \lim_x\tends 0 \frac{\sqrt{m}}{1+im} \]
+Evidently, this limit depends on $m$, which differers for different values of $m$. i.e., $f'(0)$ is not unique. This shows $f'(0)$ does not exist. Hence given function is not analytic.
+\end{Solution}
+\begin{Solution}{2.1.a}
+        $v=x^2-y^2+2y$
+        
+\end{Solution}
+\begin{Solution}{2.1.b}
+        $2y-3x^2y+y^3$
+        
+\end{Solution}
+\begin{Solution}{2.1.c}
+        \[u_x=\frac{x}{x^2+y^2} \text{ and }u_y=\frac{y}{x^2+y^2} \]
+        \[u_{xx}=\frac{y^2-x^2}{(x^2+y^2)^2} \text{ and }u_{yy}=\frac{x^2-y^2}{(x^2+y^2)^2} \]
+        \[u_{xx}+u_{yy} = 0 , \text{ Therefore function is harmonic.}\]
+        Now,
+        \[dv=v_xdx + v_ydy = -u_ydx + u_xdy = \frac{xdy-ydx}{x^2+y^2} \]
+        \[v=tan^{-1} \frac{y}{x}\]
+        
+\end{Solution}
+\begin{Solution}{2.1.d}
+        $v=3x^2y + 6xy - y^3$
+        
+\end{Solution}
+\begin{Solution}{2.2.a}
+        $w=z^{2}+(5-i)z-\frac{i}{z}$
+        
+\end{Solution}
+\begin{Solution}{2.2.b}
+                $w=\cos z$
+        
+\end{Solution}
+\begin{Solution}{2.2.c}
+        $w=2z^{2}-iz^{3}$
+        
+\end{Solution}
+\begin{Solution}{2.2.d}
+        $w=ize^{-z}$
+        
+\end{Solution}
+\begin{Solution}{2.2.e}
+        $w=ze^{2z}$
+        
+\end{Solution}
+\begin{Solution}{2.2.f}
+        $w=2i\log z-(2-i)z$
+        
+\end{Solution}
+\begin{Solution}{2.2.g}
+        $w=\sin(iz)$
+        
+\end{Solution}
+\begin{Solution}{2.2.h}
+        $w=(1+i)\frac{1}{z}$
+        
+\end{Solution}
+\begin{Solution}{2.2.i}
+        $w=z+\frac{1}{z}$
+        
+\end{Solution}
+\begin{Solution}{2.3}
+Let $U=u-v$ and $V=u+v$, therefore $F(z)=U+iV =(1+i)(u+iv)=(1+i)f(z)$. Now
+\[U= \frac{e^y-\cos x+ \sin x}{\cosh y- \cos x} = 1+\frac{\sin x+ \sinh y}{\cosh y- \cos x}\;\;\;\;\;(\because e^y=\cosh y + \sinh y)\]
+By Milne's method,
+\begin{align*}
+        F(z) = \int [\phi_1(z,0)-i\phi_2(z,0)] +C\\
+        &=(1+i) \int \frac{dz}{1-\cos z} = \frac{(1+i)}{2} \int \text{cosec}^2\frac{z}{2} dz +C\\
+        &=(1+i) \cot \frac{z}{2}  + C
+\end{align*}
+Therefore,
+\[f(z) = \cot  \frac{z}{2} + C \]
+To evaluate $C$, use condition $f\left(\frac{\pi}{2}\right)=\frac{3-i}{2}$, we get
+\[C=\frac{1-i}{2}\]
+Hence
+\[f(z) = \cot  \frac{z}{2} + \frac{1-i}{2} \]
+
+\end{Solution}
+\begin{Solution}{2.4}
+Here, $v=r^2 \cos 2 \theta - r  \cos \theta + 2$,
+\[u_r=\frac{1}{r}v_{\theta} = -2r^2\sin 2\theta + r\sin \theta\]
+and
+\[u_{\theta}=rv_{r} =r(2r\cos 2 \theta - \cos \theta)\]
+\begin{align*}
+        du &= u_rdr+u_{\theta}d\theta  \\
+        &= (-2r^2\sin 2\theta + r\sin \theta)dr + (2r^2\cos 2 \theta - r\cos \theta)d\theta \\
+        \Rightarrow u=-r^2\sin 2\theta +r \sin \theta +C
+\end{align*}
+Now, $f(z) = u+iv = -r^2\sin 2\theta +r \sin \theta +C + i(r^2 \cos 2 \theta - r  \cos \theta + 2)$. On arranging, we get
+\[f(z) = i(z^2-z)+2i+C\]
+\end{Solution}
+\begin{Solution}{2.5}
+$f(z)=(1+i)z^2 + (-2+i)z-1$
+\end{Solution}
+\begin{Solution}{2.6}
+$f(z)=\log iz$
+\end{Solution}
+\begin{Solution}{2.7}
+Let $f(z)=u+iv$, so that $|f(z)|^2=u^2+v^2 = \phi(x,y)$ (say)
+\[\phi_x = 2uu_x + 2vv_x,\;\;\;\phi_y = 2uu_y + 2vv_y\]
+and
+\[\phi_{xx} = 2\left[uu_{xx} + u_x^2 + vv_{xx} + v_x^2\right],\;\;\;\phi_{yy} =  2\left[uu_{yy} + u_y^2 + vv_{yy} + v_y^2\right]\]
+This gives
+\[\phi_{xx} + \phi_{yy} =  2\left[u(u_{xx}+u_{yy}) + (u_x^2 + u_y^2) + v(v_{xx}+v_{yy}) + (v_x^2+v_y^2)\right] \]
+Since CR equations are satisfied here and Laplace equation also holds for $u$ and $v$, therefore
+\[\phi_{xx} + \phi_{yy} =  4\left[(u_x^2 + v_x^2) \right]  = 4 |f'(z)|^2\]
+\end{Solution}

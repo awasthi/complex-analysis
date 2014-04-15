@@ -1,0 +1,16 @@
+[main]
+.\main.tex
+
+[texfiles]
+.\complex\analytic.tex
+.\complex\int.tex
+.\complex\-int.tex
+.\complex\intro.tex
+.\complex\LaTeX2.tex
+.\complex\residue.tex
+.\complex\series.tex
+.\complex\singu.tex
+.\complex\singu1.tex
+.\complex\singu2.tex
+.\complex\tmp.tex
+

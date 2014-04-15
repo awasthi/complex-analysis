@@ -1,0 +1,525 @@
+%\chapter{Residue: Evaluation of Real Integrals}\index{Evaluation of Real Integrals}\index{Residue}
+\section{Residue Theorem}\index{Residue Theorem}
+\subsection{Residue}\index{Residue}
+ By Laurent series expansion of an analytic function $f(z)$, we have
+ \[f(x) = \sum_{n=-\infty}^{\infty}  a_n(z-a)^n\]
+ where \[a_n = \frac{1}{2\pi i} \int_C \frac{f(t)}{(t-a)^{n+1}} dt\]
+As we have from definition, the coefficient of $\frac{1}{(z-a)}$ in Laurent expansion about $z=a$ is called as \emph{Residue}, Which may be obtained by putting $n=-1$ in above equation. Thus,
+\[RES(a) =  \frac{1}{2\pi i} \int_C f(t) dt\]
+which implies
+\[\int_C f(t) dt = 2 \pi i .RES(a)\]
+\subsection{Residue Theorem}\index{Residue Theorem}
+\begin{theorem}
+If $f(z)$ be analytic within and on a simple closed curve $C$ except at number of poles. (Say $z_1, z_2, z_3, ..., z_n$ are poles.) then the integral
+\begin{center}
+$\ds \int_C f(t) dt = 2 \pi i$(Sum of Residue of $f(z)$ at each poles)
+\end{center}
+\end{theorem}
+\begin{proof}
+Let $f(z)$ be analytic within and on simple closed curve $C$ except at number of poles $z_1, z_2, z_3, ..., z_n$.
+
+Let $C_1, C_2, ..., C_n$ be small circles with centres at $z_1, z_2, z_3, ..., z_n$ respectively. Then by Cauchy extension theorem, we have
+\[\int_C f(z) dz = \int_{C_1} f(z) dz + \int_{C_2} f(z) dz + ... + \int_{C_n} f(z) dz \] 
+Now, we have,
+\[\int_{C_1} f(z) dt = 2 \pi i .RES(z_1) \]
+\[\int_{C_2} f(z) dt = 2 \pi i .RES(z_2) \]
+\[... ~~...~~...\]
+\[\int_{C_n} f(z) dt = 2 \pi i .RES(z_n)\]
+Therefore, 
+\[\int_C f(z) dz = 2 \pi i .RES(z_1) +2 \pi i .RES(z_2) +...+2 \pi i .RES(z_n)  \] 
+\[\int_C f(z) dz = 2 \pi i .[RES(z_1) +RES(z_2) +...+RES(z_n)]  \] 
+\[\int_C f(z) dz = 2 \pi i .[\textrm{Sum of all Residues at each poles.}]  \] 
+\[\int_C f(z) dz = 2 \pi i .Res  \] 
+We use $Res$ for `Sum of Residues'\index{Sum of Residue} through out the text.  
+\end{proof}
+\section{Evaluation of Real Integrals by Contour Integration}\index{Contour integration}\index{Real Integrals}
+\subsection*{Type $\int_0^{2 \pi} f(\cos \theta, \sin \theta) d\theta$}
+For such questions consider a unit radius circle with center at origin, as contour
+\[|z| = 1~~~~~~\Rightarrow    z=e^{i\theta}~~~~~~~~~~~~d\theta ={dz \over iz}\]
+Now use following relations
+\[\cos \theta = {e^{i\theta} + e^{-i\theta} \over 2}  = {1 \over 2}(z + {1 \over z}) ~~~~~~~\]
+\[\sin \theta = {e^{i\theta} - e^{-i\theta} \over 2i}={1 \over 2i}(z - {1 \over z})\] 
+We get, the whole function is converted into a function of $f(z)$, Now integral become 
+\[I = \int_C f(z) dz\]
+where C is unit circle. The value of this integral may be obtained by using Residue Theorem, which is $2\pi i.$(Sum of Residue inside $C$)
+\subsection{Form I}
+Form $\int_0^{2\pi} {1 \over a+b \cos\theta} d\theta$ or $\int_0^{2\pi} {1 \over a+b \sin\theta} d\theta$
+\begin{example}
+Use residue calculus to evaluate the following integral$\int_{0}^{2\pi}\frac{1}{5-4sin\theta}d\theta$
+\end{example}
+
+\begin{solution}
+Put $z=e^{i\theta}$so that $\sin\theta=\frac{1}{2i}\left(z-\frac{1}{z}\right)$and
+$d\theta=\frac{dz}{iz}$. Then 
+
+\begin{align*}
+\int_{0}^{2\pi}\frac{1}{5-4\sin\theta}d\theta & =\oint_{c}\frac{1}{5-4\left[\frac{1}{2i}\left(z-\frac{1}{z}\right)\right]}\frac{dz}{iz}\\
+ & =\oint_{c}\frac{1}{5iz-2z^{2}+2}dz\end{align*}
+Poles of integrand are given by 
+
+\[
+-2z^{2}+5iz+2=0\]
+ or \[
+z=\frac{-5i\pm\sqrt{-25+16}}{-4}=\frac{-5\pm3i}{-4}=2i,\frac{i}{2}\]
+Only $z=\frac{i}{2}$ lies inside $c$. Residue at the simple pole
+at $z=\frac{i}{2}$ is 
+
+\[
+\lim_{z\rightarrow\frac{i}{2}}\left(z-\frac{i}{2}\right)\times\left(\frac{1}{(2z-i)(-z+2i)}\right)=\frac{1}{3i}\]
+Hence by Cauchy's residue theorem 
+
+\[
+\int_{0}^{2\pi}\frac{1}{5-4\sin\theta}d\theta=2\pi i\times Res\]
+
+
+\[
+=2\pi\times\frac{1}{3i}=\frac{2\pi}{3}\]
+\end{solution}
+
+\begin{example}
+Using complex variables, evaluate the real integral
+\[\ds \int_{0}^{2\pi}\frac{d\theta}{1-2p\sin\theta+p^{2}}\] where $p^{2}<1$
+\end{example}
+\begin{solution}
+
+We have,
+
+\[
+I=\int_{0}^{2\pi}\frac{d\theta}{1-2p\sin\theta+p^{2}}=\int_{0}^{2\pi}\frac{d\theta}{1-2p\frac{(e^{i\theta}-e^{-i\theta})}{2i}+p^{2}}\]
+Put $z=e^{i\theta},dz=ie^{i\theta}d\theta=\frac{dz}{zi}$
+
+\begin{align*}
+I & =\int_{c}\frac{1}{1+ip(z-\frac{1}{z})+p^{2}}\frac{dz}{zi}\\
+ & =\int_{c}\frac{dz}{zi-pz^{2}+p+p^{2}zi} =\int_{c}\frac{dz}{(iz+p)(izp+1)} 
+\end{align*}
+Pole are given by 
+\[(iz+p)(ipz+1)=0\]
+\[z=-\frac{p}{i},-\frac{1}{ip} \text{ or } z=ip,\frac{i}{p}\]
+$ip$ is the only poles inside the unit circle. Residue at$(z=ip)$
+\[=\lim_{z\rightarrow ip}\frac{(z-pi)}{(iz+p)(izp+1)}=\lim_{z\rightarrow ip}\frac{1}{i(izp+1)}=\frac{1}{i}\left(\frac{1}{-p^{2}+1}\right)\]
+Hence by Cauchy's residue theorem 
+\[\int_{0}^{2\pi}\frac{d\theta}{1-2psin+p^{2}}=2\pi i\times Res=2\pi i\times\frac{1}{i}\left(\frac{1}{1-p^{2}}\right)=\frac{2\pi}{1-p^{2}}\]
+\end{solution}
+\subsection{Form II}
+Form $\int_0^{2\pi} {\cos m\theta \over a+b \cos\theta} d\theta$, $\int_0^{2\pi} {\cos m\theta \over a+b \sin\theta} d\theta$, $\int_0^{2\pi} {\sin m\theta \over a+b \cos\theta} d\theta$ or $\int_0^{2\pi} {\sin m\theta \over a+b \sin\theta} d\theta$
+
+\begin{example}
+Using complex variable techniques evaluate the real integral $\int_{0}^{2\pi}\frac{\sin^{2}\theta d\theta}{5-4\cos\theta}$
+\end{example}
+\begin{solution}
+We may write,\[
+\int_{0}^{2\pi}\frac{\sin^{2}\theta d\theta}{5-4\cos\theta}=\frac{1}{2}\int_{0}^{2\pi}\frac{1-\cos2\theta}{5-4\cos\theta}d\theta\]
+Put $z=e^{i\theta}$so that $\sin\theta=\frac{1}{2i}\left(z-\frac{1}{z}\right)$and
+$d\theta=\frac{dz}{iz}$. Then 
+
+\begin{align*}
+\frac{1}{2}\int_{0}^{2\pi}\frac{1-\cos2\theta}{5-4\cos\theta}d\theta & =\text{Real part of }\frac{1}{2}\int_{0}^{2\pi}\frac{1-e^{2i\theta}}{5-4cos\theta}d\theta\\
+ & =\text{Real part of }\frac{1}{2}\oint_{c}\frac{1-z^{2}}{5-2(z+\frac{1}{z})}(\frac{dz}{iz})\\
+ & =\text{Real part of }\frac{1}{2i}\oint_{c}\frac{z^{2}-1}{2z^{2}-5z+2}dz\end{align*}
+Poles of integrand are given by \[
+2z^{2}-5z+2=0\]
+ \[
+(2z-1)(z-2)=0\]
+\[
+z=\frac{1}{2},2\]
+So poles inside the contour $c$ there is a simple pole at $z=\frac{1}{2}$.
+Residue at the simple pole $(z=\frac{1}{2})$ is 
+
+\[
+\lim_{z\rightarrow\frac{1}{2}}(z-\frac{1}{2})\frac{z^{2}-1}{(2z-1)(z-2)}\]
+
+
+\[
+=\lim_{z\rightarrow\frac{1}{2}}\frac{z^{2}-1}{2(z-2)}=\frac{\frac{1}{4}-1}{2(\frac{1}{2}-2)}=\frac{1}{4}\]
+
+
+\[
+\oint_{c}\frac{z^{2}-1}{2z^{2}-5z+2}dz=2\pi i\times Res=\frac{2\pi i}{4}\]
+
+
+\[
+\therefore\int_{0}^{2\pi}\frac{sin^{2}\theta}{5-4cos\theta}d\theta=\frac{1}{2i}\oint_{c}\frac{z^{2}-1}{2z^{2}-5z+2}dz=\frac{1}{2i}\times\frac{2\pi i}{4}=\frac{\pi}{4}
+\]\\
+\end{solution}
+
+\subsection{Form III} 
+$\int_0^{2\pi} {1 \over (a+b \cos\theta)^2} d\theta$ or $\int_0^{2\pi} {1 \over (a+b \sin\theta)^2} d\theta$
+
+\begin{example}
+Use the residue theorem to show that \[
+\int_{0}^{2\pi}\frac{d\theta}{(a+bcos\theta)^{2}}=\frac{2\pi a}{\left(a^{2}-b^{2}\right){}^{3/2}}\]
+\end{example}
+\begin{solution}
+Put $e^{i\theta}=z,$so that $e^{i\theta}(id\theta)=dz$or $izd\theta=dz=d\theta=\frac{dz}{iz}$
+
+\[
+\int_{0}^{2\pi }\frac{d\theta}{(a+bcos\theta)^{2}}=\int_{c}\frac{1}{[a+\frac{b}{2}(z+\frac{1}{z})]^{2}}\frac{dz}{iz}\]
+where $c$ is the unit circle $z=1$
+
+\[
+=\int_{0}\frac{-4izdz}{(bz^{2}+2az+b)^{2}}=-\frac{4i}{b^{2}}\int_{c}\frac{zdz}{(z^{2}+\frac{2az}{b}+1)^{2}}\]
+The pole are given by putting the denominator
+
+\[
+(z^{2}+\frac{2a}{b}z+1)^{2}=0\]
+
+
+\[
+(z-\alpha)^{2}(z-\beta)^{2}=0\]
+where\[
+[\alpha+\beta=-\frac{2a}{b}],\alpha\beta=1\]
+
+
+\[
+\alpha=\frac{-\frac{2a}{b}+\sqrt{\frac{4a^{2}}{b^{2}}-4}}{2}=\frac{-a+\sqrt{a^{2}-b^{2}}}{b}\]
+
+
+\[
+\beta=\frac{-\frac{2a}{b}-\sqrt{\frac{4a^{2}}{b^{2}}-4}}{2}=\frac{-a-\sqrt{a^{2}-b^{2}}}{b}\]
+
+
+There are two poles at $z=\alpha$ and $z=\beta$, each of order 2.
+
+Now,
+
+Let\[
+f(Z)=\frac{-4iz}{b^{2}(z-\alpha)^{2}(z-\beta)^{2}}=\frac{\phi(z)}{(z-\alpha)^{2}}\]
+where $\ds \phi(z)=\frac{-4iz}{b^{2}(z-\beta)^{2}}$. Here $z=\alpha$ is
+only point inside circle $c$. Residue at the double pole $z=\alpha$ 
+\[=\lim_{z\rightarrow\alpha}\left(\frac{d}{dz}(z-\alpha)^{2}\frac{\phi(z)}{(z-\alpha)^{2}}\right)=\lim_{z\rightarrow\alpha}\frac{d}{dz}\phi(z)\]
+\[=-\lim_{z\rightarrow\alpha}\frac{4i}{b^{2}}\left[\frac{(z-\beta)^{2}.1-z.2(z-\beta)}{(z-\beta)^{4}}\right]=-\frac{4i}{b^{2}}\lim_{z\rightarrow\alpha}\left[\frac{(z-\beta)-2z}{(z-\beta)^{3}}\right]\]
+\[=\frac{4i}{b^{2}}\frac{\alpha+\beta}{(\alpha-\beta)^{3}}=\frac{4i}{b^{2}}\frac{-\frac{2a}{b}}{\left(\frac{2\sqrt{a^{2}-b^{2}}}{b}\right)^{3}}=\frac{-ai}{(a^{2}-b^{2})^{\frac{3}{2}}}\]
+Hence \[\int_{0}^{2\pi}\frac{d\theta}{(a+bcos\theta)^{2}}=2\pi i\times\frac{-ai}{(a^{2}-b^{2})^{\frac{3}{2}}}=\frac{2\pi a}{(a^{2}-b^{2})^{\frac{3}{2}}}\]
+\end{solution}
+\subsection{Form IV}
+$\int_0^{2\pi} {1 \over a^2 + \cos ^2 \theta} d\theta$, $\int_0^{2\pi} {1 \over a^2 + \sin^2 \theta}d\theta$
+\begin{example}
+Show by the method of residue, that
+
+\[
+\int_{0}^{\pi}\frac{ad\theta}{a^{2}+sin^{2}\theta}=\frac{\pi}{\sqrt{1+a^{2}}}\]
+
+\end{example}
+\[
+I=\int_{0}^{\pi}\frac{ad\theta}{a^{2}+sin^{2}\theta}=\int_{0}^{\pi}\frac{2ad\theta}{2a^{2}+2sin^{2}\theta}\]
+
+
+\[
+\because(cos2\theta=1-2sin^{2})\]
+
+
+\[
+=\int_{0}^{\pi}\frac{2ad\theta}{2a^{2}+1-cos2\theta}=\int_{0}^{2\pi}\frac{ad\phi}{2a^{2}+1-cos\phi}\]
+Putting $2\theta=\phi$
+
+\[
+=\int_{0}^{2\pi}\frac{ad\phi}{2a^{2}+1-\frac{1}{2}(e^{i\phi}+e^{-i\phi})}=\int_{0}^{2\pi}\frac{2ad\phi}{4a^{2}+2-(e^{i\phi}+e^{-i\phi})}\]
+
+
+Now let $z=e^{i\phi}\;\Rightarrow d\phi\frac{dz}{iz}$
+
+\begin{align*}
+I & =\int_{0}^{2\pi}\frac{2a}{4a^{2}+2-(z+\frac{1}{z})}\frac{dz}{iz}\\
+ & =2ai\int_{0}^{2\pi}\frac{dz}{\left[z^{2}-(4a^{2}+2)z-1\right]}\end{align*}
+The pole are given by putting the denominator
+
+\[
+z^{2}-(4a^{2}+2)z-1=0\]
+
+
+\[
+z=\frac{(4a^{2}+2)\pm\sqrt[]{(4a^{2}+2)^{2}-4}}{2}=\frac{(4a^{2}+2)\pm\sqrt[]{16a^{4}+16a^{2}}}{2}\]
+
+
+\[
+=(2a^{2}+1)\pm2a\sqrt[]{a^{2}+1}\]
+
+
+Let
+
+\[
+\alpha=(2a^{2}+1)+2a\sqrt[]{a^{2}+1}\]
+
+
+\[
+\beta=(2a^{2}+1)-2a\sqrt[]{a^{2}+1}\]
+
+
+Let $z^{2}-(4a^{2}+2)z+1=(z-\alpha)(z-\beta)$. Therefore product
+of the roots $=\alpha\beta=1$ or $|\alpha\beta|=1$. But $|\alpha|>1$
+therefore $|\beta|<1$.
+
+i.e., Only $\beta$ lies inside the circle $c$.
+
+Residue (at $z=\beta$) is \begin{align*}
+ & =\lim_{z\rightarrow\beta}(z-\beta)\frac{2ai}{(z-\alpha)(z-\beta)} =\frac{-2ai}{(\beta-\alpha)}\\
+ & =\frac{2ai}{\left[(2a^{2}+1)-2a\sqrt{a^{2}+1}\right]-\left[(2a^{2}+1)+2a\sqrt{a^{2}+1}\right]}\\
+ & =\frac{2ai}{-4a\sqrt{a^{2}+1}}=\frac{-i}{2\sqrt{a^{2}+1}}
+\end{align*}
+Hence by Cauchy's residue theorem
+\[I=2\pi i\times Res\]
+\[
+=2\pi i\frac{-i}{2\sqrt[]{a^{2}+1}}=\frac{\pi}{\sqrt[]{a^{2}+1}}\]
+
+\begin{problems}
+\prob Use Residue of calculus to evaluate the following integrals:
+
+	\subprob  $ \ds \int_0^{\pi}{1 \over 3+2\cos\theta} d\theta $
+		\begin{sol}
+	$\ds \frac{\pi}{2\sqrt{5}}$	
+	\end{sol}
+	\subprob  $ \ds \int_0^{2\pi}{\cos \theta \over 3+\sin\theta} d\theta $
+	\begin{sol}
+	0 ; \textbf{Hint}
+	\[I = \int_0^{2\pi}{\cos \theta \over 3+\sin\theta} d\theta = Real part of \int_0^{2\pi}{\frac{e^{i\theta}}{3+\sin\theta}} d\theta \]
+	\end{sol}
+	\subprob  $ \ds \int_0^{\pi}{1+2\cos\theta \over 5+4\sin\theta} d\theta $
+		\begin{sol}
+	0 
+	\end{sol}
+	\subprob  $ \ds \int_0^{2\pi}{\sin^2 \theta - 2 \cos\theta \over 2+\cos\theta} d\theta $
+			\begin{sol}
+	$\frac{2\pi}{\sqrt{3}}$
+	\end{sol}
+
+	\subprob  $ \ds \int_0^{2\pi}{\cos 3\theta \over 5-4\cos\theta} d\theta $
+	\begin{sol}
+	$\frac{\pi}{12}$
+	\end{sol}
+	\subprob  $ \ds \int_0^{2\pi} e^{\cos \theta}[\cos(\sin \theta - n \theta)]d\theta $
+	\begin{sol}
+	Let 
+	\begin{align*}
+	I &=\int_0^{2\pi} e^{\cos \theta}[\cos(\sin \theta - n \theta+ i\sin(\sin \theta - n \theta)]d\theta \\
+		&= \int_0^{2\pi}e^{e^{i\theta}}e^{-in\theta} 
+\end{align*}
+	Put $z=e^{i\theta}$,
+	\[I = \int_C \frac{e^z}{iz^{n+1}}dz\]
+	Now by residue theorem,
+	\[I = \frac{2\pi}{n!}\]
+	Now compare real parts to obtain
+	\[\int_0^{2\pi} e^{\cos \theta}[\cos(\sin \theta - n \theta)]d\theta = \frac{2\pi}{n!}\]
+	
+	\end{sol}
+
+	
+%		\begin{sol}
+%	$\ds \frac{2\pi}{\sqrt{5}}(3-\sqrt{5})^n,\;n>0$	
+%	\end{sol}
+	{\subprob  $ \ds \int_0^{2\pi}{(1+2\cos\theta)^n \cos n\theta \over 3+2\cos\theta} d\theta $}{	\subprob  $ \ds \int_0^{2\pi}{\cos 2\theta \over 1-2p\sin\theta + p^2} d\theta $ where $p^2 < 1$.}
+					
+\end{problems}
+
+\subsection{Some Important Results}
+\subsection*{Jordan's Inequality}\index{Jordan's Inequality} Consider the relation $y=\cos \theta$. As $\theta$ increases, $\cos\theta$ decreases and therefore $y$ decreases. The mean ordinate between $0$ and $\theta$ is $ \ds 
+{1 \over \theta} \int_0^{\theta} \cos\theta d\theta = {\sin\theta \over \theta} $
+which implies when 
+\[0<\theta < {\pi \over 2} \text{ then } \frac{2}{\pi}< {\sin\theta \over \theta} < 1\]
+\begin{theorem}
+Let $AB$ be the arc $\alpha < \theta < \beta$ of the circle $|z-a|=r$. If ~~$\lim_{z \rightarrow a} (z-a) f(z) = k$ then
+\[\lim_{r \rightarrow 0} \int_{AB} f(z) dz = i(\beta - \alpha)k\]
+\end{theorem}
+\begin{theorem}
+Let $AB$ be the arc $\alpha < \theta < \beta$ of the circle $|z|=R$. If ~~$\lim_{z \rightarrow \infty} z.f(z) = k$ then
+\[\lim_{R \rightarrow \infty} \int_{AB} f(z) dz = i(\beta - \alpha)k\]
+\end{theorem}
+\begin{theorem}
+If $f(z) \rightarrow 0$ uniformly as $|z| \rightarrow \infty$, then  $\lim_{R \rightarrow \infty} \int_{C_R} e^{imz}f(z) dz = 0$, where $C_R$ denotes  the semicircle $|z|=R, ~~~m>0$. 
+\end{theorem}
+%\section{Evaluation of Real Integrals by Contour Integration}
+\subsection{Type $\int_{-\infty}^{\infty} f(x) dy$}
+Consider the integral $\int_{-\infty}^{\infty} f(x) dy$, such that $f(x) = {\phi (x) \over \psi (x)}$, where $\psi (x)$ has no real roots and the degree of $\psi (x)$ is greater than $\phi (x)$.
+\paragraph{Procedure}
+Consider a function $f(z)$ corresponding to function $f(x)$. 
+Again consider the integral $\int_C f(z) dz$, where C is a curve, consisting of upper half of the circle $|z|=R$, and part of real axis from $-R$ to $R$. Here $R$ is on our choice and can be taken as such that there is no singularity  on its circumference $C_R$.
+
+Now by Cauchy's theorem,we have
+\[\int_C f(z) dz = 2\pi i . \sum R_k\]
+\[\int_{-R}^R f(x) dx + \int_{C_R} f(z) dz = 2\pi i . \sum R_k\]
+Now as,
+\[~~~~~~~~~~~~ \lim_{R \rightarrow \infty}\int_{C_R} f(z) dz = 0 \]
+We get, 
+\[\int_{-\infty}^{\infty} f(x) dx = 2\pi i . \sum R_k\]
+Which is required integral.														
+
+\begin{example}
+Evaluate $\int_{-\infty}^{\infty}\frac{x^{2}dx}{(x^{2}+1)(x^{2}+4)}$.
+\end{example}
+\begin{solution}
+Consider the integral $\int_{C}f(z)dz$ where $f(z)=\frac{z^{2}}{(z^{2}+1)(z^{2}+4)}$
+and $C$ is the contour consisting of the semi circle $C_{R}$ which
+is upper half of a large circle $|z|=R$ of radius $R$ together with
+the part of the real axis from$-R$ to $+R$. 
+
+For the poles 
+\[(z^{2}+1)(z^{2}+4)=0 \;\; \Rightarrow\; z=\pm i,z=\pm2i\]
+So $z=i,2i$ are the only poles inside $C$. 
+
+The residue at $z=i$
+\begin{align*}
+= & \lim_{z\rightarrow i}(z-i)\frac{z^{2}}{(z+i)(z-i)(z^{2}+4)}\\
+= & \lim_{z\rightarrow i}\frac{z^{2}}{(z+i)(z^{2}+4)} = \frac{-1}{2i(-1+4)}=-\frac{1}{6i}
+\end{align*}
+The residue at $z=2i$
+\begin{align*}
+= & \lim_{z\rightarrow2i}(z-2i).\frac{z^{2}}{(z^{2}+1)(z+2i)(z-2i)}\\
+= & \lim_{z\rightarrow2i}\frac{z^{2}}{(z^{2}+1)(z+2i)}=  \frac{(2i)^{2}}{(-4+1)(2i+2i)}=\frac{1}{3i}
+\end{align*}
+By theorem of residue;
+\begin{align*}
+\int_{C}f(z)dz= & 2\pi i[Res(i)+Res(2i)]\\
+= & 2\pi i(-\frac{1}{6i}+\frac{1}{3i})=\frac{\pi}{3}\end{align*}
+
+
+i.e. \[\int_{-R}^{R}f(x)dx+\int_{C_{R}}f(z)dz=\frac{\pi}{3}\]
+Hence by making $R\rightarrow\infty,$ relation (1) becomes 
+\[\int_{-\infty}^{\infty}f(x)dx+\lim_{R\rightarrow\infty}\int_{C_{R}}f(z)dz=\frac{\pi}{3}\]
+Now
+\begin{align*}
+\left|\int_{C_{R}}f(z)dz\right| & =\left|\int_{C_{R}}\frac{z^{2}dz}{(z^{2}+1)(z^{2}+4)}\right|\\
+ & \leq\int_{C_{R}}\frac{\left|z^{2}dz\right|}{\left|(z^{2}+1)\right|\left|(z^{2}+4)\right|}\\
+ & \leq\int_{C_{R}}\frac{\left|z^{2}dz\right|}{\left|(|z|^{2}-1)\right|\left|(|z|^{2}-4)\right|}\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\because|z|=R\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; z=Re^{i\theta},0<\theta<\pi\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|dz|=Rd\theta,\\
+ & \leq\int_{C_{R}}\frac{R^{2}Rd\theta}{(R^{2}-1)(R^{2}-4)}\\
+ & =\frac{\pi R^{3}}{(R^{2}-1)(R^{2}-4)}\rightarrow0\text{ as }R\rightarrow\infty\end{align*}
+Thus
+\[\int_{-\infty}^{\infty}f(x)dx=\frac{\pi}{3}\]
+i.e.,\[\int_{-\infty}^{\infty}\frac{x^{2}dx}{(x^{2}+1)(x^{2}+4)}=\frac{\pi}{3}\]
+\end{solution}
+\begin{example}
+Evaluate by the model of complex variables , the integral $\ds \int_{-\infty}^{\infty}\frac{x^{2}}{(1+x^{2})^{3}}dx$
+\end{example}
+\begin{solution}
+Consider the integral $\int_{C}f(z)dz$ where $f(z)=\frac{z^{2}}{(1+z^{2})^{3}}$
+and $C$ is the contour consisting of the semi circle $C_{R}$ which
+is upper half of a large circle $|z|=R$ of radius $R$ together with
+the part of the real axis from$-R$ to $+R$. For the poles 
+\[(1+z^{2})^{3}=0\]
+\[\Rightarrow\; z=\pm i\]
+$\therefore z=i$ and $z=-i$ are the two poles each of order 3. But
+only $z=i$ lies within the $C$. Residue at $z=i$
+
+To get residue at $z=i$ , put $z=i+t$ , then 
+\begin{align*}
+\frac{z^{2}}{(1+z^{2})^{3}} & =\frac{(i+t)^{2}}{[1+(i+t)^{2}]^{3}}=\frac{-1+2it+t^{2}}{[1-1+2it+t^{2}]^{3}}\\
+ & =\frac{(-1+2it+t^{2})}{(2it)^{3}(1+\frac{1}{2i}t)^{3}}=\frac{(-1+2it+t^{2})}{-8it^{3}}(1+\frac{t}{2i})^{-3}\\
+ & =-\frac{1}{8i}\left(-\frac{1}{t^{3}}+\frac{2i}{t^{2}}+\frac{1}{t}\right)\left(1-\frac{3t}{2i}+\frac{(-3)(-4)}{2}\frac{t^{2}}{-4}+...\right)\\
+ & =-\frac{1}{8i}\left[-\frac{1}{t^{3}}+\frac{2i}{t^{2}}+\frac{1}{t}\right]\left[1-\frac{3}{2i}t-\frac{3}{2}t^{2}+...\right]
+ \end{align*}
+Here coefficient of $\ds \frac{1}{t}$ is $\ds \frac{-1}{8i}(\frac{3}{2}-3+1)$ = $\ds \frac{-i}{16}$, which is therefore the residue at $z=i$.
+
+Using Cauchy's theorem of residues we have 
+\[\int_{c}f(z)dz=2\pi i\times Res\]
+where $Res$ = Sum of the residues of $f(z)$ at the poles within $c$.
+\[\int_{-R}^{R}f(x)dx+\int_{C_{R}}f(z)dz=2\pi i(-\frac{i}{16})\]
+\[\int_{-R}^{R}\frac{x^{2}}{(1+x^{2})^{3}}dx+\int_{C_{R}}\frac{z^{2}}{(1+z^{2})^{3}}dz=\frac{\pi}{8}\]
+Now 
+\begin{align*}
+\left|\int_{C_{R}}\frac{z^{2}}{(1+z^{2})^{3}}dz\right| & \le\int_{C_{R}}\frac{\left|z\right|^{2}|dz|}{\left|1+z^{2}\right|{}^{3}}
+  \le\int_{C_{R}}\frac{|z|^{2}|dz|}{\left(\left|z^{2}\right|-1\right)^{3}}\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\text{Since }z=Re^{i\theta},|dz|=Rd\theta\\
+ & \le\frac{R^{2}}{(R^{2}-1)^{3}}\int_{0}^{\pi}Rd\theta\\
+ & =\frac{\pi R^{3}}{(R^{2}-1)^{3}}\rightarrow0\text{ as }R\rightarrow\infty\end{align*}
+Hence
+\[\int_{-\infty}^{\infty}\frac{x^{2}}{(1+x^{2})^{3}}dx=\frac{\pi}{8}\]
+\end{solution}
+\begin{example}
+Using the complex variables techniques, evaluate the integral
+\[\int_{0}^{\infty}\frac{dx}{x^{4}+16}\]
+\end{example}
+\begin{solution}
+Consider the integral $\int_{C}f(z)dz$ where $f(z)=\frac{1}{z^{4}+16}$
+and $C$ is the contour consisting of the semi circle $C_{R}$ which
+is upper half of a large circle $|z|=R$ of radius $R$ together with
+the part of the real axis from$-R$ to $+R$. 
+
+For the poles 
+\[z^{4}+16=  0 \; \Rightarrow \; z^{4}=  -16 \; \Rightarrow \; \Rightarrow \; z^{4}=  16e^{i\pi}=16e^{i(2n+1)\pi} \;\Rightarrow \;
+z=  2e^{(2n+1)i\pi/4} \]
+Now for $n=0,1,2,3
+$\begin{align*}
+z_{1}=2e^{i\pi/4} & 2(cos\frac{\pi}{4}+isin\frac{\pi}{4})=2(\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}})=\sqrt{2}(1+i)\\
+z_{2}=2e^{3i\pi/4} & 2(cos\frac{3\pi}{4}+isin\frac{3\pi}{4})=2(-\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}})=\sqrt{2}(-1+i)\\
+z_{3}=2e^{5i\pi/4} & 2(cos\frac{5\pi}{4}+isin\frac{5\pi}{4})=2(-\frac{1}{\sqrt{2}}-i\frac{1}{\sqrt{2}})=-\sqrt{2}(1+i)\\
+z_{4}=2e^{7i\pi/4} & 2(cos\frac{7\pi}{4}+isin\frac{7\pi}{4})=2(\frac{1}{\sqrt{2}}-i\frac{1}{\sqrt{2}})=\sqrt{2}(1-i)
+\end{align*}
+There are four poles , but only two poles at $z_{1}$ and $z_{2}$
+lie within $C$. 
+
+Residue (at $z=2e^{\frac{i\pi}{4}}$)\[
+=\left[\frac{1}{\frac{d}{dz}(z^{4}+16)}\right]_{z=2e^{\frac{i\pi}{4}}}=\left[\frac{1}{4z^{3}}\right]_{z=2e^{\frac{i\pi}{4}}}=\frac{1}{4(2e^{i\frac{\pi}{4}})^{3}}=\frac{1}{32e^{i\frac{3\pi}{4}}}=-\frac{e^{i\frac{\pi}{4}}}{32}\]
+
+
+Residues (at $z=2e^{\frac{3i\pi}{4}}$)\[
+=\left[\frac{1}{\frac{d}{dz}(z^{4}+16)}\right]_{z=2e^{\frac{3i\pi}{4}}}=\left[\frac{1}{4z^{3}}\right]_{z=2e^{\frac{3i\pi}{4}}}=\frac{1}{4(2e^{3i\frac{\pi}{4}})^{3}}=\frac{1}{32e^{i\frac{9\pi}{4}}}=\frac{e^{-i\frac{\pi}{4}}}{32}\text{ Note Here.}\]
+\[\int_{c}f(z)dz=2\pi i\times\left(\frac{-e^{i\pi/4}+e^{-i\pi/4}}{32}\right)\]
+\[\int_{c}f(z)dz=-\left(2\pi i\frac{i\sin\frac{\pi}{4}}{16}\right)=\frac{\sqrt{2}\pi}{16}\]
+where $Res$= Sum of residues at poles within $C$
+\[\int_{-R}^{R}f(z)dz+\int_{C_{R}}f(z)dz==\frac{\sqrt{2}\pi}{16}\]
+\[\int_{-R}^{R}\frac{1}{x^{4}+16}dx+\int_{C_{R}}\frac{1}{z^{4}+16}dz=\frac{\sqrt{2}\pi}{16}\]
+ Now \begin{align*}
+\left|\int_{C_{R}}\frac{1}{z^{4}+16}dz\right| & \le\int_{C_{R}}\frac{|dz|}{\left|z^{4}+16\right|}\\
+ & \le\int_{C_{R}}\frac{|dz|}{(\left|z\right|^{4}-16)}\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\text{Since }z=Re^{i\theta},|dz|=Rd\theta\\
+ & \le\int_{0}^{\pi}\frac{Rd\theta}{R^{4}-16}=\frac{R\pi}{R^{4}-16}\rightarrow0\text{ as }R\rightarrow\infty\end{align*}
+Hence \[\int_{-\infty}^{\infty}\frac{1}{x^{4}+16}dx==\frac{\sqrt{2}\pi}{16}\]
+\[2\int_{0}^{\infty}\frac{1}{x^{4}+16}dx=\frac{\sqrt{2}\pi}{16}\]
+\[\int_{0}^{\infty}\frac{1}{x^{4}+16}dx=\frac{\sqrt{2}\pi}{32}\]
+\end{solution}
+
+\begin{example}
+Using complex variables, evaluate the real integral
+
+\[
+\int_{0}^{\infty}\frac{cos(3x)dx}{(x^{2}+1)(x^{2}+4)}\]
+
+\end{example}
+\begin{solution}
+Consider the integral $\int_{C}f(z)dz$ where $f(z)=\frac{e^{3iz}}{(z^{2}+1)(z^{2}+4)}$
+and $C$ is the contour consisting of the semi circle $C_{R}$ which
+is upper half of a large circle $|z|=R$ of radius $R$ together with
+the part of the real axis from$-R$ to $+R$. 
+
+For the poles 
+\begin{center}
+$(z^{2}+1)(z^{2}+4)=0$ $\Rightarrow z^{2}+1=0$ or $z=\pm i$  $\Rightarrow z^{2}+4=0$ or $z=\pm2i$
+\end{center}
+The Poles at $z=i$ and $z=2i$ lie within the contour.
+
+Residue (at $z=i$)\[=\lim_{z\rightarrow i}\frac{(z-i)e^{3iz}}{(z^{2}+1)(z^{2}+4)}=\lim_{z\rightarrow i}\frac{e^{3iz}}{(z+i)(z^{2}+4)}=\frac{e^{-3}}{6i}\]
+Residue (at $z=2i$)\[=\lim_{z\rightarrow2i}\frac{(z-2i)e^{3iz}}{(z^{2}+1)(z^{2}+4)}=\lim_{z\rightarrow i}\frac{e^{3iz}}{(z^{2}+1)(z+2i)}=-\frac{e^{-6}}{12i}\]
+By theorem of Residue \[\int_{C}f(z)dz=2\pi i\times Res\]
+\[\int_{-R}^{R}\frac{e^{3iz}dz}{(z^{2}+1)(z^{2}+4)}+\int_{C_{R}}\frac{e^{3iz}dz}{(z^{2}+1)(z^{2}+4)}=2\pi i\left[\frac{e^{-3}}{6i}+\frac{e^{-6}}{-12i}\right]\]
+\[\lim_{R\rightarrow\infty}\int\frac{e^{3izdz}}{(z^{2}+1)(z^{2}+4)}=0,\text{ By Jordan's Lemma}\]
+\[\int_{-\infty}^{\infty}\frac{e^{3ix}}{(x^{2}+1)(x^{2}+4)}dx=\pi\left[\frac{e^{-3}}{3}-\frac{e^{-6}}{6}\right]\]
+\[\int_{-\infty}^{\infty}\frac{cos(3x)dx}{(x^{2}+1)(x^{2}+4)}=\text{ Real part of}\int_{-\infty}^{\infty}\frac{e^{3ix}dx}{(x^{2}+1)(x^{2}+4)}\]
+\[\int_{-\infty}^{\infty}\frac{cos(3x)dx}{(x^{2}+1)(x^{2}+4)}=\pi\left[\frac{e^{-3}}{3}-\frac{e^{-6}}{6}\right]\]
+\[\int_{0}^{\infty}\frac{cos(3x)dx}{(x^{2}+1)(x^{2}+4)}=\frac{\pi}{2}\left[\frac{e^{-3}}{3}-\frac{e^{-6}}{6}\right]\]
+\end{solution}
+
+\begin{problems}
+\prob Use Residue of calculus to evaluate the following integrals:
+\subprob  $ \ds \int_0^{\infty} {\cos mx \over (x^2+1)} dx $
+\begin{sol}
+$\frac{\pi e^{-m}}{2}$
+\end{sol}
+\subprob  $ \ds \int_0^{\infty} {\log (1+x^2) \over (x^2+1)} dx $
+\begin{sol}
+$\pi \log 2$
+\end{sol}
+\subprob  $ \ds \int_0^{\infty} {1 \over (x^2+1)^3} dx $
+\begin{sol}
+$\frac{3\pi}{16}$
+\end{sol}
+\subprob  $ \ds \int_0^{\infty} {1 \over (x^6+1)} dx $
+\begin{sol}
+$\frac{\pi}{3}$
+\end{sol}
+\subprob  $ \ds \int_0^{\infty} {\cos x^2 + \sin x^2 -1 \over (x^4+16)} dx $
+\prob  By contour integration, prove that $ \ds \int_0^{\infty} {\sin mx \over x} dx = {\pi \over 2} $
+\prob  Show that, if $a \geq b \geq 0$, then 	$ \ds \int_0^{\infty} {\cos 2ax -\cos 2bx \over x^2} dx = \pi (b-a) $
+\prob  Show that $ \ds \int_0^{\infty} {x^3 \sin x  \over (x^2+a^2)(x^2+b^2)} dx = \frac{\pi}{2(a^2-b^2)}[a^2e^{-a}-b^2e^{-b}]$ where $a>b>0$	
+\end{problems}
+

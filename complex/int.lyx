@@ -1,0 +1,3174 @@
+#LyX file created by tex2lyx 1.6.3
+\lyxformat 249
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+chapter{Complex Integration}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+
+Integration in complex plain
+\end_layout
+
+\begin_layout Standard
+
+In case of real variable, the path of the integration of 
+\begin_inset Formula $\ds \int_a^b f(x)dx$
+\end_inset
+
+ is always along the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis from 
+\begin_inset Formula $x=a$
+\end_inset
+
+ to 
+\begin_inset Formula $x=b$
+\end_inset
+
+. But in case of a complex function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ the path of a complex function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ the path of the definite integral 
+\begin_inset Formula $\ds \int_{\alpha}^{\beta} f(z)dz$
+\end_inset
+
+ can be along any curve from 
+\begin_inset Formula $z=\alpha$
+\end_inset
+
+ to 
+\begin_inset Formula $z=\beta$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate 
+\begin_inset Formula $\ds \int_{0}^{2+i} \bar{z}^2 dz$
+\end_inset
+
+ along the real axis from 
+\begin_inset Formula $z=0$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2$
+\end_inset
+
+ and then along parallel to 
+\begin_inset Formula $y$
+\end_inset
+
+-axis from 
+\begin_inset Formula $z=2$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2+i$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2+i} (x-iy)^2 (dx+idy)\\
+																&= \int_{0}^{2+i} (x^2-y^2-2ixy) (dx+idy)\\
+\end{align*}
+\end_inset
+
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{0.7}{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{pspicture}
+\end_layout
+
+\end_inset
+
+(0,-1.08)(2.9934375,1.05) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+<-
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+(0.2778125,1.04)(0.2778125,-0.74) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+(0.2778125,-0.74)(2.7178125,-0.74) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+(0.2778125,-0.74)(1.6978126,0.56) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psline
+\end_layout
+
+\end_inset
+
+[linewidth=0.02cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+<-
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+(1.6778125,0.58)(1.6778125,-0.74) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(1.7167188,-0.93)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+z=2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(2.2298439,0.55)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+z=2+i
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(2.8632812,-0.73)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+x
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(0.085625,0.93)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+y
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Caption
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Along real axis from 
+\begin_inset Formula $z=0$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2$
+\end_inset
+
+ (y=0)
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[y=0 \Rightarrow dy=0, dz = d(x+iy) = dx\]
+\end_inset
+
+ 
+\begin_inset Formula \[z=0, y=0 \Rightarrow x=0\]
+\end_inset
+
+ and 
+\begin_inset Formula \[z=2, y=0 \Rightarrow x=2\]
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{2} (x^2) (dx)\\
+	&= \left[\frac{x^3}{3} \right]_0^2 = \frac{8}{3}\\
+\end{align*}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+
+Along parallel to 
+\begin_inset Formula $y$
+\end_inset
+
+-axis from 
+\begin_inset Formula $z=2$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2+i$
+\end_inset
+
+ (x=2)
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[x=2 \Rightarrow dx=0, dz = d(x+iy) = idy\]
+\end_inset
+
+ 
+\begin_inset Formula \[z=2, x=2 \Rightarrow y=0~~~~~and~~~~~z=2+i, x=2 \Rightarrow y=1\]
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+	\int_{0}^{2+i} \bar{z}^2 dz		&= \int_{0}^{1} (4-y^2-4iy) (i.dy)\\
+	&= i \left[4y - \frac{y^3}{3} - 4i\frac{y^2}{2} \right]_0^1 =\left[\frac{11}{3}i + 2\right]\\
+\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{0}^{2+i} \bar{z}^2 dz$
+\end_inset
+
+ along the real axis from 
+\begin_inset Formula $z=0$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2$
+\end_inset
+
+ then along parallel to 
+\begin_inset Formula $y$
+\end_inset
+
+-axis from 
+\begin_inset Formula $z=2$
+\end_inset
+
+ to 
+\begin_inset Formula $z=2+i$
+\end_inset
+
+ 
+\begin_inset Formula \[= \frac{8}{3} +  \frac{11}{3}i + 2  = \frac{1}{3}(14+11i)\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Find the value of the integral 
+\begin_inset Formula \[\int_0^{1+i}(x-y+ix^2)dz\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ Along the straight line from 
+\begin_inset Formula $z=0$
+\end_inset
+
+ to 
+\begin_inset Formula $z=1+i$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula \[\frac{1}{3}(i-1)\]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ along the real axis from 
+\begin_inset Formula $z=0$
+\end_inset
+
+ to 
+\begin_inset Formula $z=1$
+\end_inset
+
+ and then along parallel to 
+\begin_inset Formula $y$
+\end_inset
+
+-axis from 
+\begin_inset Formula $z=1$
+\end_inset
+
+ to 
+\begin_inset Formula $z=1+i$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula \[-\frac{1}{2}+\frac{5}{6}i\]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Integrate 
+\begin_inset Formula $f(z) = x^2 + ixy$
+\end_inset
+
+ from 
+\begin_inset Formula $A(1,1)$
+\end_inset
+
+ to 
+\begin_inset Formula $B(2,8)$
+\end_inset
+
+ along 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ the straight line 
+\begin_inset Formula $AB$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Equation of line 
+\begin_inset Formula $AB$
+\end_inset
+
+ 
+\begin_inset Formula \[y=7x-6\]
+\end_inset
+
+ Now 
+\begin_inset Formula \[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+\end_inset
+
+ substitute 
+\begin_inset Formula $y=7x-6$
+\end_inset
+
+, 
+\begin_inset Formula $dy=7dx$
+\end_inset
+
+, then on integrating 
+\begin_inset Formula \[=\frac{1}{3}[-147+71i]\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ the curve 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $x=t, ~y=t^3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here 
+\begin_inset Formula \[\int f(z) dz  = \int (x^2 + ixy)(dx+idy)\]
+\end_inset
+
+ substitute 
+\begin_inset Formula $x=t,y=t^3$
+\end_inset
+
+, 
+\begin_inset Formula $dx=dt\text{ and } dy=3t^2dt$
+\end_inset
+
+, then on integrating with respect to 
+\begin_inset Formula $t$
+\end_inset
+
+ from 1 to 2 
+\begin_inset Formula \[=-\frac{1094}{21}+\frac{124}{5}i\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Evaluate the integral 
+\begin_inset Formula $\ds \int_c (3y^2dx+2ydy)$
+\end_inset
+
+, where 
+\begin_inset Formula $c$
+\end_inset
+
+ is the circle 
+\begin_inset Formula $x^2+y^2=1$
+\end_inset
+
+, counterclockwise from 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ to 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ -1 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{problems}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Cauchy's Integral Theorem
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ If a function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic and its derivative 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ continuous at all points within and on a simple closed curve 
+\begin_inset Formula $c$
+\end_inset
+
+, then 
+\begin_inset Formula $\ds \int_c f(z) dz = 0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f(z)=u+iv$
+\end_inset
+
+ and 
+\begin_inset Formula $z=x+iy$
+\end_inset
+
+ and region enclosed by the curve 
+\begin_inset Formula $c$
+\end_inset
+
+ be 
+\begin_inset Formula $R$
+\end_inset
+
+, then 
+\begin_inset Formula \begin{align*}
+	\int_cf(z)dz 	&= \int_c(u+iv)(dx+idy) =  \int_c(udx-vdy) + i(vdx+udy)\\
+								&= \int\int_R (-v_x - u_y)dxdy + i\int\int_R (u_x - v_y)dxdy\\
+								\text{By Cauchy-Riemann equations,} \\
+								&= \int\int_R (u_y - u_y)dxdy + i\int\int_R (u_x - u_x)dxdy =0
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Find the integral 
+\begin_inset Formula $\ds \int_c \frac{3z^2+7z+1}{z+1}dz$
+\end_inset
+
+, where 
+\begin_inset Formula $c$
+\end_inset
+
+ is the circle 
+\begin_inset Formula $\ds |z|=\frac{1}{2}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Poles of integrand are given by 
+\begin_inset Formula \[z+1 = 0\]
+\end_inset
+
+ That is, 
+\begin_inset Formula $z=-1$
+\end_inset
+
+. Since given circle 
+\begin_inset Formula $|z|=\frac{1}{2}$
+\end_inset
+
+, with centre 
+\begin_inset Formula $z=0$
+\end_inset
+
+ and radius 
+\begin_inset Formula $1/2$
+\end_inset
+
+ does not enclose 
+\begin_inset Formula $z=-1$
+\end_inset
+
+. Thus it is obvious that the integrand is analytic everywhere. Hence, by Cauchy's Theorem, 
+\begin_inset Formula \[\int_c \frac{3z^2+7z+1}{z+1}dz = 0\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+[Cauchy's integral theorem for multi-connected region] If a function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic in region 
+\begin_inset Formula $R$
+\end_inset
+
+ between two simple closed curves 
+\begin_inset Formula $c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $c_2$
+\end_inset
+
+, then 
+\begin_inset Formula \[\int_{c_1} f(z) dz = \int_{c_2} f(z) dz\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Since 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic in region 
+\begin_inset Formula $R$
+\end_inset
+
+, By Cauchy's Theorem 
+\begin_inset Formula \[\int f(z) dz = 0\]
+\end_inset
+
+ where path of integration is along 
+\begin_inset Formula $AB$
+\end_inset
+
+, and curves 
+\begin_inset Formula $C_2$
+\end_inset
+
+ in clockwise direction and along 
+\begin_inset Formula $BA$
+\end_inset
+
+ and along 
+\begin_inset Formula $C_1$
+\end_inset
+
+ in anticlockwise direction.
+\end_layout
+
+\begin_layout Standard
+
+We may write, 
+\begin_inset Formula \[\int_{AB} f(z) dz - \int_{c_2} f(z) dz + \int_{BA} f(z) dz + \int_{c_1} f(z) dz = 0\]
+\end_inset
+
+ or 
+\begin_inset Formula \[- \int_{c_2} f(z) dz +  \int_{c_1} f(z) dz = 0\]
+\end_inset
+
+ 
+\begin_inset Formula \[ \int_{c_1} f(z) dz =  \int_{c_2} f(z) dz \]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+
+Cauchy Integral Formula
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ If a function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic within and on a closed curve 
+\begin_inset Formula $c$
+\end_inset
+
+, and if 
+\begin_inset Formula $a$
+\end_inset
+
+ is any point within 
+\begin_inset Formula $c$
+\end_inset
+
+ , then 
+\begin_inset Formula \[f(a) = \frac{1}{2\pi i}\int_{z} \frac{f(z)}{(z-a)} dz\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $z=a$
+\end_inset
+
+ be a point within a closed curve 
+\begin_inset Formula $c$
+\end_inset
+
+. Describe a circle 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ such that 
+\begin_inset Formula $|z-a|=\rho$
+\end_inset
+
+ and it lies entirely within 
+\begin_inset Formula $c$
+\end_inset
+
+. Now consider the function 
+\begin_inset Formula \[\phi(z) = \frac{f(z)}{(z-a)}\]
+\end_inset
+
+ Obviously, this function is analytic in region between 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+. Hence by Cauchy's integral theorem for multiconnected region, we have 
+\begin_inset Formula \[\int_{c} \phi(z) dz = \int_{\gamma} \phi(z) dz\]
+\end_inset
+
+ or 
+\begin_inset Formula \begin{align*}
+	\int_{c} \frac{f(z)}{(z-a)} dz 	&= \int_{\gamma} \frac{f(z)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a) + f(a)}{(z-a)} dz \\
+																	&= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz + \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+																	&= I_1 + I_2
+\end{align*}
+\end_inset
+
+ Now, since 
+\begin_inset Formula $|z-a|=\rho$
+\end_inset
+
+, we have 
+\begin_inset Formula $z=a+ \rho e^{i\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $dz = i \rho e^{i\theta} d\theta$
+\end_inset
+
+. Hence 
+\begin_inset Formula \begin{align*}
+ I_1 &= \int_{\gamma} \frac{f(z) - f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a+ \rho e^{i\theta}) - f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= \int_{0}^{2\pi} [f(a+ \rho e^{i\theta}) - f(a)] i d\theta \\
+ 	 &=0 ~~~~~~~~\text{ as } \rho \text{ tends to 0}
+\end{align*}
+\end_inset
+
+ and 
+\begin_inset Formula \begin{align*}
+ I_2 &= \int_{\gamma} \frac{f(a)}{(z-a)} dz \\
+ 	 &= \int_{0}^{2\pi} \frac{f(a)}{[(a+ \rho e^{i\theta})-a]} i \rho e^{i\theta} d\theta \\
+ 	 &= f(a) \int_{0}^{2\pi} i d\theta \\
+ 	 &= 2\pi i f(a)	 
+ \end{align*}
+\end_inset
+
+ Hence, 
+\begin_inset Formula \[\int_{c} \frac{f(z)}{(z-a)} dz = I_1 + I_2\]
+\end_inset
+
+ That is 
+\begin_inset Formula \[\int_{c} \frac{f(z)}{(z-a)} dz = 0 + 2 \pi i f(a) \]
+\end_inset
+
+ or 
+\begin_inset Formula \[ f(a) = \frac{1}{2 \pi i}\int_{c} \frac{f(z)}{(z-a)} dz \]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate (i) 
+\begin_inset Formula $\ds \int_c \frac{e^z}{z+2}dz$
+\end_inset
+
+ and (ii) 
+\begin_inset Formula $\ds \int_c \frac{e^z}{z}dz$
+\end_inset
+
+, where 
+\begin_inset Formula $c$
+\end_inset
+
+ is circle 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ (i) The function 
+\begin_inset Formula $\ds \frac{e^z}{z+2}$
+\end_inset
+
+ is analytic everywhere except at 
+\begin_inset Formula $z=-2$
+\end_inset
+
+. This point lies outside the circle 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+. Thus function is analytic within and on 
+\begin_inset Formula $c$
+\end_inset
+
+, by Cauchy's Theorem, we have 
+\begin_inset Formula \[\int_{|z|=1} \frac{e^z}{z+2}dz = 0\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+(ii) The function 
+\begin_inset Formula $\ds \frac{e^z}{z}$
+\end_inset
+
+ is analytic everywhere except at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. The point 
+\begin_inset Formula $z=0$
+\end_inset
+
+ strictly inside 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+. Hence by Cauchy's Integral formula, we have 
+\begin_inset Formula \[\int_{|z|=1}~ \frac{e^z}{z}dz = 2 \pi i (e^z)_{z=0} =  2 \pi i \]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+
+Cauchy Integral Formula For The Derivatives of An Analytic Function
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ If a function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic within and on a closed curve 
+\begin_inset Formula $c$
+\end_inset
+
+, and if 
+\begin_inset Formula $a$
+\end_inset
+
+ is any point within 
+\begin_inset Formula $c$
+\end_inset
+
+ , then its derivative is also analytic within and on closed curve 
+\begin_inset Formula $c$
+\end_inset
+
+, and is given as 
+\begin_inset Formula \[f'(a) = \frac{1}{2\pi i}\int_{c} \frac{f(z)}{(z-a)^2} dz\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ We know Cauchy's Integral formula 
+\begin_inset Formula \begin{align*}
+	f(a) &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)} dz \\
+\text{Differentiating, wrt $a$ , we get} \\
+	f'(a) &= \frac{1}{2\pi}\frac{d}{da}\left[\int_{c} \frac{f(z)}{(z-a)} dz \right]\\
+	      &= \frac{1}{2\pi} \int_{c} f(z) \frac{\partial}{\partial a}\left[\frac{1}{(z-a)} \right]dz\\
+	      &= \frac{1}{2\pi}\int_{c} \frac{f(z)}{(z-a)^2} dz
+\end{align*}
+\end_inset
+
+ We may generalize it, 
+\begin_inset Formula \[f^n(a) = \frac{n!}{2\pi i}\int_{c} \frac{f(z)}{(z-a)^{n+1}} dz\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate the following integral 
+\begin_inset Formula $\ds \int_{c}\frac{1}{z}\cos z dz$
+\end_inset
+
+, where 
+\begin_inset Formula $c$
+\end_inset
+
+ is the ellipse 
+\begin_inset Formula $9x^{2}+4y^{2}=1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Here function 
+\begin_inset Formula $\ds \frac{1}{z}\cos z$
+\end_inset
+
+ has a simple pole at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. The given ellipse 
+\begin_inset Formula $9x^{2}+4y^{2}=1.$
+\end_inset
+
+ encloses pole 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+By Cauchy Integral formula 
+\begin_inset Formula \[\int_{c}\frac{cosz}{z}dz=2\pi i(cosz)_{z=0}=2\pi i\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate the complex integral 
+\begin_inset Formula $\ds \int_{c} \tan z dz$
+\end_inset
+
+, where 
+\begin_inset Formula $c$
+\end_inset
+
+ is 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ We have 
+\begin_inset Formula \[\int_{c}tanz.dz=\int_{c}\frac{\sin z}{\cos z} dz\]
+\end_inset
+
+ 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+, is a circle with centre at origin and radius = 2. Poles are given by putting the denominator equal to zero. i.e., 
+\begin_inset Formula \[\cos z=0 ~~~~\Rightarrow ~~~~ z=-\frac{\pi}{2},\frac{\pi}{2},\frac{3\pi}{2},...\]
+\end_inset
+
+ The integrand has two poles at 
+\begin_inset Formula $z=\frac{\pi}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $z=-\frac{\pi}{2}$
+\end_inset
+
+ inside the given circle 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+On applying Cauchy integral formula 
+\begin_inset Formula \begin{align*}
+	\int_{c}\frac{\sin z}{\cos z}dz &= \int_{c_1}\frac{\sin z}{\cos z}dz + \int_{c_2} \frac{\sin z}{\cos z}dz \\
+	&=2\pi i[\sin z]_{z=\frac{\pi}{2}} + 2 \pi i[\sin z]_{z=-\frac{\pi}{2}} \\
+	&=2\pi i(1)+2\pi i(-1)=0
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate 
+\begin_inset Formula $\ds \int_{c}\frac{e^{z}}{z^{2}+1}dz$
+\end_inset
+
+ over the circular path 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula \[z^{2}+1=0,~~z^{2}=-1,~~z=\pm i\]
+\end_inset
+
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+scalebox{0.5}{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{pspicture}
+\end_layout
+
+\end_inset
+
+(0,-3.0)(6.0,3.0) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(3.0,0.0)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+psaxes
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,labels=none,ticks=y,ticksize=0.10583333cm,showorigin=false](0,0)(-3,-3)(3,3)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pscircle
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,dimen=outer](2.94,-0.02)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+2.0
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pscircle
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,dimen=outer](2.94,0.98)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+0.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pscircle
+\end_layout
+
+\end_inset
+
+[linewidth=0.02,dimen=outer](2.94,-1.02)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+0.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(3.2803125,1.13)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+i
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+usefont{T1}{ptm}{m}{n}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+rput
+\end_layout
+
+\end_inset
+
+(3.4182813,-0.93)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+-i
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Caption
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Both points are inside the given circle with at origin and radius 2. 
+\begin_inset Formula \begin{align*}
+\int_{c}\frac{1}{2i}\{\frac{e^{z}}{z-i}-\frac{e^{z}}{z+i}\}dz &=\int_{c}\frac{1}{2i}\frac{e^{z}}{z-i}dz-\frac{1}{2i}\int_{c}\frac{e}{z+i}dz\\
+&=\frac{1}{2i}[2\pi i(e^{z})_{z=i}-2\pi i(e^{z})_{z=-i}] \\
+&=\frac{2\pi i}{2i}[e^{i}-e^{-i}]=2\pi i \sin(1) \\
+\end{align*}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+
+Second Method
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align*}
+	\int_{c}\frac{e^{z}}{z^{2}+1}dz &=\int_{c}\frac{e^{z}d_{z}}{(z+i)(z-i)} \\
+	&=\int_{c1}\frac{\frac{e^{z}}{z-i}}{z+i}dz+\int_{c}\frac{\frac{e^{z}}{z+i}}{z-i}dz \\
+	&=2\pi i(\frac{e^{z}}{z-i})_{z=-i}+2\pi i(\frac{e^{z}}{z+i})_{z=i} \\
+	&=[2\pi i\frac{e^{-i}}{-i-i}+2\pi i\frac{e^{i}}{i+i}]=\pi[-e^{-i}+e^{i}] \\
+	&=\pi(2isin1)=2\pi i \sin 1
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Evaluate 
+\begin_inset Formula $\ds \int_{c}\frac{z-1}{(z+1)^{2}(z-2)}dz$
+\end_inset
+
+ where 
+\begin_inset Formula $c$
+\end_inset
+
+ is 
+\begin_inset Formula $|z-i|= 2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ The centre of the circle is at 
+\begin_inset Formula $z = i$
+\end_inset
+
+ and its radius is 
+\begin_inset Formula $2$
+\end_inset
+
+. Poles are obtained by putting the denominator equal to zero. 
+\begin_inset Formula \[(z+1)^{2}(z-2)=0~~~~\Rightarrow ~~~~z=-1,-1,2\]
+\end_inset
+
+ The integral has two Poles at 
+\begin_inset Formula $z = -1$
+\end_inset
+
+ (second order) and 
+\begin_inset Formula $z = 2$
+\end_inset
+
+ (simple pole ) of which 
+\begin_inset Formula $z = -1$
+\end_inset
+
+ is inside the given circle. We can rewrite 
+\begin_inset Formula \[\int_{c}\frac{(z-1)dz}{(z+1)^{2}(z-2)}=\int_{c1}\frac{\frac{z-1}{z-2}}{(z+1)^{2}}dz\]
+\end_inset
+
+ By Cauchy Integral formula 
+\begin_inset Formula \[\ds \int\frac{f(z)}{(z+1)^{2}}dz=2\pi i f'(-1)\]
+\end_inset
+
+ Here 
+\begin_inset Formula \begin{align*}
+f(z)&=\frac{z-1}{z-2} \\
+f'(z)&=\frac{(z-2).1-(z-1).1}{(z-2)^{2}}=\frac{-1}{(z-2)^{2}}=\frac{-1}{(z-2)^{2}}\\
+\Rightarrow ~~~f'(-1)&=\frac{-1}{(-1-2)^{2}}=\frac{-1}{9} \\
+\therefore \int \frac{(z-1)}{(z+1)^{2}(z-2)}dz &= =-\frac{2\pi i}{9}
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Use Cauchy integral formula to evaluate . 
+\begin_inset Formula \[\int_{c}\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)(z-2)}dz\]
+\end_inset
+
+ where 
+\begin_inset Formula $c$
+\end_inset
+
+ is the circle 
+\begin_inset Formula $|z| = 3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Poles of the integrand are given by putting the denominator equal to zero. 
+\begin_inset Formula \[(z-1)(z-2)=0, ~~~~z=1,2\]
+\end_inset
+
+ The integrand has two poles at 
+\begin_inset Formula $z = 1,2$
+\end_inset
+
+. The given circle 
+\begin_inset Formula $|z| = 3$
+\end_inset
+
+ with centre at 
+\begin_inset Formula $z = 0$
+\end_inset
+
+ and radius 3 encloses both the poles 
+\begin_inset Formula $z = 1$
+\end_inset
+
+, and 
+\begin_inset Formula $z = 2$
+\end_inset
+
+. 
+\begin_inset Formula \begin{align*}
+	\int_{c}\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)(z-2)}dz &=\int_{c_1}{\frac{\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-2)}}{(z-1)}dz}+\int_{c_2}{\frac{\frac{sin\pi z^{2}+cos\pi z^{2}}{(z-1)}}{(z-2)}dx} \\
+	&=2\pi i \left[\frac{sin\pi z^{2}+cos\pi z^{2}}{z-2}\right]_{z=1}+2\pi i\left[\frac{sin\pi z^{2}+cos\pi z^{2}}{z-1}\right]_{z=2} \\
+	&=2\pi i \left[\frac{sin\pi+cos\pi}{1-2}\right]+2\pi i\left[\frac{sin4\pi+cos4\pi}{2-1}\right] \\
+	&=2\pi i\left(\frac{-1}{-1}\right)+2\pi i\left(\frac{1}{1}\right)=4\pi i 
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Evaluate the following by using Cauchy integral formula:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{1}{z-a}dz,$
+\end_inset
+
+ where 
+\begin_inset Formula $c$
+\end_inset
+
+ is a simple closed curve and the point 
+\begin_inset Formula $\ds z = a$
+\end_inset
+
+ is (i) outside 
+\begin_inset Formula $c$
+\end_inset
+
+; (ii) inside 
+\begin_inset Formula $c$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ (i) 0 \InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+\InsetSpace ~
+ (ii) 
+\begin_inset Formula $2\pi i$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{e^{z}}{z-1}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z| =2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $2\pi i e$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{cos\pi z}{z-1}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z|=3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $-2\pi i$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{cos\pi z^{2}}{(z-1)(z-2)}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z| = 3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $4\pi i $
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{e^{-z}}{(z+2)^{5}}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z|=3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{i\pi e^2}{12}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{e^{2z}}{(z+1)^{4}}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z|= 2$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{8 i \pi e^{-2}}{3}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \int_{c}\frac{3z^{2}+z}{z^{2}-1}dz$
+\end_inset
+
+, where c is the circle 
+\begin_inset Formula $|z-1|=1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $4 \pi i$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Evaluate the following integral using Cauchy integral formula 
+\begin_inset Formula \[\int_{c}\frac{4-3z}{z(z-1)(z-2)}dz\]
+\end_inset
+
+ where 
+\begin_inset Formula $c$
+\end_inset
+
+ is the circle 
+\begin_inset Formula $|z| =\frac{3}{2}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $-12 \pi i$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Integrate 
+\begin_inset Formula $\ds  \frac{1}{(z^{3}-1)^{2}}$
+\end_inset
+
+ the counter clockwise sense around the circle 
+\begin_inset Formula $|z-1|=1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $-\frac{4i\pi}{9}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Find the value of 
+\begin_inset Formula $\ds \int_{c}\frac{2z^{2}+z}{z^{2}-1}dz$
+\end_inset
+
+, if 
+\begin_inset Formula $c$
+\end_inset
+
+ is circle of unit radius with centre at 
+\begin_inset Formula $z = 1$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $3\pi i$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{problems}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

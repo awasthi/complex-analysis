@@ -1,0 +1,365 @@
+%\chapter{Series}\index{series}
+In this chapter, we discuss the power series expansion of a complex function, viz,  the Taylor's and Laurent's series
+\section{Taylor's Theorem}\index{Taylor's Theorem}
+\begin{theorem}
+If function $f(z)$ is analytic at all points inside a circle $c$, with its centre at the point $a$ and radius $R$, then at each point $z$ inside $c$,
+\[f(z) = f(a) + (z-a)f'(a) + \frac{(z-a)^2}{2!}f''(a) + ... + \frac{(z-a)^n}{n!}f^n(a) + ...\]
+\end{theorem}
+
+\begin{proof}
+Let $f(z)$ be analytic function within and on the circle circle $c$ of radius $r$ centered at $a$ so that
+\[c: |z-a|=r\]
+Draw another circle $\gamma : |z-a|=\rho $, where $\rho < r$
+\begin{figure}[ht]
+	\centering
+		\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.62)(4.141875,1.62)
+\pscircle[linewidth=0.02,dimen=outer](1.62,0.0){1.62}
+\pscircle[linewidth=0.02,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer](1.65,-0.01){0.91}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3514063,0.03){$\gamma$}
+\psdots[dotsize=0.06](1.64,-0.04)
+\psline[linewidth=0.02cm](1.62,-0.06)(2.42,0.44)
+\psdots[dotsize=0.02](2.4,0.48)
+\psdots[dotsize=0.02](2.44,0.44)
+\psline[linewidth=0.02cm](0.4,1.1)(1.62,-0.04)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.7814062,0.93){$R$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.0214062,-0.07){$a$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.2214062,0.51){$r$}
+\psdots[dotsize=0.06](2.4,-0.54)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.7314062,-0.49){$w$}
+\end{pspicture} 
+}
+	\label{fig:taylor}
+	\caption{Taylor's Theorem}
+\end{figure}
+Hence by Cauchy's integral formula, we have
+\[f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z}dw\]
+But,
+\begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= \frac{1}{(w-a)}\frac{1}{\left[{1-\frac{z-a}{w-a}}\right]} \\
+								&= \frac{1}{(w-a)}\left[{1-\frac{z-a}{w-a}}\right]^{-1} \\
+								&= \frac{1}{(w-a)}+ \frac{(z-a)}{(w-a)^2}+ \frac{(z-a)^2}{(w-a)^3} + ... \\
+								&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ \frac{(z-a)^{n-1}}{(w-a)^n} + \frac{(z-a)^n}{(w-a)^{n+1}}  \left[{1-\frac{z-a}{w-a}}\right]^{-1}\\
+\text{Hence,~~~~~~~~~~~~} \\
+					\frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-a)}dw+ \frac{(z-a)}{2\pi i}\int_{\gamma}\frac{f(w)}{(w-a)^2} dw + \frac{(z-a)^2 }{2\pi i}\int_{\gamma}\frac{f(w)}{(w-a)^3}dw \\
+					& ~~~~~~~+ ... + \frac{(z-a)^{n-1}}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-a)^n}dw + R_n\\
+					&~~~~~~~\text{where } \ds R_n= \frac{(z-a)^n}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-z)(w-a)^n}dw \\
+\text{But, we have ~~} \\
+	\frac{1}{2\pi i}\int_{\gamma} \frac{f(w)}{(w-z)^{n+1}} dw &= \frac{1}{n!}f^{(n)}(z) 	
+\text{Hence,~~~~~~~~~~} \\
+f(z) &= f(a) + \frac{(z-a)}{1!}f'(a) +  ... + \frac{(z-a)^{n-1}}{(n-1)!}f^{(n-1)}(a) + R_n 
+\end{align*}
+which is called Taylor's formula, $R_n$ being the \textit{remainder}.
+
+Now, let $M$ denotes the maximum value of $f(w)$ on $\gamma$. Since $|z-a|=\rho$, $|w-a|=r$ and $|w-z| > r - \rho$, hence
+\begin{align*}
+|R_n| &\leq \frac{|(z-a)^n|}{|2\pi i|} \int_{\gamma} \frac{|f(w)|}{|(w-z)||(w-a)^n|} |dw| \\
+&\leq \frac{|\rho^n|}{2\pi} \frac{M}{(r-\rho)r^n}\int_{\gamma}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r}} \left(\frac{\rho}{r}\right)^n
+\end{align*}
+ which tends to zero as $n$ tends to infinity since $\ds \frac{\rho}{r} < 1$. Thus
+\[f(z) = f(a) + (z-a)f'(a) + \frac{(z-a)^2}{2!}f''(a) + ... + \frac{(z-a)^n}{n!}f^n(a) + ...\]
+\textbf{Remark:} If $a=0$, Taylor's series is
+\[f(z) = f(0) + (z)f'(0) + \frac{(z)^2}{2!}f''(0) + ... + \frac{(z)^n}{n!}f^n(0) + ...\]
+which is called the \textit{Maclaurin's series} of $f(z)$.
+\end{proof}
+\begin{example}
+Find the first four terms of the Taylor's series expansion of the complex variable function
+\[f(z)=\frac{z+1}{(z-3)(z-4)}\]
+about $z=2$. Find the region of convergence.
+\end{example}
+\begin{solution}
+Given $\ds f(z)=\frac{z+1}{(z-3)(z-4)}$
+
+\noindent
+If  centre of a circle is at $z=2$, then the distance of the singularities $z=3$ and $z=4$ from the centre are 1 and 2. Hence if a circle ($|z-2|=1$) of radius 1 and with centre $z=2$ is drawn, the given function function $f(z)$ is analytic, hence it can be expanded in a Taylor's series within the circle $|z-2|=1$, which is therefore the circle of convergence ( or region of convergence).
+\begin{align*}
+	f(z) &= \frac{z+1}{(z-3)(z-4)} = \frac{-4}{z-3} + \frac{5}{z-4}~~~\text{ Using partial fraction}\\
+	&= \frac{-4}{(z-2)-1} + \frac{5}{(z-2)-2} \\
+	&= 4[1-(z-2)]^{-1} - \frac{5}{2}\left[1-\frac{z-2}{2}\right]^{-1} \\
+	&= 4[1+(z-2)+(z-2)^2+(z-2)^3 + ...] - \frac{5}{2}\left[1+\frac{z-2}{2}+\frac{(z-2)^2}{4}+\frac{(z-2)^3}{8}+ ...\right] \\
+	&= \frac{3}{2} + \frac{11}{4}(z-2) + \frac{27}{8}(z-2)^2 + \frac{59}{16}(z-2)^3
+\end{align*}
+\end{solution}
+\begin{example}
+Find the first three terms of the Taylor series expansion of $f(z)=\frac{1}{z^2+4}$ about $z=-i$. Find the region of convergence.
+\end{example}
+\begin{solution}
+Here \[f(z) = \frac{1}{z^2+4}\]
+Poles are given by
+\[z^2+4 = 0 ~~~~~\Rightarrow ~~~~~~z=\pm 2i\]
+If the centre of a circle is $z=-i$, then the distance of the singularities $z=2i$ and $z=-2i$ from the centre are 3 and 1. Hence if a circle of radius 1 is drawn at the centre $z=-i$, then within the circle $|z+i|$=1, the given function $f(z)$ is analytic. Thus the function can be expanded in Taylor Series within the circle $|z+i|=1$, which is therefore the region of convergence ($|z+i|<1$).
+
+\noindent
+This problem could be solved as previous example. Here we use alternative approach.
+
+\noindent
+We have Taylor Series about $z=-i$,
+\[f(z) = f(-i) + (z+i)\frac{f'(-i)}{1!}+ (z+i)^2\frac{f''(-i)}{2!} + ...\]
+Now since $\ds f(z)=\frac{1}{z^2+4}$,
+\[f(-i) = \frac{1}{3}\]
+\[f'(z) = \frac{-2z}{(z^2+4)^2}~~~~~ \Rightarrow ~~~~~ f'(-i) = \frac{2i}{9}\]
+\[f''(z) = \frac{2(z^2+4)-8z^2}{(z^2+4)^3}~~~~~ \Rightarrow ~~~~~ f''(-i) = -\frac{14}{27}\]
+Hence Taylor series,
+\[f(z) =  \frac{1}{3} +  \frac{2i}{9}(z+i)+ \frac{7}{27}(z+i)^2 + ...\]
+\end{solution}
+
+\section{Laurent's Theorem}\index{Laurent's Theorem}
+In expanding a function $f(z)$ by Taylor's series at a point $z=a$, we require that function $f(z)$ is analytic at $z=a$. Laurent's series gives an expansion of $f(z)$ at a point $z=a$ even if $f(z)$ is not analytic there.
+\begin{theorem}
+If function $f(z)$ is analytic between and on two circles $c_1$ and $c_2$ having common centre at $z=a$ and  radii $r_1$ and $r_2$, then for all points $z$ in this region, $f(z)$ can be expanded by
+\[f(z) = \sum_{n=0}^{\infty}a_n (z-a)^n + \sum_{n=1}^{\infty} \frac{b_n}{(z-a)^n} \]
+where
+\begin{align*}
+	a_n &= \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw \\
+	b_n &= \frac{1}{2\pi i} \int_{c_2}\frac{f(w)}{(w-a)^{-n+1}} dw 
+\end{align*}
+the integrals being taken in counter clockwise sense.
+\end{theorem}
+\begin{proof}
+Let $f(z)$ be analytic function between and on the circles $c_1$ and $c_2$ of radii $r_1$ and $r_2$ centered at $a$ so that
+\[c_1: |z-a|=r_1~~~~~~~~~c_2:|z-a|=r_2\]
+
+Draw another circle $\gamma : |z-a|=\rho $, where $r_2 < \rho < r_1$. Let $w$ be a point on circle $\gamma$, then by Cauchy's integral formula, we have
+\begin{equation}\label{Laurent1}
+	f(z) = \frac{1}{2\pi i} \int_{c_1} \frac{f(w)}{w-z}dw - \frac{1}{2\pi i} \int_{c_2} \frac{f(w)}{w-z}dw 
+\end{equation}
+But,
+\begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= \frac{1}{(w-a)}\frac{1}{\left[{1-\frac{z-a}{w-a}}\right]} \\
+								&= \frac{1}{(w-a)}\left[{1-\frac{z-a}{w-a}}\right]^{-1} \\
+								&= \frac{1}{(w-a)}+ \frac{(z-a)}{(w-a)^2}+ \frac{(z-a)^2}{(w-a)^3} + ... \\
+								&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ \frac{(z-a)^{n-1}}{(w-a)^n} + \frac{(z-a)^n}{(w-a)^{n+1}}  \left[{1-\frac{z-a}{w-a}}\right]^{-1}\\
+\text{Hence,~~~~~~~~~~~~} \\
+					\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{(w-a)}dw+ \frac{(z-a)}{2\pi i}\int_{c_1}\frac{f(w)}{(w-a)^2}dw+ \frac{(z-a)^2 }{2\pi i}\int_{c_1}\frac{f(w)}{(w-a)^3} dw \\
+					& ~~~~~~~+ ... + \frac{(z-a)^{n-1}}{2\pi i}\int_{c_1} \frac{f(w)}{(w-a)^n}dw + R_n\\
+					&~~~~~~~\text{where $\ds R_n= \frac{(z-a)^n}{2\pi i} \int_{c_1} \frac{f(w)}{(w-z)(w-a)^n}dw$} 
+\end{align*}
+$R_n$ being the \textit{remainder}.
+
+Now, let $M$ denotes the maximum value of $f(w)$ on $c_1$. Since $|z-a|=\rho$, $|w-a|=r_1$ and $|w-z| >r_1 - \rho$, hence
+\begin{align*}
+|R_n| &\leq \frac{|(z-a)^n|}{|2\pi i|} \int_{c_1} \frac{|f(w)|}{|(w-z)||(w-a)^n|} |dw| \\
+&\leq \frac{|\rho^n|}{2\pi} \frac{M}{(r_1 - \rho){r_1}^n}\int_{c_1}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r_1}} \left(\frac{\rho}{r_1}\right)^n
+\end{align*}
+ which tends to zero as $n$ tends to infinity since $\ds \frac{\rho}{r_1} < 1$. Thus
+\begin{equation}\label{Laurent2}
+	\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z} dw = a_0 + a_1(z-a) + a_2(z-a)^2 + ... + a_n(z-a)^n + ...
+\end{equation}
+where,
+\[	a_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw \]
+Similarly, since
+\begin{align*}
+	\frac{1}{w-z} &= \frac{1}{(w-a)-(z-a)} \\
+								&= -\frac{1}{(z-a)}\frac{1}{\left[{1-\frac{w-a}{z-a}}\right]} \\
+								&= -\frac{1}{(z-a)}\left[{1-\frac{w-a}{z-a}}\right]^{-1} \\
+								&= -\left[\frac{1}{(z-a)}+ \frac{(w-a)}{(z-a)^2}+ \frac{(w-a)^2}{(z-a)^3} + ... \right]
+\end{align*}
+\begin{align*}
+\text{Hence,~~~~~~~~~~~~} \\
+				-	\frac{1}{2\pi i}\int_{c_2} \frac{f(w)}{w-z}dw	&= \frac{1}{2\pi i}\int_{c_2} \frac{f(w)}{(z-a)}dw+ \frac{1}{2\pi i}\int_{c_2}\frac{(w-a)f(w)}{(z-a)^2}dw+ \frac{1 }{2\pi i}\int_{c_2}\frac{(w-a)^2f(w)}{(z-a)^3} dw\\
+					& ~~~~~~~+ ... + \frac{1}{2\pi i}\int_{c_2} \frac{(w-a)^{n-1}f(w)}{(z-a)^n}dw + R'_n\\
+					&~~~~~~~\text{where $\ds R'_n= \frac{1}{2\pi i} \int_{c_2} \frac{(w-a)^nf(w)}{(w-z)(z-a)^n}dw$} 
+\end{align*}
+Now, let $M$ denotes the maximum value of $f(w)$ on $c_2$. Since $|z-a|=\rho$, $|w-a|=r_2$ and $|w-z| > r_2 - \rho$, hence
+\begin{align*}
+|R'_n| &\leq \frac{1}{|2\pi i|} \int_{c_1} \frac{|(w-a)^n||f(w)|}{|(w-z)||(z-a)^n|} |dw|  \\
+&\leq \frac{|r_2^n|}{2\pi} \frac{M}{(r_2 - \rho ){\rho}^n}\int_{c_1}|dw|\\
+&= \frac{M}{1-\frac{\rho}{r_2}} \left(\frac{r}{\rho}\right)^n
+\end{align*}
+ which tends to zero as $n$ tends to infinity since $\ds \frac{r_2}{\rho} < 1$. Thus
+\begin{equation}\label{Laurent3}
+	-\frac{1}{2\pi i}\int_{c_1} \frac{f(w)}{w-z}dw =  \frac{b_1}{(z-a)} + \frac{b_2}{(z-a)^2} + ... + \frac{b_n}{(z-a)^n} + ...
+\end{equation}
+where 
+\[	b_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{-n+1}} dw \]
+Hence from equation \ref{Laurent1}, \ref{Laurent2} and \ref{Laurent3}, we get
+\[f(z) = a_0 + a_1(z-a) + a_2(z-a)^2 + ... + a_n(z-a)^n + ... + \frac{b_1}{z-a} + \frac{b_2}{(z-a)^2} + ... + \frac{b_n}{(z-a)^n} + ...\]
+where $\ds a_n = \frac{1}{2\pi i} \int_{c_1}\frac{f(w)}{(w-a)^{n+1}} dw$ and $\ds 	b_n = \frac{1}{2\pi i} \int_{c_2}\frac{f(w)}{(w-a)^{-n+1}} dw$.
+\end{proof}
+\begin{example}
+Show that, if $f(z)$ has a pole at $z=a$ then $|f(z)| \rightarrow \infty$ as $z \rightarrow a$.
+\end{example}
+\begin{solution}
+Suppose the pole is of order $m$, then \[f(z)=\sum_{n=0}^{\infty}a_{n}(z-a)^{n}+\sum_{n=1}^{m}b_{n}(z-a)^{-n}\]
+Its principal part is $\ds \sum_{n=1}^{m}b_{n}(z-a)^{-n}$
+\begin{align*}
+\sum_{n=1}^{m} b_{n}(z-a)^{-n} & = \frac{b_{1}}{z-a}+\frac{b_{2}}{(z-a)^{2}}+...+\frac{b_{n}}{(z-a)^{m}} \\
+&=\frac{1}{(z-a)^{m}}[b_{m}+b_{m-1}(z-a)+...b_{1}(z-a)^{m-1}] \\
+&=\frac{1}{(z-a)^{m}}[b_{m}+\sum_{n=1}^{m-1}b_{n}(z-a)^{m-n}] \\
+|\sum_{n=1}^{m}b_{n}(z-a)^{-n}| &= |\frac{z}{(z-a)^{m}}[b_{m}+\sum_{n=1}^{m-1}b_{n}(z-a)^{m-n}]| \\
+& \geq |\frac{1}{(z-a)^{m}}| \left[|b_{m}|-\sum_{n-1}^{m-1}|b_{n}||z-a|^{m-n}\right]
+\end{align*}
+This tends to $b_{m}|a_{1}+a_{2}|\geq|a_{1}|-|a_{2}|$. As $z\rightarrow -a$ R.H.S. =$\infty$
+\end{solution}
+\begin{example}
+Write all possible Laurent series for the function
+\[f(z) = \frac{1}{z(z+2)^3}\]
+about the pole $z=-2$, using appropriate Laurent series.
+\end{example}
+\begin{solution}
+To expand $\frac{1}{z(z+2)^{3}}$ about $z=-2$, i.e., in powers
+of $(z+2)$, we put $z+2=t$.
+
+\noindent
+Then
+\begin{align*} f(z)&=\frac{1}{z(z+2)^{3}}=\frac{1}{(t-2)t^{3}}=\frac{1}{t^{3}}.\frac{1}{t-2} \\
+&=\frac{1}{t^{3}}.\frac{1}{-2}.\frac{1}{1-\frac{t}{2}}=-\frac{1}{2t^{3}}(1-\frac{t}{2})^{-1} 
+\end{align*}
+$0<|z+2|<1$ or $0<|t|<1$
+\begin{align*}
+f(z)&=-\frac{1}{2t^{3}}[1+\frac{t}{2}+\frac{t^{2}}{4}+\frac{t^{3}}{8}+\frac{t^{4}}{16}+\frac{t^{5}}{32}+...] \\
+&=-\frac{1}{2t^{3}}-\frac{1}{4t^{2}}-\frac{1}{8t}-\frac{1}{16}-\frac{t}{32}-\frac{t^{2}}{64}... \\
+&=-\frac{1}{2(z+2)^{3}}-\frac{1}{4(z+2)^{2}}-\frac{1}{8(z+2)}-\frac{1}{16}-\frac{z+2}{32}-\frac{(z+2)^{2}}{64}... 
+\end{align*}
+\end{solution}
+\begin{example}
+Expand $\ds f(z) = \cosh\left(z+\frac{1}{z}\right)$
+\end{example}
+\begin{solution}
+$f(z)$ is analytic except $z=0$. $f(z)$ can be expanded by Laurent's theorem.
+\[f(z) =\sum_{n=0}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}}\]
+where
+\[a_{n}=\frac{1}{2\pi i}\int_c \frac{f(z)dz}{(z-0)^{n+1}}, \text{ and } b_{n}=\frac{1}{2\pi i}\int_c f(z)z^{n-1}dz
+\]
+\begin{align*}
+a_n&=\frac{1}{2\pi i}\int_{c}\frac{\cosh(z+\frac{1}{z})dz}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{\cosh(2\cos\theta)dz}{z^{n+1}} \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~z=e^{i\theta} \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~dz=ie^{i\theta}d\theta \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{\cosh(2\cos\theta)e^{i\theta}  d\theta}{e^{i(n+1)\theta}} \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos)e^{-ni\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos n\theta d\theta-\frac{i}{2\pi}\int_{c}\cosh(2\theta)\sin n\theta d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos n\theta d\theta+0 
+\end{align*}
+Since,
+\begin{align*}
+	b_n &=a_{-n}\\
+	 &=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos(-n\theta)d\theta \\
+	 &=\frac{1}{2\pi}\int_{0}^{2\pi}\cosh(2\cos\theta)\cos(n\theta)d\theta \\
+	 &=a_n
+\end{align*}
+Therefore,
+\begin{align*}
+	f(z)&=\sum_{n=0}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}} =a_0 + \sum_{n=1}^{\infty}a_{n}z^{n}+\sum_{n=1}^{\infty}\frac{a_{n}}{z^{n}} \\
+	&=a_0 + \sum_{n=1}^{\infty}a_{n}(z^{n}+z^{-n})
+\end{align*}
+\end{solution}
+\begin{example}
+Show that  $\ds f(z) = e^{\frac{c}{2}\left(z-\frac{1}{z}\right)} = \sum_{-\infty}^\infty a_nz^n.$, where $\ds a_n=\frac{1}{2\pi}\int_{0}^{2\pi} \cos(n\theta - c \sin \theta) d\theta $.
+\end{example}
+\begin{solution}
+$f(z)$ is the analytic function except at $z=0$ so $f(z)$ can be expanded by Laurent's series.
+\[f(z)=\sum_{n=0}^{\infty}a_{n}z^{n} + \sum_{n=1}^{\infty}\frac{b_{n}}{z^{n}}\]
+where $\ds a_{n}=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{n+1}}$ 
+and $\ds b_{n}=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{-n+1}}$
+
+Since $f(z)$ remains unaltered if $\frac{-1}{z}$ is
+written for $z$, hence
+\begin{align*}
+b_{n} &=(-1)^{n}a^{n} \\
+\therefore ~~~~~ f(z) &= \sum_{n=0}^{\infty} a_{n}z^{n}+ \sum_{n=0}^{\infty} \frac{b_{n}}{z^{n}} \\
+&= \sum_{n=0}^{\infty} a_n z^n + (-1)\sum_{n=0}^{\infty} \frac{a_n}{z^n} \\
+&= \sum_{- \infty}^{\infty} a_n z^n
+\end{align*} 
+Now,
+\begin{align*}
+ a_{n} &=\frac{1}{2\pi i}\int_{c}\frac{f(z)dz}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{c}\frac{e^{\frac{c}{2}(z-\frac{1}{z})}dx}{z^{n+1}} \\
+&=\frac{1}{2\pi i}\int_{0}^{2\pi}\frac{e^{\frac{c}{2}(2isin\theta)}ie^{i\theta}d\theta}{e^{(n+1)i\theta}} \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}e^{cisin\theta}e^{-sini\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}e^{i(csin\theta)-ni\theta}d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}[cos(csin\theta-n\theta)-isin(csin\theta-n\theta)]d\theta \\
+&=\frac{1}{2\pi}\int_{0}^{2\pi}cos(csin\theta-n\theta)d\theta \\
+&~~~~~~~~~~~~~~~~~~~~~~~~~~~\because \text{ if, } f(2a-x)=-f(x), then \int_{a}^{2a} f(x)dx=0 
+\end{align*}
+\end{solution}
+\begin{problems}  
+\prob Expand $f(z)= \frac{1}{(z-1)(z-2)}$ for $1<|z|<2$.
+\begin{sol}
+Using partial fraction, rewrite the function as
+\begin{align*}
+f(z) & =-\frac{1}{2}\left(1-\frac{z}{2}\right)^{-1}-\frac{1}{z}\left(1-\frac{1}{z}\right)^{-1}\\
+ & =-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\ldots-\frac{1}{z}-\frac{1}{z^{2}}-\frac{1}{z^{3}}
+ \end{align*}
+\end{sol}
+\prob Obtain the Taylor's or Laurent's series which represents the function $\ds f(z) = \frac{1}{(1+z^2)(z+2)}$ when (i) $1<|z|<2$ (ii) $|z| >2$.
+\begin{sol}
+Using partial fraction, rewrite the function as
+
+\begin{align*}
+f(z) & =\frac{1}{5}\left(\frac{z-2}{1+z^{2}}\right)+\frac{1}{5}\left(\frac{1}{z+2}\right)\\
+ & =\frac{z-2}{5z^{2}}\left(1+\frac{1}{z^{2}}\right)^{-1}+\frac{1}{10}\left(1+\frac{z}{2}\right)^{-1}\\
+ & =\frac{1}{5}\left[\ldots-2z^{-8}+z^{-7}+2z^{-6}-z^{-5}-2z^{-4}+z^{-3}+2z^{-2}-z^{-1}\right]\\
+ & \;\;\;+\frac{1}{5}\left[\frac{1}{2}-\frac{z}{4}+\frac{z^{2}}{8}-\frac{z^{3}}{16}+\ldots\right]\end{align*}
+\end{sol}
+\prob Expand $\ds \frac{e^z}{(z-1)^2}$ about $z=1$ 
+\begin{sol}
+Put $z-1=t$. Then expand series in powers of $t$ finally use back substitution to get
+\[e\left[\frac{1}{(z-1)^2}+\frac{1}{(z-1)}+\frac{1}{2!}+\frac{z-1}{3!} + \cdots \right]\]
+\end{sol}
+\prob Expand $f(z) = \sin \left\{c\left(z+\frac{1}{z}\right)\right\}$
+\begin{sol}
+\[b_n = a_n = \frac{1}{2\pi}\int_0^{2\pi}\sin(2c \cos \theta)\cos n\theta d\theta\]
+and
+\[f(z) = a_0 + \sum_{n=1}^{\infty}a_{n}(z^{n}+z^{-n})\]
+\end{sol}
+\prob Expand $\ds f(z) = e^{\frac{c}{2}\left(z-\frac{1}{z}\right)}$ \\
+\begin{sol}
+$f(z)$ is analytic at $z=0$, therefore by Taylor's theorem
+\[a_n =\frac{1}{2\pi}\int_0^{2\pi}\cos(c\sin \theta -n\theta) d\theta \]
+and
+\[b_n = (-1)^n a_n\]
+therefore
+\[f(z) = \sum_{-\infty}{\infty} a_nz^n\]
+\end{sol}
+\prob $\ds \frac{z-1}{z+1}$ (a) about $z=0$ (b) about $z=1$
+\begin{sol}
+(a) $-1+2(z-z^{2}+z^{3}-z^{4}+...)$ 
+\noindent
+(b) $\frac{1}{2}(z-1)-\frac{1}{2^{2}}(z-1)^{2}+\frac{1}{2^{3}}(z-1)^{3}$
+\end{sol}
+\prob Expand $\frac{1}{(z+1)(z+3)}$ in Laurent's series, if (a) $1<|z|<3$ (b) $|z|<3$ (c) $-3<z<3$ (d) $|z|<1$.
+\begin{sol}
+(a) $\ds -\frac{1}{2z^{4}}+\frac{1}{2z^{3}}-\frac{1}{2z^{2}}+\frac{1}{2z}-\frac{1}{6}+\frac{z}{18}-\frac{z^{2}}{54}+\frac{z^{3}}{162}.......$
+
+(b) $\ds \frac{1}{z^{2}}-\frac{4}{z^{3}}+\frac{13}{z^{4}}-\frac{50}{z^{5}}+...$
+
+(c) $\ds \frac{1}{2(1+z)}-\frac{1}{4}+\frac{(z+1)}{8}-\frac{(z+1)^{2}}{16}+....$
+
+(d) $\ds \frac{1}{3}-\frac{4}{9}z+\frac{13}{27}z^{2}-\frac{40}{81}z^{3}+...$
+\end{sol}
+\prob Find the Taylor's and Laurent's series which represents the function $\frac{z^2-1}{(z+2)(z+3)}$ when (i) $|z|<2$  (ii) $2|z|<3$.
+\prob Expand $\frac{z}{(z^2+1)(z^2+4)}$ in $1<|z|<2$.
+\begin{sol}
+$\frac{1}{10}[(\frac{2}{z}+\frac{2}{z^{2}}+\frac{2}{z^{5}}+...)-(\frac{z}{2}+\frac{z^{3}}{8}+...)]$
+\end{sol}
+\prob Represent the function f(z) = $\frac{4z+3}{z(z-3)(z+2)}$ in Laurent's series (i) within $|z|=1$ (ii) in the annular region between $|z|=2$ and $|z|=3$.
+\begin{sol}
+(i) $-\frac{1}{2z}+\sum_{n=0}^{\infty}\left[(-1)^{n+1}\frac{1}{2^{n+2}}-\frac{1}{2^{n+1}}\right]z^{n}$ 
+
+(ii) $-\frac{1}{2z}-\frac{1}{2z}\sum_{n=0}^{\infty}(-1)^{n}(\frac{2}{z})^{n}-\frac{1}{3}\sum_{n=0}^{\infty}(\frac{z}{3})^{n}$
+
+\end{sol}
+\prob Write all possible Laurent Series for the function f(z) = $\frac{z^2}{(z-1)^2(z+3)}$ about the singularity z=1, stating the region of convergence in each case.
+\begin{sol}
+when $|z-1|>4,\frac{1}{z-1}-\frac{2}{(z-1)^{2}}+\frac{9}{(z-1)^{3}}+\frac{36}{(z-1)^{4}}+...$ 
+
+when $0<|z-1|<4,\frac{1}{4}[1-\frac{1}{(z-1)^{2}}+\frac{7}{4}\frac{1}{z-1}+\frac{9}{16}-\frac{9}{-64}(z-1)...]$
+\end{sol}
+\prob Obtain the expansion
+\[f(z) = f(a)+ 2\left\{\frac{z-a}{2}f'\left(\frac{z+a}{2}\right)+\frac{(z-a)^3}{2^3.3}f'''\left(\frac{z+a}{2}\right) + \frac{(z-a)^5}{2^5.5} f^v\left(\frac{z+a}{2}\right)+....\right\}\]
+\prob Expand $\frac{z^2-6z-1}{(z-1)(z+2)(z-3)}$ in $3<|z+2|<5$.
+\begin{sol}
+$\frac{2}{z+2}+\frac{3}{(z+2)^{2}}+\frac{3^{2}}{(z+2)^{3}}+\cdots+\frac{1}{5}\left[1+\frac{z+2}{5}+\frac{(z+2)^{2}}{5^{2}}+\frac{(z+2)^{3}}{5^{3}}+\cdots\right]$
+\end{sol}
+\end{problems}

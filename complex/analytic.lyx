@@ -1,0 +1,4072 @@
+#LyX file created by tex2lyx 1.6.3
+\lyxformat 249
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+chapter{Analytic Functions}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \index{Analytic Function}
+
+\end_inset
+
+ The theory of functions of complex variable is utmost important in solving a large number of problems in the field of engineering. Many complicated integrals of real functions are solved with the help of functions of a complex variable. 
+\end_layout
+
+\begin_layout Section
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $\W$
+\end_inset
+
+ be two non-empty set of complex numbers. A rule 
+\begin_inset Formula $f$
+\end_inset
+
+ assigns to each element 
+\begin_inset Formula $z \in Z$
+\end_inset
+
+, a unique 
+\begin_inset Formula $w \in \W$
+\end_inset
+
+, is called as complex function. i.e., 
+\begin_inset Formula \[f: Z \rightarrow \W\]
+\end_inset
+
+ We may also write, 
+\begin_inset Formula \[w = f(z)\]
+\end_inset
+
+ Here 
+\begin_inset Formula $z$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+ are complex variables. As 
+\begin_inset Formula $z = x+iy$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are independent real variables. Let 
+\begin_inset Formula $w=u+iv$
+\end_inset
+
+, a function of 
+\begin_inset Formula $z$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are function 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ as 
+\begin_inset Formula $z$
+\end_inset
+
+ is function 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+. i.e, 
+\begin_inset Formula \[ u \equiv u(x,y) \]
+\end_inset
+
+ 
+\begin_inset Formula \[ v \equiv v(x,y) \]
+\end_inset
+
+ Thus 
+\begin_inset Formula \[ w = f(z) = u(x,y)+iv(x,y) \]
+\end_inset
+
+ There may be some relations such that, to a value of 
+\begin_inset Formula $z$
+\end_inset
+
+, there may correspond more than one value of 
+\begin_inset Formula $w$
+\end_inset
+
+, such as 
+\begin_inset Formula $w=\sqrt{z}$
+\end_inset
+
+ has two values of 
+\begin_inset Formula $w$
+\end_inset
+
+ for each 
+\begin_inset Formula $z \in Z$
+\end_inset
+
+. We call such relations 
+\emph on
+multivalued functions
+\emph default
+
+\begin_inset LatexCommand \index{Complex function!multivalued functions}
+
+\end_inset
+
+. On the other hand in the usual sense functions returning single value of 
+\begin_inset Formula $w$
+\end_inset
+
+ for each 
+\begin_inset Formula $z \in Z$
+\end_inset
+
+ are called 
+\emph on
+single valued functions
+\emph default
+
+\begin_inset LatexCommand \index{Complex function!single valued functions}
+
+\end_inset
+
+. We use function for single valued functions throughout the text. 
+\end_layout
+
+\begin_layout Subsection
+
+Limits
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Complex function!Limits}
+
+\end_inset
+
+ A function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is said to have limit 
+\begin_inset Formula $A$
+\end_inset
+
+ as 
+\begin_inset Formula $z \rightarrow a$
+\end_inset
+
+, if 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is defined in deleted neighborhood
+\begin_inset Foot
+status collapsed
+
+
+\begin_layout Standard
+
+A subset 
+\begin_inset Formula $C_N$
+\end_inset
+
+ of the complex plane containing 
+\begin_inset Formula $z_0$
+\end_inset
+
+ is said to be neighborhood of 
+\begin_inset Formula $z_0$
+\end_inset
+
+, if for some real number 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+, the set 
+\begin_inset Formula $\{z\in C:|z-z_0|<\delta\} \subseteq C_N$
+\end_inset
+
+. Further the set 
+\begin_inset Formula $C_N-\{z_0\}$
+\end_inset
+
+ is called deleted neighborhood of 
+\begin_inset Formula $z_0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ of 
+\begin_inset Formula $a$
+\end_inset
+
+ and if 
+\begin_inset Formula $\forall \epsilon ,\exists \delta >0$
+\end_inset
+
+, such that 
+\begin_inset Formula $|f(z)-A| < \epsilon $
+\end_inset
+
+ whenever 
+\begin_inset Formula $ 0 < |z-a| < \delta $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+If 
+\begin_inset Formula $f(z) = f(x+iy) = u(x,y) + iv(x,y)$
+\end_inset
+
+. Let 
+\begin_inset Formula $a=x_0 + i y_0$
+\end_inset
+
+ Then, 
+\begin_inset Formula \[\lim_{z \rightarrow a}f(z) = A = \alpha + i \beta\]
+\end_inset
+
+ 
+\begin_inset Formula \[\Leftrightarrow\]
+\end_inset
+
+ 
+\begin_inset Formula \[\lim_{x \rightarrow x_0, y \rightarrow y_0} u(x,y) = \alpha\]
+\end_inset
+
+ and 
+\begin_inset Formula \[\lim_{x \rightarrow x_0, y \rightarrow y_0} v(x,y) = \beta\]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+
+Continuity
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Complex function!Continuity}
+
+\end_inset
+
+ 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is said to be continuous at 
+\begin_inset Formula $z=a$
+\end_inset
+
+, if 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ is defined and 
+\begin_inset Formula $\lim_{z \rightarrow a}f(z) = f(a)$
+\end_inset
+
+. In other words, Let function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ of complex variable 
+\begin_inset Formula $z$
+\end_inset
+
+ is said to continuous at the point 
+\begin_inset Formula $z_0$
+\end_inset
+
+, if for any given positive number 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, we can find a number 
+\begin_inset Formula $\delta$
+\end_inset
+
+ such that 
+\begin_inset Formula $|f(z)-f(z_0)|<\epsilon$
+\end_inset
+
+, for all points 
+\begin_inset Formula $z$
+\end_inset
+
+ of the domain satisfying 
+\begin_inset Formula $|z-z_0|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Also, if 
+\begin_inset Formula $f(z) = f(x+iy) = u(x,y) + iv(x,y)$
+\end_inset
+
+. Let 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $a=x_0 + i y_0$
+\end_inset
+
+ Then 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are separately continuous at the point 
+\begin_inset Formula $a = x_0+iy_0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is said to be continuous in domain if continuous at each point of that domain. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ The function 
+\begin_inset Formula $z, Re(z), Im(z)$
+\end_inset
+
+ and 
+\begin_inset Formula $|\overline{z}|$
+\end_inset
+
+ are continuous in the entire plane. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+
+Differentiability
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Complex function!Differentiability}
+
+\end_inset
+
+ The 
+\shape italic
+complex derivative
+\shape default
+ is defined as, 
+\begin_inset Formula \[ 
+\frac{d}{d z} f(z) = \lim_{\Delta z \to 0}\frac{f(z + \Delta z) - f(z)}{\Delta z}.
+\]
+\end_inset
+
+ The complex derivative exists if this limit exists. This means that the value of the limit is independent of the manner in which 
+\begin_inset Formula $\Delta z \to 0$
+\end_inset
+
+. If the complex derivative exists at a point, then we say that the function is 
+\shape italic
+complex differentiable
+\shape default
+ there.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \label{ex_conj_z}
+
+\end_inset
+
+ Show that 
+\begin_inset Formula $f(z) = \overline{z}$
+\end_inset
+
+ is not differentiable. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Consider its derivative. 
+\begin_inset Formula \[
+  \frac{d}{d z} f(z) = \lim_{\Delta z \to 0}\frac{f(z+\Delta z)-f(z)}{\Delta z}.
+  \]
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+    \frac{d}{d z} \overline{z} 
+    &= \lim_{\Delta z \to 0} \frac{\overline{z + \Delta z}-\overline{z}}{\Delta z} 
+    \\
+    &= \lim_{\Delta z \to 0} \frac{\overline{\Delta z}}{\Delta z} 
+  \end{align*}
+\end_inset
+
+ First we take 
+\begin_inset Formula $\Delta z = \Delta x$
+\end_inset
+
+ and evaluate the limit. 
+\begin_inset Formula \[ 
+  \lim_{\Delta x \to 0} \frac{\Delta x}{\Delta x} = 1
+  \]
+\end_inset
+
+ Then we take 
+\begin_inset Formula $\Delta z = \imath \Delta y$
+\end_inset
+
+. 
+\begin_inset Formula \[ 
+  \lim_{\Delta y \to 0} \frac{-\imath \Delta y}{\imath \Delta y} = -1
+  \]
+\end_inset
+
+ Since the limit depends on the way that 
+\begin_inset Formula $\Delta z \to 0$
+\end_inset
+
+, the function is nowhere differentiable. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Prove that the function 
+\begin_inset Formula $f(z)=|z|^2$
+\end_inset
+
+ is continuous everywhere but nowhere differentiable except at the origin. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Since 
+\begin_inset Formula $f(z)=|z|^2 = x^2+y^2$
+\end_inset
+
+, the continuity of the function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is evident because of the continuity of 
+\begin_inset Formula $x^2+y^2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Let us consider its differentiability, 
+\begin_inset Formula \begin{align*}
+	f'(z_0) &= \lim_{\delta z \rightarrow 0} \frac{f(z_0 + \delta z)-f(z_0) }{\delta z} \\
+	&= \lim_{\delta z \rightarrow 0} \frac{|z_0 + \delta z|^2-|z_0|^2 }{\delta z} \\
+	&= \lim_{\delta z \rightarrow 0} \frac{(z_0 + \delta z)\overline{(z_0 + \delta z)}-z_0\overline{z_0}) }{\delta z} \\
+	&= \lim_{\delta z \rightarrow 0} \overline{z_0} + \delta \overline{z} + z_0 \frac{\delta \overline{z}}{\delta z} \\
+	&= \lim_{\delta z \rightarrow 0} \overline{z_0} + z_0 \frac{\delta \overline{z}}{\delta z}~~~~~~~~\text{(Since $\delta z \rightarrow 0 \Rightarrow \delta \overline{z} \rightarrow 0 $)} \\
+\end{align*}
+\end_inset
+
+ Now at 
+\begin_inset Formula $z_0=0$
+\end_inset
+
+, the above lim,it is clearly zero, so that 
+\begin_inset Formula $f'(0)=0$
+\end_inset
+
+. Let us now choose 
+\begin_inset Formula $z_0 \neq 0$
+\end_inset
+
+, let 
+\begin_inset Formula \begin{align*}
+\delta z &= r e^{i\theta} \\
+\delta \overline{z} &= r e^{-i\theta} \\
+\Rightarrow \frac{\delta \overline{z}}{\delta z} &= e^{-2i\theta} = \cos 2\theta - i \sin 2\theta
+\end{align*}
+\end_inset
+
+ Above does not not tend to a unique limit as this limit depends upon 
+\begin_inset Formula $\theta$
+\end_inset
+
+. Therefore, the given function is not differentiable at any other non-zero value of 
+\begin_inset Formula $z$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula \[
+f(z)=
+\begin{cases}
+\ds \frac{x^3y(y-ix)}{x^6+y^2},~~~~~~~ z \neq 0 \\
+=0,~~~~~~~~~~~~~~~~~~~~ z=0,
+\end{cases}
+\]
+\end_inset
+
+ prove that 
+\begin_inset Formula $\ds \frac{f(z)-f(0)}{z} \rightarrow 0$
+\end_inset
+
+ as 
+\begin_inset Formula $z \rightarrow 0$
+\end_inset
+
+ along any radius vector, but not 
+\begin_inset Formula $z \rightarrow 0$
+\end_inset
+
+ in any manner. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula $y-ix = -i(x+iy) = -iz$
+\end_inset
+
+. Now, 
+\begin_inset Formula \begin{align*}
+	f'(z)=\lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0}\frac{\frac{x^3y(y-ix)}{x^6+y^2} - 0}{z}\\
+		&= \lim_{z \rightarrow 0} \frac{x^3y i}{x^6+y^2}   
+\end{align*}
+\end_inset
+
+ Now if 
+\begin_inset Formula $z \tends 0$
+\end_inset
+
+ along any radius vector, say 
+\begin_inset Formula $y=mx$
+\end_inset
+
+, then 
+\begin_inset Formula \begin{align*}
+	f'(z)=\lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0} \frac{x^3 (mx) i}{x^6+(mx)^2}   \\
+	&= \lim_{z \rightarrow 0} \frac{x^4 im}{x^6+m^2x^2}   \\
+	&= \lim_{z \rightarrow 0} \frac{x^2 im}{x^4+m^2} = 0  ~~~\text{Hence.}  
+\end{align*}
+\end_inset
+
+ Now let us suppose that 
+\begin_inset Formula $z \tends 0$
+\end_inset
+
+ along the curve 
+\begin_inset Formula $y=x^3$
+\end_inset
+
+, then 
+\begin_inset Formula \begin{align*}
+	f'(z)=\lim_{z \rightarrow 0}\frac{f(z)-f(0)}{z} &= \lim_{z \rightarrow 0} \frac{x^3 (x^3) i}{x^6+(x^3)^2}   \\
+	&= \lim_{z \rightarrow 0} \frac{x^6 i}{x^6+x^6}   = -\frac{i}{2} 
+\end{align*}
+\end_inset
+
+ along different paths, the value of 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ is not unique (that is 0 along 
+\begin_inset Formula $y=mx$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds -\frac{i}{2}$
+\end_inset
+
+ along 
+\begin_inset Formula $y=x^3$
+\end_inset
+
+). Therefore the function is not differentiable at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Cauchy-Riemann Equations
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Cauchy-Riemann Equations}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+ The necessary and sufficient condition for the derivative of the function 
+\begin_inset Formula $f(z)=u+iv$
+\end_inset
+
+, where 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are real-valued functions of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, to exist for all values of 
+\begin_inset Formula $z$
+\end_inset
+
+ in domain 
+\begin_inset Formula $D$
+\end_inset
+
+, are 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $\ds \pd ux = \pd vy$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds \pd uy = - \pd vx$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $\ds \pd ux, \pd uy, \pd vx, \pd vy$
+\end_inset
+
+ are continuous function of 
+\begin_inset Formula $x, y$
+\end_inset
+
+ in 
+\begin_inset Formula $D$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+provided these four partial derivatives involved here should exist. The relations given in (1) is referred as .Cauchy and Riemann Equations (some times CR Equations). 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+
+\series bold
+Necessary Condition
+\series default
+ Let derivative of 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ exists, then 
+\begin_inset Formula \begin{align*}
+	f'(z) &= \lim_{\delta z \tends 0} \frac{f(z+\delta z) - f(z)}{\delta z} \\
+	 &= \lim_{\delta x, \delta y \tends 0,0} \frac{[u(x+\delta x, y+\delta y)+iv(x+\delta x, y+\delta y)]-[u(x, y)+iv(x, y)]  }{\delta x + i\delta y} 
+\end{align*}
+\end_inset
+
+ since 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ exists, the limit of above equation should be finite as 
+\begin_inset Formula $(\delta x, \delta y) \tends (0,0)$
+\end_inset
+
+ in any manner that we may choose. To begin with, we assume that 
+\begin_inset Formula $\delta z$
+\end_inset
+
+ is wholly real, i.e. 
+\begin_inset Formula $\delta y=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta z =\delta x$
+\end_inset
+
+. This gives 
+\begin_inset Formula \begin{align*}
+f'(z) &= \lim_{\delta x \tends 0} \frac{[u(x+\delta x, y)+iv(x+\delta x, y)]-[u(x, y)+iv(x, y)]  }{\delta x} \\
+&= \lim_{\delta x \tends 0} \frac{[u(x+\delta x, y)-u(x, y)]+i[v(x+\delta x, y) - v(x, y)]  }{\delta x}
+&= u_x + i v_x
+\end{align*}
+\end_inset
+
+ Similarly, if we assume 
+\begin_inset Formula $\delta z$
+\end_inset
+
+ wholly imaginary number, then 
+\begin_inset Formula \begin{align*}
+f'(z) &= \lim_{\delta y \tends 0} \frac{[u(x, y+\delta y)+iv(x, y+\delta y)]-[u(x, y)+iv(x, y)]  }{\delta y} \\
+&= \lim_{\delta x \tends 0} \frac{[u(x, y+\delta y)-u(x, y)]+i[v(x, y+\delta y) - v(x, y)]  }{i\delta y}
+&=\frac{1}{i}u_y + v_y = v_y - iu_y
+\end{align*}
+\end_inset
+
+ Since 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ exists, it is unique, therefore 
+\begin_inset Formula \[u_x + i v_x = v_y - iu_y\]
+\end_inset
+
+ Equating then the real and imaginary parts, we obtain 
+\begin_inset Formula \[u_x = v_y \text{ and } u_y = -v_x\]
+\end_inset
+
+ Thus the necessary conditions for the existence of the derivative of 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is that the CR equations should be satisfied.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+
+\series bold
+Sufficient Condition
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+Suppose 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ possessing partial derivatives 
+\begin_inset Formula $u_x,u_y,v_x,v_y$
+\end_inset
+
+ at each point in 
+\begin_inset Formula $D$
+\end_inset
+
+ and the CR equations are satisfied. 
+\begin_inset Formula \begin{align*}
+f(z) &= u(x,y)+iv(x,y)  \\
+f(z+\delta z) &= u(x+\delta x,y+\delta y)+iv(x+\delta x,y+\delta y) \\
+&= [u(x,y) + (u_x \delta x + u_y \delta y) + ... ] + i[v(x,y) + (v_x \delta x + v_y \delta y) + ... ] \\
+&~~~~~~~~~~\text{(Using Taylor's Theorem for two variables)} \\
+&= [u(x,y)+iv(x,y)] + (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y + ... \\
+&= f(z) +  (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y \; \\
+&=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{ Leaving the higher order terms}\\
+\Rightarrow ~~~~f(z+\delta z)-f(z) & = (u_x+iv_x)\delta x  + (u_y+iv_y)\delta y
+\end{align*}
+\end_inset
+
+ On using Cauchy Riemann equations 
+\begin_inset Formula \[u_x=v_y;\;u_y=-v_x \]
+\end_inset
+
+ we get, 
+\begin_inset Formula \begin{align*}
+f(z+\delta z)-f(z) & = (u_x+iv_x)\delta x  + (-v_x+iu_x)\delta y \\
+ & = (u_x+iv_x)\delta x  + i(iv_x+ u_x)\delta y \\
+ & = (u_x+iv_x)(\delta x  + i\delta y) \\
+ & = (u_x+iv_x)\delta z \\
+\Rightarrow~~~~ \frac{f(z+\delta z)-f(z)}{\delta z} &= u_x + iv_x \\
+\Rightarrow~~~~ \lim_{z \tends 0}\frac{f(z+\delta z)-f(z)}{\delta z} &= u_x + iv_x \\
+\Rightarrow~~~~ f'(z) &= u_x + iv_x
+\end{align*}
+\end_inset
+
+ Since 
+\begin_inset Formula $u_x, v_x$
+\end_inset
+
+ exist and are unique, therefore we conclude that 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ exists. Hence 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is analytic.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Remark : 
+\series default
+
+\begin_inset Formula $\ds \frac{dw}{dz} = u_x+iv_x = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} = \frac{\partial}{\partial x}(u+iv) = \frac{\partial w}{\partial x}$
+\end_inset
+
+. Also, 
+\begin_inset Formula $\ds \frac{dw}{dz} = -i \frac{\partial w}{\partial y}$
+\end_inset
+
+(why?).
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Discuss the exponential function. 
+\begin_inset Formula \[
+  w= \e^z = \phi(x,y) = \e^x (\cos y + \imath \sin y)
+  \]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ We use the Cauchy-Riemann equations to show that the function is entire. Let 
+\begin_inset Formula \[f(z) = u+iv = e^z =  \e^x (\cos y + \imath \sin y)\]
+\end_inset
+
+ Hence 
+\begin_inset Formula \[ u =e^x \cos y \text{   and   } v = e^x \sin y\]
+\end_inset
+
+ Then, 
+\begin_inset Formula \[u_x =e^x \cos y, ~~~~u_y= -e^x \sin y, ~~~~v_x=e^x \sin y, ~~~~v_y=e^x \cos y \]
+\end_inset
+
+ It follows that Cauchy-Riemann equations are satisfied. Since the function satisfies the Cauchy-Riemann equations and the first partial derivatives are continuous everywhere in the finite complex plane. Hence 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ exists and
+\end_layout
+
+\begin_layout Standard
+
+Now we find the value of the complex derivative. 
+\begin_inset Formula \begin{align*}
+	f'(z) &= \frac{dw}{dz} = \frac{\partial w}{\partial x} \\
+	 &=  \frac{\partial}{\partial x}[e^x(\cos y + i \sin y)] \\
+	 &=  e^x(\cos y + i \sin y) \\
+	 &=e^z
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Remark: 
+\series default
+The differentiability of the exponential function implies the differentiability of the trigonometric functions, as they can be written in terms of the exponential.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ A function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is defined as follows: 
+\begin_inset Formula \[
+f(z) = \begin{cases} \frac{x^3-y^3}{x^2+y^2} + i\frac{x^3+y^3}{x^2+y^2}, z\neq 0 \\
+0,~~~~~~~~~~~~~~~~~~~~~z=0
+\end{cases}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+Show that 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is continuous and that Cauchy-Riemann equations are satisfied at the origin. Also show that 
+\begin_inset Formula $f'(0)$
+\end_inset
+
+ does not exist. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ We have 
+\begin_inset Formula \[u = \frac{x^3-y^3}{x^2+y^2} ~~~~~\text{and}~~~~~v=\frac{x^3+y^3}{x^2+y^2}\]
+\end_inset
+
+ For non zero values of 
+\begin_inset Formula $z,~f(z)$
+\end_inset
+
+ is continuous since 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are rational functions of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ with non-zero denominators. To prove its continuity at 
+\begin_inset Formula $z=0$
+\end_inset
+
+, we use polar coordinates. Then we have 
+\begin_inset Formula $u=r(\cos^3\theta -  \sin^3\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $v=r(\cos^3\theta + \sin^3\theta)$
+\end_inset
+
+. It is seen that 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ tends to zero as 
+\begin_inset Formula $r \tends 0$
+\end_inset
+
+ irrespective of the values of 
+\begin_inset Formula $\theta$
+\end_inset
+
+. Since 
+\begin_inset Formula $u(0,0) = v(0,0) = 0$
+\end_inset
+
+ (Given 
+\begin_inset Formula $f(z)=0$
+\end_inset
+
+ at 
+\begin_inset Formula $z=0$
+\end_inset
+
+), it follows that 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+. Thus 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is continuous for all values of 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Further, 
+\begin_inset Formula \begin{align*}
+	(u_x)_{(0,0)} &= \lim_{x \tends 0} \frac{u(x,0) - u(0,0)}{x} = \lim_{x \tends 0} \frac{x^3/x^2}{x} = 1 \\
+	(u_y)_{(0,0)} &= \lim_{y \tends 0} \frac{u(0,y) - u(0,0)}{y} = \lim_{y \tends 0} \frac{-y^3/y^2}{y} = -1 \\
+	(v_x)_{(0,0)} &= \lim_{x \tends 0} \frac{v(x,0) - v(0,0)}{x} = \lim_{x \tends 0} \frac{x^3/x^2}{x} = 1 \\
+	(v_y)_{(0,0)} &= \lim_{y \tends 0} \frac{v(0,y) - u(0,0)}{y} = \lim_{y \tends 0} \frac{y^3/y^2}{y} = 1 
+\end{align*}
+\end_inset
+
+ which show that the Cauchy-Riemann equations are satisfied at the origin. Finally, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% f'(0) &= 
+\backslash
+lim_{z 
+\backslash
+tends 0} 
+\backslash
+frac{f(z)-f(0)}{z} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+lim_{x,y 
+\backslash
+tends 0} 
+\backslash
+frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+lim_{y 
+\backslash
+tends 0} 
+\backslash
+frac{(i-1)y^3}{iy^3} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+frac{(i-1)}{i} = 1+i
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Now, let $z 
+\backslash
+tends 0$ along $y=x$, then
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% f'(0) &= 
+\backslash
+lim_{z 
+\backslash
+tends 0} 
+\backslash
+frac{f(z)-f(0)}{z} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+lim_{z 
+\backslash
+tends 0} 
+\backslash
+frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+lim_{x 
+\backslash
+tends 0} 
+\backslash
+frac{2ix^3}{2(1+i)x^3} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  &= 
+\backslash
+frac{(1+i)}{2}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Now, let 
+\begin_inset Formula $z \tends 0$
+\end_inset
+
+ along 
+\begin_inset Formula $y=mx$
+\end_inset
+
+, then 
+\begin_inset Formula \begin{align*}
+ f'(0) &= \lim_{z \tends 0} \frac{f(z)-f(0)}{z} \\
+  &= \lim_{x,y \tends 0} \frac{(x^3-y^3)+i(x^3+y^3)}{(x^2+y^2)(x+iy)} \\
+  &= \lim_{x \tends 0} \frac{x^3(1-m^3)+ix^3(1+m^3)}{x^2(1+m^2)x(1+im)} \\
+  &= \lim_{x \tends 0} \frac{(1-m^3)+i(1+m^3)}{(1+m^2)(1+im)} \\
+\end{align*}
+\end_inset
+
+ Since this limit depends on 
+\begin_inset Formula $m$
+\end_inset
+
+ therefore 
+\begin_inset Formula $f'(0)$
+\end_inset
+
+ is not unique, it follows that 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ does not exist at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Cauchy-Riemann Equation in Polar Form 
+\end_layout
+
+\begin_layout Standard
+
+We know that 
+\begin_inset Formula $x=r\cos\theta,y=r\sin\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ is a function 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+. Thus, we have
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+z=x+iy=r\cos\theta+ir\sin\theta=re^{i\theta}\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\Rightarrow f(z)=u+iv=f(re^{i\theta})\label{eq:CRP1}\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Differentiating Equation (
+\begin_inset LatexCommand \ref{eq:CRP1}
+
+\end_inset
+
+) partially with respect to 
+\begin_inset Formula $r$
+\end_inset
+
+, we get
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial v}=f'(re^{i\theta})e^{i\theta}\label{eq:CRP2}\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Again, differentiating Equation (1.10) partially with respect to 
+\begin_inset Formula $\theta,$
+\end_inset
+
+ we get
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=if'(re^{i\theta})re^{i\theta}\label{eq:CRP3}\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Substituting the value of 
+\begin_inset Formula $f'(re^{i\theta})e^{i\theta}$
+\end_inset
+
+ from Equation (
+\begin_inset LatexCommand \ref{eq:CRP2}
+
+\end_inset
+
+) into Equation (
+\begin_inset LatexCommand \ref{eq:CRP3}
+
+\end_inset
+
+), we get
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)ir\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+or 
+\begin_inset Formula \[
+\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}=ir\frac{\partial u}{\partial r}-r\frac{\partial v}{\partial r}\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Comparing real and imaginary parts of the above equation, we get
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial\theta}\label{eq:CRPa}\end{equation}
+\end_inset
+
+ and 
+\begin_inset Formula \begin{equation}
+\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta}\label{eq:CRPb}\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Derivative of 
+\begin_inset Formula $w$
+\end_inset
+
+ in Polar Form 
+\end_layout
+
+\begin_layout Standard
+
+We have
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+w=u+iv\]
+\end_inset
+
+ Therefore
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{dw}{dz}=\frac{\partial w}{\partial x}=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}\]
+\end_inset
+
+ But 
+\begin_inset Formula \begin{align*}
+\frac{dw}{dz} & =\frac{\partial w}{\partial x}=\frac{\partial w\partial r}{\partial r\partial x}+\frac{\partial w\partial\theta}{\partial\theta\partial x}\\
+ & =\frac{\partial w}{\partial r}\cos\theta-\left(\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta}\right)\frac{\sin\theta}{r}\;\;\;(w=u+iv)\\
+ & =\frac{\partial u}{\partial r}\cos\theta-\left(-r\frac{\partial v}{\partial r}+ir\frac{\partial u}{\partial r}\right)\frac{\sin\theta}{r}\end{align*}
+\end_inset
+
+ Since 
+\begin_inset Formula $\ds \frac{\partial u}{\partial\theta}=-r\frac{\partial v}{\partial r}$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds \frac{\partial v}{\partial\theta}=r\frac{\partial u}{\partial r}$
+\end_inset
+
+. Therefore
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{dw}{dz}=\frac{\partial w}{\partial r}\cos\theta-i\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)\sin\theta=\frac{\partial w}{\partial r}\cos\theta-i\frac{\partial}{\partial r}(u+iv)\sin\theta\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\therefore\;\;\;\;\;\frac{dw}{dz}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}\label{eq:DP1}\end{equation}
+\end_inset
+
+ Again, we have
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{dw}{dz}=\frac{\partial w\partial r}{\partial r\partial x}+\frac{\partial w\partial\theta}{\partial\theta\partial x}=\left(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r}\right)\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}\]
+\end_inset
+
+ Using the Cauchy-Riemann equations in Polar form, we get
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+=(\frac{1}{r}\frac{\partial v}{\partial\theta}-i\frac{1}{r}\frac{\partial u}{\partial\theta})\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}=-\frac{1}{r}(\frac{\partial u}{\partial\theta}+i\frac{\partial v}{\partial\theta})\cos\theta-\frac{\partial w}{\partial\theta}\frac{\sin\theta}{r}\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\therefore\;\;\;\;\;\frac{dw}{dz}=-\frac{i}{r}(\cos\theta-i\sin\theta)\frac{\partial w}{\partial\theta}\label{eq:DP2}\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Analytic Functions
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Analytic function}
+
+\end_inset
+
+ We will consider a single valued function throughout the section. 
+\end_layout
+
+\begin_layout Subsection
+
+Analyticity at point
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Analytic function!Analyticity at point}
+
+\end_inset
+
+ The function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is said to be analytic at a point 
+\begin_inset Formula $z=z_0$
+\end_inset
+
+ in the domain 
+\begin_inset Formula $D$
+\end_inset
+
+ if its derivative 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ exists at 
+\begin_inset Formula $z=z_0$
+\end_inset
+
+ and at every point in some neighborhood of 
+\begin_inset Formula $z_0$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Subsection
+
+Analyticity in domain
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand \index{Analytic function!Analyticity in domain}
+
+\end_inset
+
+ A function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is said to be analytic in a domain 
+\begin_inset Formula $D$
+\end_inset
+
+, if 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is defined and differentiable at all points of the domain.
+\end_layout
+
+\begin_layout Standard
+
+Note that complex differentiable has a different meaning than analytic. Analyticity refers to the behavior of a function on an open set. A function can be complex differentiable at isolated points, but the function would not be analytic at those points. Analytic functions are also called 
+\shape italic
+regular
+\shape default
+
+\begin_inset LatexCommand \index{Regular function}
+
+\end_inset
+
+ or 
+\shape italic
+holomorphic
+\shape default
+
+\begin_inset LatexCommand \index{Holomorphic function}
+
+\end_inset
+
+. If a function is analytic everywhere in the finite complex plane, it is called 
+\shape italic
+entire
+\shape default
+. 
+\begin_inset LatexCommand \index{regular}
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \index{holomorphic}
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \index{entire}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \label{example ddz zn}
+
+\end_inset
+
+ Consider 
+\begin_inset Formula $z^n$
+\end_inset
+
+, 
+\begin_inset Formula $n \in \mathbb{Z}^+$
+\end_inset
+
+, Is the function differentiable? Is it analytic? What is the value of the derivative? 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ We determine differentiability by trying to differentiate the function. We use the limit definition of differentiation. We will use Newton's binomial formula to expand 
+\begin_inset Formula $(z + \Delta z)^n$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%% CONTINUE reference Newton's Binomial formula.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+    \frac{d}{d z} z^n
+    &= \lim_{\Delta z \to 0} \frac{ (z + \Delta z)^n - z^n }{ \Delta z } 
+    \\
+    &= \lim_{\Delta z \to 0} \frac{ \left( z^n + n z^{n-1} \Delta z
+        + \frac{n (n-1)}{2} z^{n-2} \Delta z^2 + \cdots + \Delta z^n
+      \right) - z^n }{ \Delta z } 
+    \\
+    &= \lim_{\Delta z \to 0} \left( n z^{n-1}
+      + \frac{n (n-1)}{2} z^{n-2} \Delta z + \cdots + \Delta z^{n-1} \right) 
+    \\
+    &= n z^{n-1}
+  \end{align*}
+\end_inset
+
+ The derivative exists everywhere. The function is analytic in the whole complex plane so it is entire. The value of the derivative is 
+\begin_inset Formula $\frac{d}{d z} = n z^{n-1}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Remark: 
+\series default
+ The definition of the derivative of a function of complex variable is identical in form of that the derivative of the function of real variable. Hence the rule of differentiation for complex functions are the same as those of real functions. Thus if a complex function is once known to be analytic, it can be differentiated just like ordinary way.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula $w=\log z$
+\end_inset
+
+, find 
+\begin_inset Formula $\ds \frac{dw}{dz}$
+\end_inset
+
+ and determine the value of 
+\begin_inset Formula $z$
+\end_inset
+
+ at which function ceases to be analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ We have 
+\begin_inset Formula \[w=\log z = \log (x+iy) = \frac{1}{2}\log(x^2+y^2)+i \tan^{-1}\frac{y}{x}\]
+\end_inset
+
+ i.e., 
+\begin_inset Formula \[u =\frac{1}{2}\log(x^2+y^2) \]
+\end_inset
+
+ 
+\begin_inset Formula \[v= \tan^{-1}\frac{y}{x}\]
+\end_inset
+
+ 
+\begin_inset Formula \[\therefore \;\;\;\; u_x = \frac{x}{x^2+y^2}, u_y =\frac{y}{x^2+y^2}\]
+\end_inset
+
+ 
+\begin_inset Formula \[\text{and } \;\;\;\; v_x = \frac{-y}{x^2+y^2}, v_y =\frac{x}{x^2+y^2}\]
+\end_inset
+
+ Since, the CR equations are satisfied and the partial derivatives are continuous except at (0,0). Hence 
+\begin_inset Formula $w$
+\end_inset
+
+ is analytic everywhere except at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset Formula \[\therefore \;\;\;\; \frac{dw}{dz}=u_x+iv_x = \frac{x}{x^2+y^2} + i \frac{-y}{x^2+y^2} =\frac{x-iy}{x^2+y^2} = \frac{1}{x+iy} = \frac{1}{z} \]
+\end_inset
+
+ where 
+\begin_inset Formula $z\neq 0$
+\end_inset
+
+. (Note direct differentiations of 
+\begin_inset Formula $\log z$
+\end_inset
+
+ also gives 
+\begin_inset Formula $1/z$
+\end_inset
+
+). 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Show that for the analytic function 
+\begin_inset Formula $f(z)=u+iv$
+\end_inset
+
+, the two families of curves 
+\begin_inset Formula $u(x,y)=c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $v(x,y)=c_2$
+\end_inset
+
+ are orthogonal
+\begin_inset Foot
+status collapsed
+
+
+\begin_layout Standard
+
+Two curves are said to be orthogonal if they intersect at right angle at each point of intersection. Mathematically, if the curves have slopes 
+\begin_inset Formula $m_1$
+\end_inset
+
+ and 
+\begin_inset Formula $m_2$
+\end_inset
+
+, then the curves are orthogonal if 
+\begin_inset Formula $m_1m_2=-1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Families of curves 
+\begin_inset Formula \begin{equation}\label{eqa1}
+u(x,y)=c_1
+\end{equation}
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}\label{eqa2}
+v(x,y)=c_2
+\end{equation}
+\end_inset
+
+ On differentiating equation 
+\begin_inset LatexCommand \ref{eqa1}
+
+\end_inset
+
+, 
+\begin_inset Formula \begin{equation}u_xdx+u_ydy=0~~~~~~\Rightarrow~~~~~~ m_1 = \frac{dy}{dx} = - \frac{u_x}{u_y}\end{equation}
+\end_inset
+
+ On differentiating equation 
+\begin_inset LatexCommand \ref{eqa1}
+
+\end_inset
+
+, 
+\begin_inset Formula \begin{equation}v_xdx+v_ydy=0~~~~~~\Rightarrow~~~~~~ m_2 = \frac{dy}{dx} = - \frac{v_x}{v_y}\end{equation}
+\end_inset
+
+ The product of two slopes 
+\begin_inset Formula \begin{equation}\label{eqa3}
+m_1m_2 = \left(- \frac{u_x}{u_y}\right)\left(- \frac{v_x}{v_y}\right) 
+\end{equation}
+\end_inset
+
+ Since, 
+\begin_inset Formula $u + iv$
+\end_inset
+
+ is analytic, Hence. Cauchy Riemann equations are 
+\begin_inset Formula \[u_x = v_y~~~~and ~~~~ u_y=-v_x\]
+\end_inset
+
+ Hence equation 
+\begin_inset LatexCommand \ref{eqa3}
+
+\end_inset
+
+ reduces to 
+\begin_inset Formula \[m_1m_2 =\left(- \frac{u_x}{u_y}\right)\left( \frac{u_y}{u_x}\right)  = -1 \]
+\end_inset
+
+ Hence the two families of curves 
+\begin_inset Formula $u(x,y)=c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $v(x,y)=c_2$
+\end_inset
+
+ are orthogonal. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Analytic Functions can be Written in Terms of 
+\begin_inset Formula $\mathbf{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Consider an analytic function expressed in terms of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $\phi(x, y)$
+\end_inset
+
+. We can write 
+\begin_inset Formula $\phi$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $z = x + \imath y$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{z} = x - \imath y$
+\end_inset
+
+. 
+\begin_inset Formula \[
+f \left( z, \overline{z} \right) 
+= \phi \left( \frac{z + \overline{z}}{2}, \frac{z - \overline{z}}{2i} \right)
+\]
+\end_inset
+
+ We treat 
+\begin_inset Formula $z$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{z}$
+\end_inset
+
+ as independent variables. We find the partial derivatives with respect to these variables. 
+\begin_inset Formula \begin{gather*}
+  \frac{\partial}{\partial z} = \frac{\partial x}{\partial z} \frac{\partial}{\partial x} 
+  + \frac{\partial y}{\partial z} \frac{\partial }{\partial y}
+  = \frac{1}{2} \left( \frac{\partial}{\partial x} - \imath \frac{\partial}{\partial y} \right) 
+  \\
+  \frac{\partial}{\partial \overline{z}} 
+  = \frac{\partial x}{\partial \overline{z}} \frac{\partial}{\partial x} 
+  + \frac{\partial y}{\partial \overline{z}} \frac{\partial}{\partial y}
+  = \frac{1}{2} \left( \frac{\partial}{\partial x} + \imath \frac{\partial}{\partial y} \right)
+\end{gather*}
+\end_inset
+
+ Since 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is analytic, the complex derivatives in the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ directions are equal. 
+\begin_inset Formula \[
+\frac{\partial \phi}{\partial x} = - \imath \frac{\partial \phi}{\partial y}
+\]
+\end_inset
+
+ The partial derivative of 
+\begin_inset Formula $f\left( z,\overline{z} \right)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\overline{z}$
+\end_inset
+
+ is zero. 
+\begin_inset Formula \[
+\frac{\partial f}{\partial \overline{z}} 
+= \frac{1}{2} \left( \frac{\partial \phi}{\partial x} + \imath \frac{\partial \phi}{\partial y} \right)
+= 0
+\]
+\end_inset
+
+ Thus 
+\begin_inset Formula $f\left( z,\overline{z} \right)$
+\end_inset
+
+ has no functional dependence on 
+\begin_inset Formula $\overline{z}$
+\end_inset
+
+, it can be written as a function of 
+\begin_inset Formula $z$
+\end_inset
+
+ alone.
+\end_layout
+
+\begin_layout Standard
+
+If we were considering an analytic function expressed in polar coordinates 
+\begin_inset Formula $\phi(r, \theta)$
+\end_inset
+
+, then we could write it in Cartesian coordinates with the substitutions: 
+\begin_inset Formula \[
+r = \sqrt{x^2 + y^2}, \quad \theta = \arctan(x, y).
+\]
+\end_inset
+
+ Thus we could write 
+\begin_inset Formula $\phi(r, \theta)$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $z$
+\end_inset
+
+ alone. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula $n$
+\end_inset
+
+ is real, show that 
+\begin_inset Formula $f(re^{i\theta})=r^{n}(\cos n\theta+i\sin n\theta)$
+\end_inset
+
+ is analytic expect possibly when 
+\begin_inset Formula $r=0$
+\end_inset
+
+ and that its derivative is 
+\begin_inset Formula $nr^{n-1}[\cos(n-1)\theta+i\sin(n-1)\theta].$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $w=f(z)=u+iv=r^{n}(\cos n\theta+i\sin n\theta)$
+\end_inset
+
+. Therefore 
+\begin_inset Formula $u=r^{n}\cos n\theta,v=r^{n}\sin n\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{\partial u}{\partial r}=nr^{n-1}\cos n\theta,\frac{\partial u}{\partial\theta}=-nr^{n}\sin n\theta\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{\partial v}{\partial r}=nr^{n-1}\sin n\theta,\frac{\partial v}{\partial\theta}=nr^{n}\cos n\theta\]
+\end_inset
+
+ Thus, we have
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta}=nr^{n-1}\cos n\theta\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+and 
+\begin_inset Formula \[
+\frac{1}{r}\frac{\partial u}{\partial\theta}=-\frac{\partial v}{\partial r}=-nr^{n-1}\sin n\theta\]
+\end_inset
+
+ Hence, the Cauchy-Riemann equations are satisfied. Thus, the function 
+\begin_inset Formula $w=r^{n}(\cos n\theta+i\sin n\theta)$
+\end_inset
+
+ is analytic for all finite values of 
+\begin_inset Formula $z,$
+\end_inset
+
+ if 
+\begin_inset Formula $\frac{dw}{dz}$
+\end_inset
+
+ exits . we have
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+\frac{dw}{dz}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}=(\cos\theta-i\sin\theta)\frac{\partial w}{\partial r}=(\cos\theta-i\sin\theta)nr^{n-1}(\cos n\theta+i\sin n\theta)\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[
+=nr^{n-1}[\cos(n-1)\theta+i\sin(n-1)\theta]\]
+\end_inset
+
+ Thus, 
+\begin_inset Formula $\ds\frac{dw}{dz}$
+\end_inset
+
+ exits for all values of 
+\begin_inset Formula $r$
+\end_inset
+
+, including zero, expect when 
+\begin_inset Formula $r=0$
+\end_inset
+
+ and 
+\begin_inset Formula $n\le1.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ Show that the function 
+\begin_inset Formula $\ds f(z)=e^{{-z}^{-4}}$
+\end_inset
+
+ 
+\begin_inset Formula $(z\neq 0)$
+\end_inset
+
+ and 
+\begin_inset Formula $f(0)=0$
+\end_inset
+
+ is not analytic at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. Although Cauchy-Riemann equations are satisfied at the point. How would you explain this? 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{solution}
+\end_layout
+
+\end_inset
+
+ Here 
+\begin_inset Formula \[f(z) = e^{-z^{-4}}=e^{\ds -\frac{1}{(x+iy)^4}} = e^{ \ds-\frac{(x-iy)^4}{(x^2+y^2)^4}} = e^{\ds -\frac{(x^4+y^4-6x^2y^2)-i4xy(x^2-y^2)}{(x^2+y^2)^4}} \]
+\end_inset
+
+ 
+\begin_inset Formula \[	\Rightarrow u+iv  = e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}}e^{\ds -i\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}}\]
+\end_inset
+
+ This gives, 
+\begin_inset Formula \[ u = e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}} \cos \left(\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}\right) \text{ and } v = e^{\ds -\frac{x^4+y^4-6x^2y^2}{(x^2+y^2)^4}} \sin \left(\frac{4xy(x^2-y^2)}{(x^2+y^2)^4}\right)\]
+\end_inset
+
+ At 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\frac{\partial u}{\partial x} & =\lim_{h\rightarrow0}\frac{u(0+h,0)-u(0,0)}{h}=\lim_{h\rightarrow0}\frac{e^{-h^{-4}}}{h}\\
+ & =\lim_{h\rightarrow0}\frac{1}{he^{\frac{1}{h^{4}}}}=\lim_{h\rightarrow0}\left[\frac{1}{h\left(1+\frac{1}{h^{4}}+\frac{1}{2!h^{8}}+\frac{1}{3!h^{12}}+...\right)}\right]=0\\
+ & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;(\because e^{x}=1+x+\frac{x^{2}}{2!}+...)
+\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\frac{\partial u}{\partial y} & =\lim_{k\rightarrow0}\frac{u(0,0+k)-u(0,0)}{k}=\lim_{k\rightarrow0}\frac{e^{-k^{-4}}}{k}\\
+ & =\lim_{k\rightarrow0}\frac{1}{he^{\frac{1}{h^{4}}}}=0\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\frac{\partial v}{\partial x} & =\lim_{h\rightarrow0}\frac{v(0+h,0)-v(0,0)}{h}=\lim_{h\rightarrow0}\frac{e^{-h^{-4}}}{h}\\
+ & =\lim_{h\rightarrow0}\frac{1}{h.e^{\frac{1}{h^{4}}}}=0\end{align*}
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+\frac{\partial v}{\partial y} & =\lim_{k\rightarrow0}\frac{v(0,0+k)-v(0,0)}{k}=\lim_{k\rightarrow0}\frac{e^{-k^{-4}}}{k}\\
+ & =\lim_{k\rightarrow0}\frac{1}{k.e^{\frac{1}{k^{4}}}}=\lim_{k\rightarrow0}\frac{1}{k.e^{\frac{1}{k^{4}}}}=0\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Hence 
+\begin_inset Formula $\ds \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\ds \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+\end_inset
+
+ (C-R equations are satisfied at 
+\begin_inset Formula $z=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+But 
+\begin_inset Formula \[
+f'(0)=\lim_{z\rightarrow0}\frac{f(z)-f(0)}{z}=\lim_{z \rightarrow 0}\frac{e^{-z^{-4}}-0}{z}\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Along 
+\begin_inset Formula $z=re^{i\frac{\pi}{4}}$
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+f'(0) & =\lim_{r\rightarrow0}\frac{e^{-r^{-4}}e^{-\left(e^{i\frac{\pi}{4}}\right)^{4}}}{re^{i\frac{\pi}{4}}}=\lim_{r\rightarrow0}\frac{e^{-r^{-4}}e}{re^{i\frac{\pi}{4}}}\\
+ & =\frac{e}{e^{i\frac{\pi}{4}}}\lim_{r\rightarrow0}\frac{1}{re^{-r^{-4}}}=0\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Showing that 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ does not exist at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. Hence 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is not analytic at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Determine which of the following functions are analytic: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $x^2+iy^2$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula $u=x^2$
+\end_inset
+
+ and 
+\begin_inset Formula $v=y^2$
+\end_inset
+
+, this implies 
+\begin_inset Formula \[u_x=2x,\;\;u_y=0\;\;v_x= 0\;\;v_y=2y\]
+\end_inset
+
+ Cauchy Riemann equations give, 
+\begin_inset Formula \[u_x=v_y \;\;\; \Rightarrow 2x=2y \;\;\text{ and } u_y=0=-v_x\]
+\end_inset
+
+ Function is nowhere analytic except at 
+\begin_inset Formula $x=y$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $2xy+i(x^2-y^2)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Check Cauchy Riemann equations. Not satisfied. Not analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sidebyside
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\sin x \cosh y+i\cos x \sinh y$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \frac{1}{(z-1)(z+1)}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+Aanalytic everywhere except 
+\begin_inset Formula $z=\pm 1$
+\end_inset
+
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+sidebyside
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \frac{x-iy}{x-iy+a}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subprob
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\ds \frac{x-iy}{x^2+y^2}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Consider the function 
+\begin_inset Formula $f(z)=(4x+y)+i(-x+4y)$
+\end_inset
+
+ and discuss 
+\begin_inset Formula $\ds \frac{df}{dz}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula \[u=4x + y \;\; \Rightarrow u_x=4,\;\;u_y=1\]
+\end_inset
+
+ and 
+\begin_inset Formula \[v=-x + 4y \;\; \Rightarrow v_x=-1,\;\;v_y=4\]
+\end_inset
+
+ Cauchy Riemann equations are satisfied. Partial derivatives 
+\begin_inset Formula $u_x,u_y,v_x,v_y$
+\end_inset
+
+ exist and are continuous, therefore given function is differentiable everywhere. We have 
+\begin_inset Formula \[\frac{df}{dz} = \frac{\partial f}{ \partial z} = u_x+iv_x = 4-i\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ For what values of 
+\begin_inset Formula $z$
+\end_inset
+
+, the function 
+\begin_inset Formula $w$
+\end_inset
+
+ defined as 
+\begin_inset Formula \[w=\rho(\cos \phi + i\sin \phi);\;\;\text{ where } z=\ln \rho + i \phi\]
+\end_inset
+
+ cases to be analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula $w=\rho(\cos \phi + i\sin \phi) = \rho e^{i\phi}$
+\end_inset
+
+ and 
+\begin_inset Formula \[z=\ln \rho + i\phi = \ln \rho + \ln (e^{i\phi}) = \ln \rho e^{i\phi}  \Rightarrow e^z = \rho e^{i\phi} = w \Rightarrow z = \ln w \]
+\end_inset
+
+ Now problem reduces to find the value of 
+\begin_inset Formula $z$
+\end_inset
+
+ for which function 
+\begin_inset Formula $w=e^z$
+\end_inset
+
+ is not analytic.
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Important: 
+\series default
+ To find 
+\begin_inset Formula $z$
+\end_inset
+
+ for which function ceases to be analytic, solve 
+\begin_inset Formula $\frac{dz}{dw}=0$
+\end_inset
+
+, i.e., 
+\begin_inset Formula \[\frac{dz}{dw} = \frac{1}{w} = e^{-z} \]
+\end_inset
+
+ Thus 
+\begin_inset Formula $\frac{dz}{dw} = 0  \Rightarrow  e^{-z} =0$
+\end_inset
+
+ which gives 
+\begin_inset Formula $z=\infty$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ For what values of 
+\begin_inset Formula $z$
+\end_inset
+
+ the function 
+\begin_inset Formula $z=\sinh u\cos v + i\cosh u \sin v$
+\end_inset
+
+, where 
+\begin_inset Formula $w=u+iv$
+\end_inset
+
+ ceases to be analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ For what values of 
+\begin_inset Formula $z$
+\end_inset
+
+ the function 
+\begin_inset Formula $z=e^{-v}(\cos u + i \sin u)$
+\end_inset
+
+, where 
+\begin_inset Formula $w=u+iv$
+\end_inset
+
+ ceases to be analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ for 
+\begin_inset Formula $z=0$
+\end_inset
+
+ function ceases to be analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula \[
+f(z)=
+\begin{cases}
+\ds \frac{x^3y(y-ix)}{x^6+y^2},~~ z \neq 0 \\
+=0, z=0,
+\end{cases}
+\]
+\end_inset
+
+ then discuss 
+\begin_inset Formula $\ds \frac{df}{dz}$
+\end_inset
+
+ at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Show that the complex variable function 
+\begin_inset Formula $f(z)=|z|^2$
+\end_inset
+
+ is differentiable only at the origin. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Using the Cauchy-Riemann equations, show that 
+\begin_inset Formula $f(z)=z^3$
+\end_inset
+
+ is analytic in the entire z-plane. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula $f(z) = z^3 = (x+iy^3)$
+\end_inset
+
+, which gives 
+\begin_inset Formula \[u=x^3-3xy^2 \text{ and } v=3x^2y-y^3\]
+\end_inset
+
+ Compute Cauchy Riemann equations and check these holds. Hence function is analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Test the analyticity of the function 
+\begin_inset Formula $w= \sin z$
+\end_inset
+
+ and hence derive that: 
+\begin_inset Formula \[\frac{d}{dz}(\sin z) = \cos z\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula $w=\sin z = \sin(x+iy) = \sin x \cosh y + i \cos x \sinh y$
+\end_inset
+
+ (Since 
+\begin_inset Formula $\cos (iy) = \cosh y$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin (iy) = i \sinh y$
+\end_inset
+
+). 
+\begin_inset Formula \[u_x=\cos x \cosh y\;\;\;u_y=\sin x \sinh y\]
+\end_inset
+
+ 
+\begin_inset Formula \[v_x= - \sin x \sinh y\;\;\; v_y=\cos x \cosh y\]
+\end_inset
+
+ Cauchy Riemann equations are satisfied. 
+\begin_inset Formula $u_x,u_y,v_x,v_y$
+\end_inset
+
+ exists and are continuous. Hence 
+\begin_inset Formula $w$
+\end_inset
+
+ is analytic function. Now, 
+\begin_inset Formula \[\frac{dw}{dz}=u_x+iv_x =\cos x \cosh y-\sin x \sinh y = \cos (x+iy) = \cos z\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Find the point where the Cauchy-Riemann equations are satisfied for the function: 
+\begin_inset Formula \[f(z)=xy^2+ix^2y\]
+\end_inset
+
+ where does 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ = exist? Where is 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ analytic? 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Find the values of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ such that the function 
+\begin_inset Formula \[f(z)=x^2+ay^2-2xy+i(bx^2-y^2+2xy)\]
+\end_inset
+
+ is analytic. Also find 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here, 
+\begin_inset Formula \[u_x=2x-2y,\;\;\;\;u_y=2ay-2x\;\;\;\;v_x=2bx+2y\;\;\;\;v_y=-2y+2x\]
+\end_inset
+
+ Now from Cauchy Riemann equations, we get 
+\begin_inset Formula \[u_x=v_y\;\;\;\Rightarrow 2x-2y=-2y+2x\]
+\end_inset
+
+ which is true, and 
+\begin_inset Formula \[u_y=-v_x\;\;\;\Rightarrow 2ay-2x=-(2bx+2y)\]
+\end_inset
+
+ Compare coefficients of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ on both side 
+\begin_inset Formula \[a=-1,\;\;b=1\]
+\end_inset
+
+ Now, 
+\begin_inset Formula \[f'(z)=u_x+iv_x = (2x-2y)+i(2x+2y) = 2(1+i)z\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Show that the function 
+\begin_inset Formula $z|z|$
+\end_inset
+
+ is not analytic anywhere. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ Here 
+\begin_inset Formula $f(z)=z|z| = (x+iy)|x+iy| = x\sqrt{(x^2+y^2)}+iy\sqrt{(x^2+y^2)}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula \[u=x\sqrt{(x^2+y^2)},\;\;\;v=y\sqrt{(x^2+y^2)}\]
+\end_inset
+
+ Compute 
+\begin_inset Formula $u_x,u_y,v_x,v_y$
+\end_inset
+
+ and check, 
+\begin_inset Formula $u_x\neq v_y \text{ and } u_y \neq -v_x$
+\end_inset
+
+, therefore function is nowhere analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Discuss the analyticity of the function 
+\begin_inset Formula $f(z)=z\overline(z)$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Show that the function 
+\begin_inset Formula $f(z)=u+iv$
+\end_inset
+
+, where 
+\begin_inset Formula \[
+f(z)=
+\begin{cases} 
+\ds \frac{x^3(1+i)-y^3(1-i)}{x^2+y^2},~~ z \neq 0 \\
+\end{cases}=0, z=0\]
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{problems}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+]
+\end_layout
+
+\end_inset
+
+ satisfy the Cauchy-Riemann conditions at 
+\begin_inset Formula $z=0$
+\end_inset
+
+. Is the function analytic at 
+\begin_inset Formula $z=0$
+\end_inset
+
+? justify your answer. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+prob
+\end_layout
+
+\end_inset
+
+ Show that the function defined by 
+\begin_inset Formula $f(z)=\sqrt{|xy|}$
+\end_inset
+
+ satisfy Cauchy Riemann equations at the origin but is not analytic at the point. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{sol}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[u_x=u_y=v_x=v_y =0\]
+\end_inset
+
+ It is obvious that the Cauchy Riemann equations are satisfied at 
+\begin_inset Formula $z=0$
+\end_inset
+
+, i.e., at 
+\begin_inset Formula $x=0,\;y=0$
+\end_inset
+
+. But derivative along 
+\begin_inset Formula $y=mx$
+\end_inset
+
+ at 
+\begin_inset Formula $z=0$
+\end_inset
+
+ is 
+\begin_inset Formula \[f'(0)=\lim_x\tends 0 \frac{f(z)-f(0)}{z}=\lim_x\tends 0 \frac{\sqrt{xy}-0}{x+iy} = \lim_x\tends 0 \frac{\sqrt{x.mx}-0}{x+imx} = \lim_x\tends 0 \frac{\sqrt{m}}{1+im} \]
+\end_inset
+
+ Evidently, this limit depends on 
+\begin_inset Formula $m$
+\end_inset
+
+, which differers for different values of 
+\begin_inset Formula $m$
+\end_inset
+
+. i.e., 
+\begin_inset Formula $f'(0)$
+\end_inset
+
+ is not unique. This shows 
+\begin_inset Formula $f'(0)$
+\end_inset
+
+ does not exist. Hence given function is not analytic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{sol}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
